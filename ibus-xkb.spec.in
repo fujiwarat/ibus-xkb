@@ -1,0 +1,134 @@
+%{!?python_sitelib: %define python_sitelib %(%{__python} -c "from distutils.sysconfig import get_python_lib; print get_python_lib()")}
+
+%define gconf2_version 2.12.0
+%define dbus_python_version 0.83.0
+
+Name:       ibus-xkb
+Version:    @PACKAGE_VERSION@
+Release:    1%{?dist}
+Summary:    IBus XKB
+License:    LGPLv2+
+Group:      System Environment/Libraries
+URL:        http://code.google.com/p/ibus/
+Source0:    http://ibus.googlecode.com/files/%{name}-%{version}.tar.gz
+# Patch0:     ibus-xkb-HEAD.patch
+
+BuildRequires:  dbus-glib-devel
+BuildRequires:  dbus-python-devel >= %{dbus_python_version}
+BuildRequires:  gettext-devel
+BuildRequires:  ibus-devel
+BuildRequires:  intltool
+BuildRequires:  iso-codes-devel
+BuildRequires:  libtool
+BuildRequires:  python
+BuildRequires:  pygobject2-devel
+
+Requires:   %{name}-libs = %{version}-%{release}
+
+Requires:   ibus
+Requires:   iso-codes
+Requires:   dbus-python >= %{dbus_python_version}
+Requires:   GConf2 >= %{gconf2_version}
+Requires:   pygtk2
+Requires:   pyxdg
+
+Requires(pre): GConf2 >= %{gconf2_version}
+Requires(post): GConf2 >= %{gconf2_version}
+Requires(preun): GConf2 >= %{gconf2_version}
+
+%define _xinputconf %{_sysconfdir}/X11/xinit/xinput.d/ibus.conf
+
+%description
+The XKB engine for IBus platform. It provides XKB keymaps.
+
+%package libs
+Summary:    IBus libraries
+Group:      System Environment/Libraries
+
+Requires:   glib2
+Requires:   dbus >= 1.2.4
+
+%description libs
+This package contains the libraries for IBus XKB
+
+%package devel
+Summary:    Development tools for ibus
+Group:      Development/Libraries
+Requires:   %{name} = %{version}-%{release}
+Requires:   glib2-devel
+Requires:   dbus-devel
+
+%description devel
+The ibus-xkb-devel package contains the header files and developer
+docs for ibus-xkb.
+
+%prep
+%setup -q
+# %patch0 -p1
+
+%build
+%configure \
+    --disable-static \
+    --enable-introspection
+
+# make -C po update-gmo
+make %{?_smp_mflags}
+
+%install
+rm -rf $RPM_BUILD_ROOT
+make DESTDIR=$RPM_BUILD_ROOT install
+rm -f $RPM_BUILD_ROOT%{_libdir}/libibus-xkb.la
+
+%find_lang %{name}
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%post
+export GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source`
+gconftool-2 --makefile-install-rule %{_sysconfdir}/gconf/schemas/ibus-xkb.schemas >& /dev/null || :
+
+%pre
+if [ "$1" -gt 1 ]; then
+    export GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source`
+    gconftool-2 --makefile-uninstall-rule %{_sysconfdir}/gconf/schemas/ibus-xkb.schemas >& /dev/null || :
+fi
+
+%preun
+if [ "$1" -eq 0 ]; then
+    export GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source`
+    gconftool-2 --makefile-uninstall-rule %{_sysconfdir}/gconf/schemas/ibus-xkb.schemas >& /dev/null || :
+fi
+
+%post libs -p /sbin/ldconfig
+
+%postun libs -p /sbin/ldconfig
+
+%files -f %{name}.lang
+%defattr(-,root,root,-)
+%doc AUTHORS COPYING README
+%dir %{python_sitelib}/ibus-xkb
+%{python_sitelib}/ibus-xkb/*
+%{_datadir}/ibus/component/*.xml
+%{_datadir}/ibus/xkb/*.xml
+%{_datadir}/ibus-xkb/*
+%{_libexecdir}/ibus-setup-xkb
+%{_libexecdir}/ibus-engine-xkb
+%{_libexecdir}/ibus-xkb
+%{_sysconfdir}/gconf/schemas/ibus-xkb.schemas
+
+%files libs
+%defattr(-,root,root,-)
+%{_libdir}/libibus-xkb.so.*
+%{_libdir}/girepository-1.0/IBusXKB-1.0.typelib
+
+%files devel
+%defattr(-,root,root,-)
+%{_libdir}/lib*.so
+%{_libdir}/pkgconfig/*
+%{_includedir}/*
+%{_datadir}/gir-1.0/IBusXKB-1.0.gir
+
+%changelog
+* @DATE_DISPLAY@ Takao Fujiwara <takao.fujiwara1@gmail.com> - @VERSION@-1
+- Current version.

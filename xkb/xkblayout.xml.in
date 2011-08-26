@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component>
+        <name>org.freedesktop.IBus.XKB</name>
+        <description>XKB Component</description>
+        <exec>@libexecdir@/ibus-engine-xkb --ibus</exec>
+        <version>0.0.0</version>
+        <author>Takao Fujiwara &lt;takao.fujiwara1@gmail.com&gt;</author>
+        <license>LGPL2.1</license>
+        <homepage>http://code.google.com/p/ibus/</homepage>
+        <textdomain>ibus</textdomain>
+        <observed-paths>
+                <path>@datadir@/ibus/xkb/xkblayoutconfig.xml</path>
+                <path>~/.config/ibus/xkb/xkblayoutconfig.xml</path>
+        </observed-paths>
+        <engines exec="@libexecdir@/ibus-engine-xkb --xml"/>
+</component>

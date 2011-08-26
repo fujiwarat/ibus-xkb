@@ -1,0 +1,10 @@
+# Files with translatable strings.
+# Please keep this file in alphabetical order.
+data/ibus-xkb.schemas.in
+setup/enginecombobox.py
+setup/enginetreeview.py
+setup/main.py
+setup/setup.ui
+setup/xkbsetup.py
+xkb/ibus-engine-xkb-main.c
+xkb/ibus-xkb-main.c

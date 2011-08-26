@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xkblayout>
+  <config>
+    <preload_layouts>@XKB_PRELOAD_LAYOUTS@</preload_layouts>
+  </config>
+</xkblayout>

@@ -1,0 +1,422 @@
+# vim:set et sts=4 sw=4:
+#
+# ibus-xkb - IBus XKB
+#
+# Copyright (c) 2011 Takao Fujiwara <takao.fujiwara1@gmail.com>
+# Copyright (c) 2011 Red Hat, Inc.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this program; if not, write to the
+# Free Software Foundation, Inc., 59 Temple Place, Suite 330,
+# Boston, MA  02111-1307  USA
+
+__all__ = (
+        'XKBConfigRegistry',
+        'XKBLayoutConfig',
+    )
+
+import os
+import string
+import xml.sax as sax
+import enginedesc
+from xml.sax.saxutils import XMLFilterBase, XMLGenerator
+from xml.sax._exceptions import SAXParseException
+from cStringIO import StringIO
+from _config import DEFAULT_BRIDGE_ENGINE_NAME
+from _config import get_ICON_KEYBOARD
+
+try:
+    from glib import get_user_config_dir
+except ImportError:
+    get_user_config_dir = lambda : None
+
+XKB_RULES_XML_FILE = '@XKB_RULES_XML_FILE@'
+
+class XKBConfigRegistryHandler(XMLFilterBase):
+    def __init__(self, parser=None, root='root'):
+        XMLFilterBase.__init__(self, parser)
+        self.__root = root
+        self.__current_node = root
+        self.__layoutlist_array = {}
+        self.__layoutlist = False
+        self.__layout = False
+        self.__layout_label = None
+        self.__layout_desc = {}
+        self.__layout_lang = {}
+        self.__variantlist = False
+        self.__variant = False
+        self.__variant_label = None
+        self.__variant_desc = {}
+        self.__optionlist_array = {}
+        self.__optionlist = False
+        self.__option_group_desc = {}
+        self.__option_desc = {}
+        self.__option = False
+        self.__option_label = None
+        self.__group = False
+        self.__group_label = None
+
+    def __characters_layoutlist(self, text):
+        if not self.__layout:
+            return
+        if self.__variant:
+            if self.__current_node == 'name':
+                self.__variant_label = text
+                if self.__layout_label != None and \
+                   self.__layout_label in self.__layoutlist_array:
+                    self.__layoutlist_array[self.__layout_label].append(text)
+            elif self.__current_node == 'description':
+                label =  '%s(%s)' % (self.__layout_label, self.__variant_label)
+                self.__variant_desc[label] = text
+            elif self.__current_node == 'iso639Id':
+                label = self.__layout_label
+                if label != None:
+                    label = '%s(%s)' % (label, self.__variant_label)
+                else:
+                    label = self.__variant_label
+                if label not in self.__layout_lang:
+                    self.__layout_lang[label] = []
+                self.__layout_lang[label].append(text)
+            else:
+                pass
+        else:
+            if self.__current_node == 'name':
+                self.__layout_label = text
+                self.__layoutlist_array[self.__layout_label] = []
+            elif self.__current_node == 'description':
+                self.__layout_desc[self.__layout_label] = text
+            elif self.__current_node == 'iso639Id':
+                if self.__layout_label not in self.__layout_lang:
+                    self.__layout_lang[self.__layout_label] = []
+                self.__layout_lang[self.__layout_label].append(text)
+            else:
+                pass
+
+    def __characters_optionlist(self, text):
+        if not self.__group:
+            return
+        if self.__option:
+            if self.__current_node == 'name':
+                self.__option_label = text
+                if self.__group_label != None and \
+                   self.__group_label in self.__optionlist_array:
+                    self.__optionlist_array[self.__group_label].append(text)
+            elif self.__current_node == 'description':
+                self.__option_desc[self.__option_label] = text
+            else:
+                pass
+        else:
+            if self.__current_node == 'name':
+                self.__group_label = text
+                self.__optionlist_array[self.__group_label] = []
+            elif self.__current_node == 'description':
+                self.__option_group_desc[self.__group_label] = text
+            else:
+                pass
+
+    def startElement(self, name, attrs):
+        self.__current_node = name
+        if name == 'layoutList':
+            self.__layoutlist = True
+        elif name == 'layout':
+            self.__layout = True
+            self.__layout_label = None
+        elif name == 'variantList':
+            self.__variantlist = True
+        elif name == 'variant':
+            self.__variant = True
+            self.__variant_label = None
+        elif name == 'optionList':
+            self.__optionlist = True
+        elif name == 'option':
+            self.__option = True
+            self.__option_label = None
+        elif name == 'group':
+            self.__group = True
+            self.__group_label = None
+
+    def endElement(self, name):
+        self.__current_node = self.__root
+        if name == 'layoutList':
+            self.__layoutlist = False
+        elif name == 'layout':
+            self.__layout = False
+        elif name == 'variantList':
+            self.__variantlist = False
+        elif name == 'variant':
+            self.__variant = False
+        elif name == 'optionList':
+            self.__optionlist = False
+        elif name == 'option':
+            self.__option = False
+        elif name == 'group':
+            self.__group = False
+
+    def characters(self, text):
+        if self.__current_node == self.__root:
+            return
+        if self.__layoutlist:
+            self.__characters_layoutlist(text)
+        elif self.__optionlist:
+            self.__characters_optionlist(text)
+
+    def getLayoutList(self):
+        return self.__layoutlist_array
+
+    def getLayoutDesc(self):
+        return self.__layout_desc
+
+    def getLayoutLang(self):
+        return self.__layout_lang
+
+    def getVariantDesc(self):
+        return self.__variant_desc
+
+    def getOptionList(self):
+        return self.__optionlist_array
+
+    def getOptionGroupDesc(self):
+        return self.__option_group_desc
+
+    def getOptionDesc(self):
+        return self.__option_desc
+
+class XKBLayoutConfigHandler(XMLFilterBase):
+    def __init__(self,
+                 parser=None,
+                 downstream=None,
+                 preload_layouts=None,
+                 root='root'):
+        XMLFilterBase.__init__(self, parser)
+        self.__downstream = downstream
+        self.__preload_layouts = preload_layouts
+        self.__root = root
+        self.__current_node = root
+        self.__xkblayout = False 
+        self.__config = False 
+
+    def startDocument(self):
+        if self.__downstream != None:
+            self.__downstream.startDocument()
+
+    def endDocument(self):
+        if self.__downstream != None:
+            self.__downstream.endDocument()
+
+    def startElement(self, name, attrs):
+        self.__current_node = name
+        if name == 'xkblayout':
+            self.__xkblayout = True
+        if name == 'config':
+            self.__config = True
+        if self.__downstream != None:
+            self.__downstream.startElement(name, {})
+
+    def endElement(self, name):
+        self.__current_node = self.__root
+        if name == 'xkblayout':
+            self.__xkblayout = False
+        if name == 'config':
+            self.__config = False
+        if self.__downstream != None:
+            self.__downstream.endElement(name)
+
+    def characters(self, text):
+        if self.__current_node == self.__root:
+            return
+        if not self.__xkblayout or not self.__config:
+            return
+        if self.__current_node == 'preload_layouts':
+            if self.__preload_layouts == None:
+                self.__preload_layouts = text.split(',')
+                self.__preload_layouts.sort()
+            if self.__downstream != None:
+                self.__downstream.characters(string.join(self.__preload_layouts,
+                                                         ','))
+
+    def getPreloadLayouts(self):
+        return self.__preload_layouts
+
+class XKBConfigRegistry():
+    def __init__(self, file_path=XKB_RULES_XML_FILE):
+        self.__handler = None
+        parser = sax.make_parser()
+        parser.setFeature(sax.handler.feature_namespaces, 0)
+        self.__handler = XKBConfigRegistryHandler(parser)
+        parser.setContentHandler(self.__handler)
+        f = file(file_path, 'r')
+        try:
+            parser.parse(f)
+        except SAXParseException:
+            print 'ERROR: invalid file format', file_path
+        finally:
+            f.close()
+
+    def get_layout_list(self):
+        return self.__handler.getLayoutList()
+
+    def get_layout_desc(self):
+        return self.__handler.getLayoutDesc()
+
+    def get_layout_lang(self):
+        return self.__handler.getLayoutLang()
+
+    def get_variant_desc(self):
+        return self.__handler.getVariantDesc()
+
+    def get_option_list(self):
+        return self.__handler.getOptionList()
+
+    def get_option_group_desc(self):
+        return self.__handler.getOptionGroupDesc()
+
+    def get_option_desc(self):
+        return self.__handler.getOptionDesc()
+
+    @classmethod
+    def have_xkb(self):
+        return @HAVE_XKB@
+
+    @classmethod
+    def engine_desc_new(self,
+                        lang,
+                        layout,
+                        layout_desc=None,
+                        variant=None,
+                        variant_desc=None,
+                        name=None):
+        if variant_desc != None:
+            longname = variant_desc
+        elif layout != None and variant != None:
+            longname = layout + ' - ' + variant
+        elif layout_desc != None:
+            longname = layout_desc
+        else:
+            longname = layout
+        name_prefix='xkb:layout:'
+        if variant != None:
+            if name == None:
+                name = name_prefix + layout + ':' + variant
+            desc = 'XKB ' + layout + '(' + variant + ') keyboard layout'
+            engine_layout = layout + '(' + variant + ')'
+        else:
+            if name == None:
+                name = name_prefix + layout
+            desc = 'XKB ' + layout + ' keyboard layout'
+            engine_layout = layout
+
+        icon = 'ibus-engine'
+        if name.startswith(DEFAULT_BRIDGE_ENGINE_NAME):
+            icon = get_ICON_KEYBOARD()
+
+        engine = enginedesc.EngineDesc(name, longname, desc, lang,
+                                       'LGPL2.1',
+                                       'Takao Fujiwara <takao.fujiwara1@gmail.com>',
+                                       icon,
+                                       engine_layout)
+        return engine
+
+class XKBLayoutConfig():
+    def __init__(self,
+                 system_config='@datadir@/ibus/xkb/xkblayoutconfig.xml'):
+        self.__user_config = get_user_config_dir()
+        if self.__user_config == None:
+            self.__user_config = os.environ['HOME'] + '/.config'
+        self.__user_config = self.__user_config + \
+            '/ibus/xkb/xkblayoutconfig.xml'
+        self.__system_config = system_config
+        self.__filter_handler = None
+        self.__load()
+
+    def __load(self, downstream=None, preload_layouts=None):
+        parser = sax.make_parser()
+        parser.setFeature(sax.handler.feature_namespaces, 0)
+        self.__filter_handler = XKBLayoutConfigHandler(parser,
+                                                       downstream,
+                                                       preload_layouts)
+        parser.setContentHandler(self.__filter_handler)
+        f = None
+        if os.path.exists(self.__user_config):
+            f = file(self.__user_config)
+        elif os.path.exists(self.__system_config):
+            f = file(self.__system_config)
+        if f == None:
+            return
+        try:
+            parser.parse(f)
+        except SAXParseException:
+            print 'ERROR: invalid file format', self.__user_config
+        finally:
+            f.close()
+
+    def get_preload_layouts(self):
+        return self.__filter_handler.getPreloadLayouts()
+
+    def save_preload_layouts(self, layouts):
+        if layouts == None:
+            if os.path.exists(self.__user_config):
+                os.unlink(self.__user_config)
+                return
+        parser = sax.make_parser()
+        parser.setFeature(sax.handler.feature_namespaces, 0)
+        result = StringIO()
+        downstream_handler = XMLGenerator(result, 'utf-8')
+        self.__load(downstream_handler, layouts)
+        contents = result.getvalue()
+        dir = os.path.dirname(self.__user_config)
+        if not os.path.exists(dir):
+            os.makedirs(dir, 0700)
+        f = open(self.__user_config, 'w')
+        f.write(contents)
+        f.close()
+        os.chmod(self.__user_config, 0600)
+
+def test():
+    xkbconfig = XKBConfigRegistry()
+    layout_list = xkbconfig.get_layout_list()
+    layout_desc = xkbconfig.get_layout_desc()
+    layout_lang = xkbconfig.get_layout_lang()
+    variant_desc = xkbconfig.get_variant_desc()
+    for layout in layout_list.keys():
+        if layout not in layout_lang:
+            print 'layout name:', layout, 'NO-LANG description:', layout_desc[layout]
+            continue
+        lang = layout_lang[layout]
+        print 'layout name:', layout, 'lang:', lang, 'description:', layout_desc[layout]
+        for variant in layout_list[layout]:
+            label = '%s(%s)' % (layout, variant)
+            if label in layout_lang:
+                lang = layout_lang[label]
+            print '  variant name:', variant, 'lang:', lang, 'description:', variant_desc[variant]
+
+    option_list = xkbconfig.get_option_list()
+    option_group_desc = xkbconfig.get_option_group_desc()
+    option_desc = xkbconfig.get_option_desc()
+    for option_group in option_list.keys():
+        print 'option group name:', option_group, 'description:', option_group_desc[option_group]
+        for option in option_list[option_group]:
+            print '  option name:', option, 'description:', option_desc[option]
+
+def test2():
+    xkblayoutconfig = XKBLayoutConfig('../xkb/xkblayoutconfig.xml')
+    list = xkblayoutconfig.get_preload_layouts()
+    print list
+    if list == None:
+        list = []
+    list.append('gb(test)')
+    list.sort()
+    #xkblayoutconfig.save_preload_layouts(list)
+
+if __name__ == '__main__':
+    test()
+    test2()

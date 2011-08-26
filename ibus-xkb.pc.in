@@ -1,0 +1,7 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+ibus_xkb=@libexecdir@/ibus-xkb
+
+Name: IBus-XKB
+Description: IBus XKB
+Version: @VERSION@
