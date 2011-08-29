@@ -27,6 +27,7 @@
 #include <glib.h>
 
 #include "ibus.h"
+#include "ibusxkbxml.h"
 
 #ifndef XKB_RULES_XML_FILE
 #define XKB_RULES_XML_FILE "/usr/share/X11/xkb/rules/evdev.xml"

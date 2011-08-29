@@ -34,6 +34,7 @@
 
 #include "ibus-engine-xkb-main.h"
 #include "xkbxml.h"
+#include "ibusxkbxml.h"
 
 #define IBUS_TYPE_XKB_ENGINE (ibus_xkb_engine_get_type ())
 
