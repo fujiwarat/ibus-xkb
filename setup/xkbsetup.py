@@ -25,6 +25,7 @@ import gettext
 import gobject
 import gtk
 import ibus
+import ibusxkb
 
 _ = lambda a : gettext.dgettext("ibus", a)
 XKB_MAX_LAYOUTS = 4
@@ -53,8 +54,8 @@ class XKBSetup(gobject.GObject):
         self.__preload_xkb_engines = []
         self.__other_xkb_engines = []
         self.__default_xkb_engine = None
-        if ibus.XKBConfigRegistry.have_xkb():
-            self.__xkblayoutconfig = ibus.XKBLayoutConfig()
+        if ibusxkb.XKBConfigRegistry.have_xkb():
+            self.__xkblayoutconfig = ibusxkb.XKBLayoutConfig()
 
         # config layouts dialog
         self.__init_config_layouts()
@@ -68,7 +69,7 @@ class XKBSetup(gobject.GObject):
 
     def __get_xkb_engines(self):
         xkb_engines = []
-        xkbconfig = ibus.XKBConfigRegistry()
+        xkbconfig = ibusxkb.XKBConfigRegistry()
         layout_list = xkbconfig.get_layout_list()
         layout_desc = xkbconfig.get_layout_desc()
         layout_lang = xkbconfig.get_layout_lang()
@@ -78,7 +79,7 @@ class XKBSetup(gobject.GObject):
             if layout in layout_lang:
                 langs = layout_lang[layout]
             for lang in langs:
-                engine = ibus.XKBConfigRegistry.engine_desc_new(
+                engine = ibusxkb.XKBConfigRegistry.engine_desc_new(
                     lang,
                     layout,
                     layout_desc[layout],
@@ -93,7 +94,7 @@ class XKBSetup(gobject.GObject):
                 else:
                     sub_langs = langs
                 for lang in sub_langs:
-                    engine = ibus.XKBConfigRegistry.engine_desc_new(
+                    engine = ibusxkb.XKBConfigRegistry.engine_desc_new(
                         lang,
                         layout,
                         layout_desc[layout],
@@ -105,7 +106,7 @@ class XKBSetup(gobject.GObject):
     def __get_default_xkb_engine(self):
         if self.__default_xkb_engine != None:
             return self.__default_xkb_engine
-        self.__default_xkb_engine = ibus.XKBConfigRegistry.engine_desc_new(
+        self.__default_xkb_engine = ibusxkb.XKBConfigRegistry.engine_desc_new(
             "other",
             "default",
             _("Default"),
@@ -114,7 +115,7 @@ class XKBSetup(gobject.GObject):
         return self.__default_xkb_engine
 
     def __init_config_layouts(self):
-        if not ibus.XKBConfigRegistry.have_xkb():
+        if not ibusxkb.XKBConfigRegistry.have_xkb():
             button = self.__builder.get_object("button_config_layouts")
             button.hide()
             return
@@ -264,7 +265,7 @@ class XKBSetup(gobject.GObject):
         self.__checkbutton_use_system_keyboard_option.connect(
             "toggled", lambda button: self.__vbox_system_keyboard_options.set_sensitive(not button.get_active()))
 
-        xkbconfig = ibus.XKBConfigRegistry()
+        xkbconfig = ibusxkb.XKBConfigRegistry()
         option_list = xkbconfig.get_option_list()
         option_group_desc = xkbconfig.get_option_group_desc()
         option_desc = xkbconfig.get_option_desc()
@@ -301,7 +302,7 @@ class XKBSetup(gobject.GObject):
                 checkbutton.show()
 
     def __init_system_keyboard(self):
-        if not ibus.XKBConfigRegistry.have_xkb():
+        if not ibusxkb.XKBConfigRegistry.have_xkb():
             hbox = self.__builder.get_object("hbox_system_keyboard_layout")
             hbox.hide()
             return

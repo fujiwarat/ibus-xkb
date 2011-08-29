@@ -26,6 +26,7 @@ import glib
 import gobject
 import pango
 import ibus
+import ibusxkb
 
 from icon import load_icon
 from i18n import _, N_
@@ -173,8 +174,8 @@ class EngineTreeView(gtk.TreeView):
         for e in engines:
             if e in self.__engines:
                 continue
-            if ibus.use_bridge_hotkey() and \
-               e.name.startswith(ibus.DEFAULT_BRIDGE_ENGINE_NAME):
+            if ibusxkb.use_bridge_hotkey() and \
+               e.name.startswith(ibusxkb.DEFAULT_BRIDGE_ENGINE_NAME):
                 pass
             else:
                 iter = self.__model.append(None)

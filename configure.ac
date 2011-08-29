@@ -281,6 +281,7 @@ ibus-xkb.pc
 ibus-xkb.spec
 data/Makefile
 ibus/Makefile
+ibus/_config.py
 src/Makefile
 setup/Makefile
 setup/ibus-setup-xkb

@@ -2,60 +2,6 @@
 <interface>
   <requires lib="gtk+" version="2.14"/>
   <!-- interface-naming-policy toplevel-contextual -->
-  <object class="GtkListStore" id="model_candidates_orientation">
-    <columns>
-      <!-- column-name gchararray -->
-      <column type="gchararray"/>
-    </columns>
-    <data>
-      <row>
-        <col id="0" translatable="yes">Horizontal</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">Vertical</col>
-      </row>
-    </data>
-  </object>
-  <object class="GtkListStore" id="model_panel_show_mode">
-    <columns>
-      <!-- column-name gchararray -->
-      <column type="gchararray"/>
-    </columns>
-    <data>
-      <row>
-        <col id="0" translatable="yes">Embedded in menu</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">When active</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">Always</col>
-      </row>
-    </data>
-  </object>
-  <object class="GtkListStore" id="model_panel_position">
-    <columns>
-      <!-- column-name position -->
-      <column type="gchararray"/>
-    </columns>
-    <data>
-      <row>
-        <col id="0" translatable="yes">Top left corner</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">Top right corner</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">Bottom left corner</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">Bottom right corner</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">Custom</col>
-      </row>
-    </data>
-  </object>
   <object class="GtkWindow" id="window_preferences">
     <property name="border_width">12</property>
     <property name="title" translatable="yes">IBus XKB Preferences</property>

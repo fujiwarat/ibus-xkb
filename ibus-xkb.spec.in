@@ -107,8 +107,7 @@ fi
 %files -f %{name}.lang
 %defattr(-,root,root,-)
 %doc AUTHORS COPYING README
-%dir %{python_sitelib}/ibus-xkb
-%{python_sitelib}/ibus-xkb/*
+%{python_sitelib}/ibusxkb
 %{_datadir}/ibus/component/*.xml
 %{_datadir}/ibus/xkb/*.xml
 %{_datadir}/ibus-xkb/*

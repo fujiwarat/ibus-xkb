@@ -22,3 +22,4 @@
 
 from xkblayout import *
 from xkbxml import *
+from _config import *

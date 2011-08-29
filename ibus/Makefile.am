@@ -29,7 +29,11 @@ ibus_PYTHON = \
 	__init__.py \
 	$(NULL)
 
-ibusdir = @pkgpythondir@
+nodist_ibus_PYTHON = \
+	_config.py \
+	$(NULL)
+
+ibusdir = @pythondir@/ibusxkb
 
 XKB_COMMAND=\\\"$(libexecdir)/ibus-xkb\\\"
 
@@ -40,11 +44,23 @@ XKB_COMMAND=\\\"$(libexecdir)/ibus-xkb\\\"
 	     -e "s|\@datadir\@|$(datadir)|g" \
 	$< > $@
 
+dist-hook:
+	for f in $(ibus_PYTHON_in_files); do \
+	    if test -f $(distdir)/$$f ; then \
+	        touch $(distdir)/$$f; \
+	    fi; \
+	done;
+
 EXTRA_DIST = \
 	$(ibus_PYTHON_in_files) \
+	_config.py.in \
 	$(NULL)
 
 CLEANFILES = \
 	*.pyc \
 	$(ibus_PYTHON_gen_files) \
+	$(NULL)
+
+DISTCLEANFILES = \
+	_config.py \
 	$(NULL)

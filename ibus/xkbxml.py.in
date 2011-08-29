@@ -28,12 +28,11 @@ __all__ = (
 import os
 import string
 import xml.sax as sax
-import enginedesc
+import ibus
 from xml.sax.saxutils import XMLFilterBase, XMLGenerator
 from xml.sax._exceptions import SAXParseException
 from cStringIO import StringIO
 from _config import DEFAULT_BRIDGE_ENGINE_NAME
-from _config import get_ICON_KEYBOARD
 
 try:
     from glib import get_user_config_dir
@@ -285,7 +284,7 @@ class XKBConfigRegistry():
 
     @classmethod
     def have_xkb(self):
-        return @HAVE_XKB@
+        return True
 
     @classmethod
     def engine_desc_new(self,
@@ -317,13 +316,13 @@ class XKBConfigRegistry():
 
         icon = 'ibus-engine'
         if name.startswith(DEFAULT_BRIDGE_ENGINE_NAME):
-            icon = get_ICON_KEYBOARD()
+            icon = ibus.get_ICON_KEYBOARD()
 
-        engine = enginedesc.EngineDesc(name, longname, desc, lang,
-                                       'LGPL2.1',
-                                       'Takao Fujiwara <takao.fujiwara1@gmail.com>',
-                                       icon,
-                                       engine_layout)
+        engine = ibus.EngineDesc(name, longname, desc, lang,
+                                 'LGPL2.1',
+                                 'Takao Fujiwara <takao.fujiwara1@gmail.com>',
+                                 icon,
+                                 engine_layout)
         return engine
 
 class XKBLayoutConfig():

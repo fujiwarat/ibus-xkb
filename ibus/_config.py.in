@@ -1,8 +1,8 @@
-# vim:set noet ts=4:
+# vim:set et sts=4 sw=4:
 #
 # ibus-xkb - IBus XKB
 #
-# Copyright (C) 2011 Takao Fujiwara <takao.fujiwara1@gmail.com>
+# Copyright (c) 2011 Takao Fujiwara <takao.fujiwara1@gmail.com>
 # Copyright (c) 2011 Red Hat, Inc.
 #
 # This library is free software; you can redistribute it and/or
@@ -20,24 +20,12 @@
 # Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 # Boston, MA  02111-1307  USA
 
-SUBDIRS = data ibus setup src xkb po
+__all__ = (
+    "use_bridge_hotkey",
+    "DEFAULT_BRIDGE_ENGINE_NAME",
+)
 
-pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = ibus-xkb.pc
+def use_bridge_hotkey():
+    return True if @USE_BRIDGE_HOTKEY@ == 1 else False
 
-dist-hook:
-	if test -d .git ; then \
-	    git log --name-status --date=iso > $(distdir)/ChangeLog ; \
-	fi
-
-EXTRA_DIST = \
-    autogen.sh \
-    ibus-xkb.pc.in \
-    ibus-xkb.spec.in \
-    $(NULL)
-
-DISTCLEANFILES = \
-    $(pkgconfig_DATA) \
-    stamp-h2 \
-    ibus-xkb.spec \
-    $(NULL)
+DEFAULT_BRIDGE_ENGINE_NAME='@DEFAULT_BRIDGE_ENGINE_NAME@'
