@@ -32,15 +32,13 @@
 #include <locale.h>
 #endif
 
-#include "ibus-engine-xkb-main.h"
 #include "xkbxml.h"
 #include "ibusxkbxml.h"
+#include "ibus-simple-engine.h"
 
-#define IBUS_TYPE_XKB_ENGINE (ibus_xkb_engine_get_type ())
 
 static IBusBus *bus = NULL;
 static IBusFactory *factory = NULL;
-static IBusEngineClass *parent_class = NULL;
 static gboolean ibus = FALSE;
 static gboolean xml = FALSE;
 
@@ -50,173 +48,6 @@ static const GOptionEntry entries[] =
     { "xml", 'x', 0, G_OPTION_ARG_NONE, &xml, "print component xml", NULL },
     { NULL },
 };
-
-struct _IBusXKBEngine {
-    IBusEngine engine;
-
-#ifdef ENABLE_SETUP_GUI
-    IBusPropList *prop_list;
-#endif
-};
-
-struct _IBusXKBEngineClass {
-    IBusEngineClass parent;
-};
-
-static GObject*
-ibus_xkb_engine_constructor (GType                   type,
-                             guint                   n_construct_params,
-                             GObjectConstructParam  *construct_params)
-{
-    IBusXKBEngine *engine;
-
-    engine = (IBusXKBEngine *) G_OBJECT_CLASS (parent_class)->constructor (type,
-                                               n_construct_params,
-                                               construct_params);
-
-    return (GObject *) engine;
-}
-
-static void
-ibus_xkb_engine_destroy (IBusObject *object)
-{
-#ifdef ENABLE_SETUP_GUI
-    IBusXKBEngine *xkbengine = (IBusXKBEngine *) object;
-
-    if (xkbengine->prop_list) {
-        g_object_unref (xkbengine->prop_list);
-        xkbengine->prop_list = NULL;
-    }
-#endif
-
-    IBUS_OBJECT_CLASS (parent_class)->destroy (object);
-}
-
-static void
-ibus_xkb_engine_enable (IBusEngine *engine)
-{
-    parent_class->enable (engine);
-}
-
-static void
-ibus_xkb_engine_disable (IBusEngine *engine)
-{
-    parent_class->disable (engine);
-}
-
-static void
-ibus_xkb_engine_focus_in (IBusEngine *engine)
-{
-#ifdef ENABLE_SETUP_GUI
-    IBusXKBEngine *xkbengine = (IBusXKBEngine *) engine;
-
-    ibus_engine_register_properties (engine, xkbengine->prop_list);
-#endif
-    parent_class->focus_in (engine);
-}
-
-static void
-ibus_xkb_engine_focus_out (IBusEngine *engine)
-{
-    parent_class->focus_out (engine);
-}
-
-static void
-ibus_xkb_engine_property_activate (IBusEngine  *engine,
-                                   const gchar *prop_name,
-                                   guint        prop_state)
-{
-    if (g_strcmp0 (prop_name, "setup") == 0) {
-        gchar *argv[2] = { NULL, NULL};
-        gchar *path;
-        const gchar *libexecdir = g_getenv ("LIBEXECDIR");
-        GError *error = NULL;
-
-        if (libexecdir == NULL) {
-            libexecdir = LIBEXECDIR;
-        }
-        path = g_build_filename (libexecdir, "ibus-setup-xkb", NULL);
-        argv[0] = path;
-        if (!g_spawn_async (NULL, argv, NULL, 0, NULL, NULL, NULL, &error)) {
-            if (error) {
-                g_warning ("exec failure: %s", error->message);
-                g_error_free (error);
-            }
-        }
-        g_free (path);
-    }
-    parent_class->property_activate (engine, prop_name, prop_state);
-}
-
-static void
-ibus_xkb_engine_class_init (IBusXKBEngineClass *klass)
-{
-    GObjectClass *object_class = G_OBJECT_CLASS (klass);
-    IBusObjectClass *ibus_object_class = IBUS_OBJECT_CLASS (klass);
-    IBusEngineClass *engine_class = IBUS_ENGINE_CLASS (klass);
-
-    parent_class = (IBusEngineClass *) g_type_class_peek_parent (klass);
-    object_class->constructor = ibus_xkb_engine_constructor;
-    ibus_object_class->destroy = (IBusObjectDestroyFunc) ibus_xkb_engine_destroy;
-    engine_class->enable = ibus_xkb_engine_enable;
-    engine_class->disable = ibus_xkb_engine_disable;
-    engine_class->focus_in = ibus_xkb_engine_focus_in;
-    engine_class->focus_out = ibus_xkb_engine_focus_out;
-    engine_class->property_activate = ibus_xkb_engine_property_activate;
-}
-
-static void
-ibus_xkb_engine_init (IBusXKBEngine *xkbengine)
-{
-#ifdef ENABLE_SETUP_GUI
-    IBusText *label;
-    IBusText *tooltip;
-    IBusProperty *prop;
-
-    xkbengine->prop_list = ibus_prop_list_new ();
-
-    g_object_ref_sink (xkbengine->prop_list);
-    label = ibus_text_new_from_string (_("Setup"));
-    tooltip = ibus_text_new_from_string (_("Configure XKB engine"));
-    prop = ibus_property_new ("setup",
-                              PROP_TYPE_NORMAL,
-                              label,
-                              "gtk-preferences",
-                              tooltip,
-                              TRUE, TRUE,
-                              PROP_STATE_UNCHECKED,
-                              NULL);
-    g_object_ref_sink (prop);
-    ibus_prop_list_append (xkbengine->prop_list, prop);
-#endif
-}
-
-GType
-ibus_xkb_engine_get_type (void)
-{
-    static GType type = 0;
-
-    static const GTypeInfo type_info = {
-        sizeof (IBusXKBEngineClass),
-        (GBaseInitFunc)     NULL,
-        (GBaseFinalizeFunc) NULL,
-        (GClassInitFunc)    ibus_xkb_engine_class_init,
-        NULL,
-        NULL,
-        sizeof (IBusXKBEngine),
-        0,
-        (GInstanceInitFunc) ibus_xkb_engine_init,
-    };
-
-    if (type == 0) {
-            type = g_type_register_static (IBUS_TYPE_ENGINE,
-                                           "IBusXKBEngine",
-                                           &type_info,
-                                           (GTypeFlags) 0);
-    }
-
-    return type;
-}
 
 static void
 ibus_disconnected_cb (IBusBus  *bus,
@@ -231,9 +62,6 @@ _factory_create_engine_cb (IBusFactory *factory,
                            const gchar *engine_name,
                            gpointer     data)
 {
-#if 0
-    static GHashTable *engine_table = NULL;
-#endif
     IBusEngine *engine = NULL;
     gchar *object_path = NULL;
     static int id = 0;
@@ -244,31 +72,13 @@ _factory_create_engine_cb (IBusFactory *factory,
         return NULL;
     }
 
-    /* FIXME: Do we always need a new object path for the same engine name? */
-#if 0
-    if (engine_table == NULL) {
-        engine_table = g_hash_table_new_full (g_str_hash,
-                                              g_str_equal,
-                                              g_free,
-                                              NULL);
-    }
-
-    if ((engine = (IBusEngine *) g_hash_table_lookup (engine_table,
-                                                      engine_name))) {
-        return engine;
-    }
-#endif
-
     object_path = g_strdup_printf ("/org/freedesktop/IBus/XKBEngine/%d",
                                    ++id);
-    engine = ibus_engine_new_type (IBUS_TYPE_XKB_ENGINE,
+    engine = ibus_engine_new_type (IBUS_TYPE_SIMPLE_ENGINE,
                                    engine_name,
                                    object_path,
                                    ibus_service_get_connection (IBUS_SERVICE (factory)));
     g_free (object_path);
-#if 0
-    g_hash_table_insert (engine_table, g_strdup (engine_name), engine);
-#endif
     return engine;
 }
 
@@ -300,7 +110,7 @@ start_component (int argc, char **argv)
 
     factory = ibus_factory_new (ibus_bus_get_connection (bus));
 
-    ibus_factory_add_engine (factory, "xkb:layout:us", IBUS_TYPE_XKB_ENGINE);
+    ibus_factory_add_engine (factory, "xkb:layout:us", IBUS_TYPE_SIMPLE_ENGINE);
 
     g_signal_connect (G_OBJECT (factory), "create-engine",
                       G_CALLBACK (_factory_create_engine_cb),

@@ -62,6 +62,9 @@ ibus_xkb_LDADD = \
 ibus_engine_xkb_SOURCES = \
         ibus-engine-xkb-main.c \
         ibus-engine-xkb-main.h \
+        ibus-simple-engine.c \
+        ibus-simple-engine.h \
+        gtkimcontextsimpleseqs.h \
         xkbxml.c \
         xkbxml.h \
         $(NULL)

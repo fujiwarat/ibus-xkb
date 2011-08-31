@@ -7,4 +7,5 @@ setup/main.py
 setup/setup.ui
 setup/xkbsetup.py
 xkb/ibus-engine-xkb-main.c
+xkb/ibus-simple-engine.c
 xkb/ibus-xkb-main.c

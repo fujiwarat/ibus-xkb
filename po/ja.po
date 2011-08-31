@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ibus-xkb HEAD\n"
 "Report-Msgid-Bugs-To: http://code.google.com/p/ibus/issues/entry\n"
-"POT-Creation-Date: 2011-08-25 18:47+0900\n"
+"POT-Creation-Date: 2011-08-29 22:37-0400\n"
 "PO-Revision-Date: 2011-08-25 18:47+0900\n"
 "Last-Translator:  <takao.fujiwara1@gmail.com>\n"
 "Language-Team: Japanese\n"
@@ -41,139 +41,60 @@ msgstr ""
 msgid "us layout is appended to the latin layouts. variant is not needed."
 msgstr ""
 
-#: ../setup/engineabout.py:34
-msgid "About"
-msgstr ""
-
-#: ../setup/engineabout.py:62
-#, python-format
-msgid "Language: %s\n"
-msgstr ""
-
-#: ../setup/engineabout.py:64
-#, python-format
-msgid "Keyboard layout: %s\n"
-msgstr ""
-
-#: ../setup/engineabout.py:66
-#, python-format
-msgid "Author: %s\n"
-msgstr ""
-
-#: ../setup/engineabout.py:68
-msgid "Description:\n"
-msgstr ""
-
-#: ../setup/enginecombobox.py:47
+#: ../setup/enginecombobox.py:48
 msgid "Select an input method"
 msgstr ""
 
 #. create im name & icon column
-#: ../setup/enginetreeview.py:65
+#: ../setup/enginetreeview.py:66
 msgid "Input Method"
 msgstr ""
 
-#: ../setup/enginetreeview.py:93
+#: ../setup/enginetreeview.py:94
 msgid "Kbd"
 msgstr ""
 
-#: ../setup/keyboardshortcut.py:53
-msgid "Keyboard shortcuts"
+#: ../setup/main.py:72
+msgid "IBus is not running."
 msgstr ""
 
-#: ../setup/keyboardshortcut.py:64
-msgid "Key code:"
-msgstr ""
-
-#: ../setup/keyboardshortcut.py:79
-msgid "Modifiers:"
-msgstr ""
-
-#: ../setup/keyboardshortcut.py:232
-msgid ""
-"Please press a key (or a key combination).\n"
-"The dialog will be closed when the key is released."
-msgstr ""
-
-#: ../setup/keyboardshortcut.py:234
-msgid "Please press a key (or a key combination)"
-msgstr ""
-
-#: ../setup/main.py:104
-msgid "trigger"
-msgstr ""
-
-#: ../setup/main.py:115
-msgid "enable"
-msgstr ""
-
-#: ../setup/main.py:126
-msgid "disable"
-msgstr ""
-
-#: ../setup/main.py:137
-msgid "next input method"
-msgstr ""
-
-#: ../setup/main.py:148
-msgid "previous input method"
-msgstr ""
-
-#: ../setup/main.py:219
-msgid "Toggle:"
-msgstr ""
-
-#: ../setup/main.py:220
-msgid "The trigger shortcut keys to toggle the previous and next input methods"
-msgstr ""
-
-#: ../setup/main.py:309
-msgid "IBus daemon is not started. Do you want to start it now?"
-msgstr ""
-
-#: ../setup/main.py:324
-msgid ""
-"IBus has been started! If you can not use IBus, please add below lines in "
-"$HOME/.bashrc, and relogin your desktop.\n"
-"  export GTK_IM_MODULE=ibus\n"
-"  export XMODIFIERS=@im=ibus\n"
-"  export QT_IM_MODULE=ibus"
-msgstr ""
-
-#: ../setup/main.py:339
-#, python-format
-msgid "Select keyboard shortcut for %s"
-msgstr ""
-
-#: ../setup/xkbsetup.py:43 ../setup/xkbsetup.py:108 ../setup/xkbsetup.py:404
+#: ../setup/xkbsetup.py:44 ../setup/xkbsetup.py:112 ../setup/xkbsetup.py:408
 msgid "Default"
 msgstr ""
 
-#: ../setup/xkbsetup.py:203
+#: ../setup/xkbsetup.py:207
 msgid "Select keyboard layouts"
 msgstr ""
 
-#: ../setup/xkbsetup.py:208
+#: ../setup/xkbsetup.py:212
 msgid "Keyboard Layouts"
 msgstr ""
 
-#: ../setup/xkbsetup.py:237
+#: ../setup/xkbsetup.py:241
 #, python-format
 msgid ""
 "<small><i>The system keyboard layouts can be set less than or equal to %d.\n"
 "You may use Up/Down buttons to change the order.</i></small>"
 msgstr ""
 
-#: ../setup/xkbsetup.py:376 ../setup/xkbsetup.py:431
+#: ../setup/xkbsetup.py:380 ../setup/xkbsetup.py:435
 msgid "Please restart IBus to reload your configuration."
 msgstr ""
 
-#: ../setup/xkbsetup.py:421
+#: ../setup/xkbsetup.py:425
 msgid "The keyboard option cannot be chosen."
 msgstr ""
 
-#: ../xkb/ibus-engine-xkb-main.c:314
+#: ../xkb/ibus-engine-xkb-main.c:201
 msgid "Default Layout"
+msgstr ""
+
+#: ../xkb/ibus-simple-engine.c:132
+msgid "Setup"
+msgstr ""
+
+#: ../xkb/ibus-simple-engine.c:133
+msgid "Configure XKB engine"
 msgstr ""
 
 #: ../xkb/ibus-xkb-main.c:47
