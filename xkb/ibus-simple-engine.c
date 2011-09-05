@@ -6,11 +6,20 @@
 
 #include "ibus-simple-engine.h"
 
+#include <glib/gi18n-lib.h>
 #include <stdlib.h>
 #include <memory.h>
-#include <glib/gi18n-lib.h>
+
+#ifdef ENABLE_NLS
+#include <locale.h>
+#endif
 
 #define MAX_COMPOSE_LEN 7
+
+typedef enum {
+    IBUS_COMPOSE_TABLE_NONE             = 0,
+    IBUS_COMPOSE_TABLE_CEDILLA,
+} IBusComposeAddOnTableType;
 
 typedef struct _IBusSimpleEngine IBusSimpleEngine;
 typedef struct _IBusSimpleEngineClass IBusSimpleEngineClass;
@@ -30,6 +39,7 @@ struct _IBusSimpleEngine {
 
 struct _IBusSimpleEngineClass {
     IBusEngineClass parent;
+    IBusComposeAddOnTableType compose_addon_table_type;
 };
 
 typedef struct _GtkComposeTableCompact GtkComposeTableCompact;
@@ -78,6 +88,24 @@ static const guint16 gtk_compose_ignore[] = {
     IBUS_ISO_Level3_Shift
 };
 
+/* Copied from gtk+2.0-2.20.1/modules/input/imcedilla.c to fix crosbug.com/11421.
+ * Overwrite the original Gtk+'s compose table in gtk+-2.x.y/gtk/gtkimcontextsimple.c. */
+
+/* The difference between this and the default input method is the handling
+ * of C+acute - this method produces C WITH CEDILLA rather than C WITH ACUTE.
+ * For languages that use CCedilla and not acute, this is the preferred mapping,
+ * and is particularly important for pt_BR, where the us-intl keyboard is
+ * used extensively.
+ */
+static guint16 cedilla_compose_seqs[] = {
+  IBUS_dead_acute,      IBUS_C,   0,      0,      0,      0x00C7, /* LATIN_CAPITAL_LETTER_C_WITH_CEDILLA */
+  IBUS_dead_acute,      IBUS_c,   0,      0,      0,      0x00E7, /* LATIN_SMALL_LETTER_C_WITH_CEDILLA */
+  IBUS_Multi_key,       IBUS_apostrophe, IBUS_C,  0,      0,      0x00C7, /* LATIN_CAPITAL_LETTER_C_WITH_CEDILLA */
+  IBUS_Multi_key,       IBUS_apostrophe, IBUS_c,  0,      0,      0x00E7, /* LATIN_SMALL_LETTER_C_WITH_CEDILLA */
+  IBUS_Multi_key,       IBUS_C,  IBUS_apostrophe, 0,      0,      0x00C7, /* LATIN_CAPITAL_LETTER_C_WITH_CEDILLA */
+  IBUS_Multi_key,       IBUS_c,  IBUS_apostrophe, 0,      0,      0x00E7, /* LATIN_SMALL_LETTER_C_WITH_CEDILLA */
+};
+
 /* functions prototype */
 static void     ibus_simple_engine_class_init   (IBusSimpleEngineClass  *klass);
 static void     ibus_simple_engine_init         (IBusSimpleEngine       *simple);
@@ -109,6 +137,7 @@ ibus_simple_engine_class_init (IBusSimpleEngineClass *klass)
 {
     IBusObjectClass *ibus_object_class = IBUS_OBJECT_CLASS (klass);
     IBusEngineClass *engine_class = IBUS_ENGINE_CLASS (klass);
+    gchar *lang = NULL;
 
     ibus_object_class->destroy = (IBusObjectDestroyFunc) ibus_simple_engine_destroy;
 
@@ -121,6 +150,19 @@ ibus_simple_engine_class_init (IBusSimpleEngineClass *klass)
                             = ibus_simple_engine_property_activate;
     engine_class->process_key_event
                             = ibus_simple_engine_process_key_event;
+
+    klass->compose_addon_table_type = IBUS_COMPOSE_TABLE_NONE;
+ 
+#ifdef ENABLE_NLS
+    lang = g_strdup (setlocale (LC_CTYPE, NULL));
+#endif
+    if (lang == NULL) {
+        lang = g_strdup (g_getenv ("LANG"));
+    }
+    if (lang && g_ascii_strncasecmp (lang, "pt_BR", strlen ("pt_BR")) == 0) {
+        klass->compose_addon_table_type = IBUS_COMPOSE_TABLE_CEDILLA;
+    }
+    g_free (lang);
 }
 
 static void
@@ -147,7 +189,6 @@ ibus_simple_engine_init (IBusSimpleEngine *simple)
     g_object_ref_sink (prop);
     ibus_prop_list_append (simple->prop_list, prop);
 #endif
- 
 }
 
 static void
@@ -389,6 +430,87 @@ compare_seq (const void *key, const void *value)
     return 0;
 }
 
+
+static gboolean
+check_addon_table (IBusSimpleEngine *simple,
+                   gint              n_compose)
+{
+    IBusComposeAddOnTableType table_type;
+    const guint16 *data = NULL;
+    gint max_seq_len = 0;
+    gint n_seqs = 0;
+    gint row_stride = 0;
+    guint16 *seq;
+
+    g_assert (IBUS_IS_SIMPLE_ENGINE (simple));
+
+    table_type = IBUS_SIMPLE_ENGINE_GET_CLASS (simple)->compose_addon_table_type;
+
+    if (table_type == IBUS_COMPOSE_TABLE_CEDILLA) {
+        data = cedilla_compose_seqs;
+        max_seq_len = 4;
+        n_seqs = G_N_ELEMENTS (cedilla_compose_seqs) / (4 + 2);
+    }
+    else {
+        return FALSE;
+    }
+
+    /* Will never match, if the sequence in the compose buffer is longer
+     * than the sequences in the table.  Further, compare_seq (key, val)
+     * will overrun val if key is longer than val. */
+    if (n_compose > max_seq_len) {
+        return FALSE;
+    }
+
+    row_stride = max_seq_len + 2;
+    seq = bsearch (simple->compose_buffer,
+                   data, n_seqs,
+                   sizeof (guint16) *  row_stride,
+                   compare_seq);
+
+    if (seq) {
+        guint16 *prev_seq;
+
+        /* Back up to the first sequence that matches to make sure
+         * we find the exact match if their is one.
+         */
+        while (seq > data) {
+            prev_seq = seq - row_stride;
+            if (compare_seq (simple->compose_buffer, prev_seq) != 0) {
+                break;
+            }
+            seq = prev_seq;
+        }
+
+        /* complete sequence */
+        if (n_compose == max_seq_len || seq[n_compose] == 0) {
+            guint16 *next_seq;
+            gunichar value =
+                0x10000 * seq[max_seq_len] + seq[max_seq_len + 1];
+
+            /* We found a tentative match. See if there are any longer
+             * sequences containing this subsequence
+             */
+            next_seq = seq + row_stride;
+            if (next_seq < data + row_stride * n_seqs) {
+                if (compare_seq (simple->compose_buffer, next_seq) == 0) {
+                    simple->tentative_match = value;
+                    simple->tentative_match_len = n_compose;
+
+                    ibus_simple_engine_update_preedit_text (simple);
+
+                    return TRUE;
+                }
+            }
+
+            ibus_simple_engine_commit_char (simple, value);
+            g_debug ("U+%04X\n", value);
+            simple->compose_buffer[0] = 0;
+        }
+        return TRUE;
+    }
+    return FALSE;
+}
 
 static gboolean
 check_compact_table (IBusSimpleEngine          *simple,
@@ -679,9 +801,9 @@ no_sequence_matches (IBusSimpleEngine *simple,
 
 gboolean
 ibus_simple_engine_process_key_event (IBusEngine *engine,
-                                          guint       keyval,
-                                          guint       keycode,
-                                          guint       modifiers)
+                                      guint       keyval,
+                                      guint       keycode,
+                                      guint       modifiers)
 {
     IBusSimpleEngine *simple = (IBusSimpleEngine *)engine;
     gint n_compose = 0;
@@ -868,6 +990,9 @@ ibus_simple_engine_process_key_event (IBusEngine *engine,
     }
     else {
         // TODO CONT
+        if (check_addon_table (simple, n_compose)) {
+            return TRUE;
+        }
         if (check_compact_table (simple, &gtk_compose_table_compact, n_compose))
             return TRUE;
 
