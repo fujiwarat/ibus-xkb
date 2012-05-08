@@ -74,10 +74,10 @@ _factory_create_engine_cb (IBusFactory *factory,
 
     object_path = g_strdup_printf ("/org/freedesktop/IBus/XKBEngine/%d",
                                    ++id);
-    engine = ibus_engine_new_type (IBUS_TYPE_SIMPLE_ENGINE,
-                                   engine_name,
-                                   object_path,
-                                   ibus_service_get_connection (IBUS_SERVICE (factory)));
+    engine = ibus_engine_new_with_type (IBUS_TYPE_SIMPLE_ENGINE,
+                                        engine_name,
+                                        object_path,
+                                        ibus_service_get_connection (IBUS_SERVICE (factory)));
     g_free (object_path);
     return engine;
 }
