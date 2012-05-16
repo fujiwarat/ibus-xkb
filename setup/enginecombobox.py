@@ -2,9 +2,9 @@
 #
 # ibus-xkb - IBus XKB
 #
-# Copyright (c) 2011 Takao Fujiwara <takao.fujiwara1@gmail.com>
-# Copyright (c) 2011 Peng Huang <shawn.p.huang@gmail.com>
-# Copyright (c) 2011 Red Hat, Inc.
+# Copyright (c) 2012 Takao Fujiwara <takao.fujiwara1@gmail.com>
+# Copyright (c) 2007-2010 Peng Huang <shawn.p.huang@gmail.com>
+# Copyright (c) 2007-2012 Red Hat, Inc.
 #
 # This library is free software; you can redistribute it and/or
 # modify it under the terms of the GNU Lesser General Public
@@ -21,23 +21,24 @@
 # Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 # Boston, MA  02111-1307  USA
 
-import gtk
-import gobject
-import pango
-import ibus
-import ibusxkb
 import locale
+
+from gi.repository import GObject
+from gi.repository import Gtk
+from gi.repository import IBus
+from gi.repository import Pango
+
 from icon import load_icon
 from i18n import _, N_
 
-class EngineComboBox(gtk.ComboBox):
+class EngineComboBox(Gtk.ComboBox):
     __gtype_name__ = 'EngineComboBox'
     __gproperties__ = {
         'active-engine' : (
-            gobject.TYPE_PYOBJECT,
+            object,
             'selected engine',
             'selected engine',
-            gobject.PARAM_READABLE)
+            GObject.ParamFlags.READABLE)
     }
 
     def __init__(self):
@@ -45,57 +46,66 @@ class EngineComboBox(gtk.ComboBox):
         self.connect("notify::active", self.__notify_active_cb)
 
         self.__model = None
-        self.__title = _("Select an input method")
 
-        renderer = gtk.CellRendererPixbuf()
+        renderer = Gtk.CellRendererPixbuf()
         renderer.set_property("xalign", 0)
         renderer.set_property("xpad", 2)
         self.pack_start(renderer, False)
-        self.set_cell_data_func(renderer, self.__icon_cell_data_cb)
+        self.set_cell_data_func(renderer, self.__icon_cell_data_cb, None)
 
-        renderer = gtk.CellRendererText()
+        renderer = Gtk.CellRendererText()
         renderer.set_property("xalign", 0)
         renderer.set_property("xpad", 2)
         self.pack_start(renderer, True)
-        self.set_cell_data_func(renderer, self.__name_cell_data_cb)
+        self.set_cell_data_func(renderer, self.__name_cell_data_cb, None)
 
     def set_engines(self, engines):
-        self.__model = gtk.TreeStore(gobject.TYPE_PYOBJECT)
+        self.__model = Gtk.TreeStore(object)
 
         iter1 = self.__model.append(None)
         self.__model.set(iter1, 0, 0)
-        lang = {}
+        langs = {}
         for e in engines:
-            if ibusxkb.use_bridge_hotkey() and \
-               e.name.startswith(ibusxkb.DEFAULT_BRIDGE_ENGINE_NAME):
-                continue
-            l = ibus.get_language_name(e.language)
-            if l not in lang:
-                lang[l] = []
-            lang[l].append(e)
+            print e.get_language()
+            l = IBus.get_language_name(e.get_language())
+            if l == None:
+                l = ""
+            if l not in langs:
+                langs[l] = []
+            langs[l].append(e)
 
-        keys = lang.keys()
+        keys = langs.keys()
         keys.sort(locale.strcoll)
+        loc = locale.getlocale()[0]
+        # None on C locale
+        if loc == None:
+            loc = 'en_US'
+        current_lang = IBus.get_language_name(loc)
+        # move current language to the first place
+        if current_lang in keys:
+            keys.remove(current_lang)
+            keys.insert(0, current_lang)
+
         #add "Others" to the end of the combo box
-        if ibus.get_language_name("Other") in keys:
-            keys.remove(ibus.get_language_name("Other"))
-            keys += [ibus.get_language_name("Other")]
+        if IBus.get_language_name("Other") in keys:
+            keys.remove(IBus.get_language_name("Other"))
+            keys += [IBus.get_language_name("Other")]
         for l in keys:
             iter1 = self.__model.append(None)
             self.__model.set(iter1, 0, l)
             def cmp_engine(a, b):
-                if a.rank == b.rank:
-                    return locale.strcoll(a.longname, b.longname)
-                return int(b.rank - a.rank)
-            lang[l].sort(cmp_engine)
-            for e in lang[l]:
+                if a.get_rank() == b.get_rank():
+                    return locale.strcoll(a.get_longname(), b.get_longname())
+                return int(b.get_rank() - a.get_rank())
+            langs[l].sort(cmp_engine)
+            for e in langs[l]:
                 iter2 = self.__model.append(iter1)
                 self.__model.set(iter2, 0, e)
 
         self.set_model(self.__model)
         self.set_active(0)
 
-    def __icon_cell_data_cb(self, celllayout, renderer, model, iter):
+    def __icon_cell_data_cb(self, celllayout, renderer, model, iter, data):
         engine = self.__model.get_value(iter, 0)
 
         if isinstance(engine, str) or isinstance (engine, unicode):
@@ -107,28 +117,30 @@ class EngineComboBox(gtk.ComboBox):
         else:
             renderer.set_property("visible", True)
             renderer.set_property("sensitive", True)
-            pixbuf = load_icon(engine.icon, gtk.ICON_SIZE_LARGE_TOOLBAR)
+            pixbuf = load_icon(engine.get_icon(), Gtk.IconSize.LARGE_TOOLBAR)
             if pixbuf == None:
-                pixbuf = load_icon("ibus-engine", gtk.ICON_SIZE_LARGE_TOOLBAR)
+                pixbuf = load_icon("ibus-engine", Gtk.IconSize.LARGE_TOOLBAR)
             if pixbuf == None:
-                pixbuf = load_icon("gtk-missing-image", gtk.ICON_SIZE_LARGE_TOOLBAR)
+                pixbuf = load_icon(Gtk.STOCK_MISSING_IMAGE,
+                        Gtk.IconSize.LARGE_TOOLBAR)
             renderer.set_property("pixbuf", pixbuf)
 
-    def __name_cell_data_cb(self, celllayout, renderer, model, iter):
+    def __name_cell_data_cb(self, celllayout, renderer, model, iter, data):
         engine = self.__model.get_value(iter, 0)
 
         if isinstance (engine, str) or isinstance (engine, unicode):
             renderer.set_property("sensitive", False)
             renderer.set_property("text", engine)
-            renderer.set_property("weight", pango.WEIGHT_NORMAL)
+            renderer.set_property("weight", Pango.Weight.NORMAL)
         elif isinstance(engine, int):
             renderer.set_property("sensitive", True)
-            renderer.set_property("text", self.__title)
-            renderer.set_property("weight", pango.WEIGHT_NORMAL)
+            renderer.set_property("text", _("Select an input method"))
+            renderer.set_property("weight", Pango.Weight.NORMAL)
         else:
             renderer.set_property("sensitive", True)
-            renderer.set_property("text", engine.longname)
-            renderer.set_property("weight", pango.WEIGHT_BOLD if engine.rank > 0 else pango.WEIGHT_NORMAL)
+            renderer.set_property("text", engine.get_longname())
+            renderer.set_property("weight",
+                    Pango.Weight.BOLD if engine.get_rank() > 0 else Pango.Weight.NORMAL)
 
     def __notify_active_cb(self, combobox, property):
         self.notify("active-engine")
@@ -146,9 +158,10 @@ class EngineComboBox(gtk.ComboBox):
     def get_active_engine(self):
         return self.get_property("active-engine")
 
-    def get_title(self):
-        return self.__title
-
-    def set_title(self, title):
-        self.__title = title
-
+if __name__ == "__main__":
+    combo = EngineComboBox()
+    combo.set_engines([IBus.EngineDesc(language="zh")])
+    w = Gtk.Window()
+    w.add(combo)
+    w.show_all()
+    Gtk.main()

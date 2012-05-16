@@ -1,9 +1,9 @@
 /* -*- mode: C; c-basic-offset: 4; indent-tabs-mode: nil; -*- */
 /* vim:set et sts=4: */
 /* ibus-xkb - IBus XKB
- * Copyright (C) 2011 Takao Fujiwara <takao.fujiwara1@gmail.com>
- * Copyright (C) 2011 Peng Huang <shawn.p.huang@gmail.com>
- * Copyright (C) 2011 Red Hat, Inc.
+ * Copyright (C) 2012 Takao Fujiwara <takao.fujiwara1@gmail.com>
+ * Copyright (C) 2012 Peng Huang <shawn.p.huang@gmail.com>
+ * Copyright (C) 2012 Red Hat, Inc.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -115,6 +115,17 @@ const GHashTable *
  */
 const GHashTable *
                  ibus_xkb_config_registry_get_variant_desc
+                                                 (IBusXKBConfigRegistry *xkb_config);
+
+/**
+ * ibus_xkb_config_registry_layout_list_get_layouts:
+ * @xkb_config: An IBusXKBConfigRegistry.
+ * @returns: (transfer container) (element-type utf8): A GList of layouts
+ *
+ * a GList of layouts
+ */
+GList *
+                 ibus_xkb_config_registry_layout_list_get_layouts
                                                  (IBusXKBConfigRegistry *xkb_config);
 
 /**

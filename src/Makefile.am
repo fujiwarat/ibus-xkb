@@ -2,9 +2,9 @@
 #
 # ibus-xkb - IBus XKB
 #
-# Copyright (c) 2011 Takao Fujiwara <takao.fujiwara1@gmail.com>
+# Copyright (c) 2011-2012 Takao Fujiwara <takao.fujiwara1@gmail.com>
 # Copyright (c) 2011 Peng Huang <shawn.p.huang@gmail.com>
-# Copyright (c) 2011 Red Hat, Inc.
+# Copyright (c) 2011-2012 Red Hat, Inc.
 #
 # This library is free software; you can redistribute it and/or
 # modify it under the terms of the GNU Lesser General Public
@@ -21,7 +21,8 @@
 # Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 # Boston, MA  02111-1307  USA
 libibus_xkb_common = libibus-xkb-common.la
-libibus_xkb = libibus-xkb.la
+# libibus_xkb = libibus-xkb-@IBUS_XKB_API_VERSION@.la
+libibus_xkb = libibus-xkb-1.0.la
 
 # gobject introspection
 -include $(INTROSPECTION_MAKEFILE)
@@ -68,12 +69,12 @@ libibus_xkb_common_la_LDFLAGS =         \
     -export-symbols-regex "ibus_xkb_.*" \
     $(NULL)
 
-libibus_xkb_la_SOURCES = $(NULL)
-libibus_xkb_la_LIBADD =                 \
+libibus_xkb_1_0_la_SOURCES = $(NULL)
+libibus_xkb_1_0_la_LIBADD =             \
     $(libibus_xkb_common_la_LIBADD)     \
     $(libibus_xkb_common)               \
     $(NULL)
-libibus_xkb_la_LDFLAGS =                \
+libibus_xkb_1_0_la_LDFLAGS =            \
     -no-undefined                       \
     -export-symbols-regex "ibus_xkb_.*" \
     -version-info @LT_VERSION_INFO@     \
@@ -85,7 +86,7 @@ introspection_files =                   \
     $(ibus_xkb_common_c_sources)        \
     $(NULL)
 IBusXKB-1.0.gir: $(libibus_xkb) Makefile
-IBusXKB_1_0_gir_SCANNERFLAGS =         \
+IBusXKB_1_0_gir_SCANNERFLAGS =          \
     --warn-all                          \
     --pkg=glib-2.0                      \
     $(IBUS_GIR_SCANNERFLAGS)            \

@@ -1,9 +1,9 @@
 /* -*- mode: C; c-basic-offset: 4; indent-tabs-mode: nil; -*- */
 /* vim:set et sts=4: */
 /* ibus-xkb - IBus XKB
- * Copyright (C) 2011 Takao Fujiwara <takao.fujiwara1@gmail.com>
- * Copyright (C) 2011 Peng Huang <shawn.p.huang@gmail.com>
- * Copyright (C) 2011 Red Hat, Inc.
+ * Copyright (C) 2012 Takao Fujiwara <takao.fujiwara1@gmail.com>
+ * Copyright (C) 2012 Peng Huang <shawn.p.huang@gmail.com>
+ * Copyright (C) 2012 Red Hat, Inc.
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -173,8 +173,9 @@ parse_xkb_xml_variant_configitem_node (IBusXKBConfigRegistryPrivate *priv,
         /* This is an expected case. */
         return name;
     }
+    variant_lang_name = g_strdup_printf ("%s(%s)", layout_name, name);
     g_hash_table_insert (priv->variant_desc,
-                         (gpointer) g_strdup (name),
+                         (gpointer) variant_lang_name,
                          (gpointer) g_strdup (description));
     return name;
 }
@@ -408,16 +409,40 @@ TABLE_FUNC (variant_desc)
 
 #undef TABLE_FUNC
 
+GList *
+ibus_xkb_config_registry_layout_list_get_layouts (IBusXKBConfigRegistry *xkb_config)
+{
+    GHashTable *table;
+    GList *list = NULL;
+
+    table = (GHashTable *)
+        ibus_xkb_config_registry_get_layout_list (xkb_config);
+    list = (GList *) g_hash_table_get_keys (table);
+    return list;
+}
+
+/* vala could use GLib.List<string> for the returned pointer and
+ * the declaration calls g_list_foreach (retval, g_free, NULL).
+ * When I think about GLib.List<string> v.s. GLib.List, probably
+ * I think GLib.List<string> is better for the function and set
+ * g_strdup() here. I do not know about GJS implementation.
+ */
 #define TABLE_LOOKUP_LIST_FUNC(field_name, value) GList *               \
 ibus_xkb_config_registry_##field_name##_get_##value  (IBusXKBConfigRegistry *xkb_config, const gchar *key) \
 {                                                                       \
     GHashTable *table;                                                  \
     GList *list = NULL;                                                 \
+    GList *retval= NULL;                                                \
+    GList *p = NULL;                                                    \
                                                                         \
     table = (GHashTable *)                                              \
         ibus_xkb_config_registry_get_##field_name (xkb_config);         \
     list = (GList *) g_hash_table_lookup (table, key);                  \
-    return g_list_copy (list);                                          \
+    retval = g_list_copy (list);                                        \
+    for (p = retval; p; p = p->next) {                                  \
+        p->data = g_strdup (p->data);                                   \
+    }                                                                   \
+    return retval;                                                      \
 }
 
 #define TABLE_LOOKUP_STRING_FUNC(field_name, value) gchar *             \

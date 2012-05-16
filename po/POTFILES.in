@@ -1,11 +1,18 @@
 # Files with translatable strings.
 # Please keep this file in alphabetical order.
 data/ibus-xkb.schemas.in
+setup/engineabout.py
 setup/enginecombobox.py
 setup/enginetreeview.py
+setup/ibus-setup-xkb.desktop.in
+setup/keyboardshortcut.py
 setup/main.py
 setup/setup.ui
 setup/xkbsetup.py
+ui/gtk2/candidatepanel.py
+ui/gtk2/engineabout.py
+ui/gtk2/languagebar.py
+ui/gtk2/panel.py
 xkb/ibus-engine-xkb-main.c
 xkb/ibus-simple-engine.c
 xkb/ibus-xkb-main.c

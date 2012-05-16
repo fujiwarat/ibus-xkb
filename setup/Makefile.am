@@ -2,8 +2,9 @@
 #
 # ibus-xkb - IBus XKB
 #
-# Copyright (c) 2011 Takao Fujiwara <takao.fujiwara1@gmail.com>
-# Copyright (c) 2011 Red Hat, Inc.
+# Copyright (c) 2012 Takao Fujiwara <takao.fujiwara1@gmail.com>
+# Copyright (c) 2007-2010 Peng Huang <shawn.p.huang@gmail.com>
+# Copyright (c) 2007-2012 Red Hat, Inc.
 #
 # This library is free software; you can redistribute it and/or
 # modify it under the terms of the GNU Lesser General Public
@@ -26,15 +27,21 @@ ibussetup_PYTHON = \
 	icon.py \
 	enginecombobox.py \
 	enginetreeview.py \
-	xkbsetup.py \
+	engineabout.py \
+	keyboardshortcut.py \
 	$(NULL)
 
 ibussetup_DATA = \
 	setup.ui \
 	$(NULL)
 
-libexec_SCRIPTS = ibus-setup-xkb
-ibussetupdir = $(pkgdatadir)/setup
+bin_SCRIPTS = ibus-setup-xkb
+ibussetupdir = $(datadir)/ibus/setup-xkb
+
+desktop_in_files = ibus-setup-xkb.desktop.in
+desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+desktopdir = $(datadir)/applications
+@INTLTOOL_DESKTOP_RULE@
 
 CLEANFILES = \
 	*.pyc \
@@ -44,4 +51,19 @@ CLEANFILES = \
 EXTRA_DIST = \
 	ibus-setup-xkb.in \
 	setup.ui \
+	ibus-setup-xkb.desktop.in \
 	$(NULL)
+
+DISTCLEANFILES = \
+	$(desktop_DATA) \
+	$(NULL)
+
+test:
+	$(ENV_IBUS_TEST) \
+		PYTHONPATH=$(top_srcdir) \
+		IBUS_PREFIX="@prefix@" \
+		IBUS_LOCALEDIR="@localedir@" \
+		$(PYTHON) \
+		$(srcdir)/main.py
+
+-include $(top_srcdir)/git.mk

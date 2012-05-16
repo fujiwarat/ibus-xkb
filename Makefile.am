@@ -2,8 +2,8 @@
 #
 # ibus-xkb - IBus XKB
 #
-# Copyright (C) 2011 Takao Fujiwara <takao.fujiwara1@gmail.com>
-# Copyright (c) 2011 Red Hat, Inc.
+# Copyright (C) 2011-2012 Takao Fujiwara <takao.fujiwara1@gmail.com>
+# Copyright (c) 2011-2012 Red Hat, Inc.
 #
 # This library is free software; you can redistribute it and/or
 # modify it under the terms of the GNU Lesser General Public
@@ -20,7 +20,7 @@
 # Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 # Boston, MA  02111-1307  USA
 
-SUBDIRS = data ibus setup src xkb po
+SUBDIRS = src engine ui setup po
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = ibus-xkb.pc
