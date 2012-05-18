@@ -339,8 +339,8 @@ Build options:
   Version                   $IBUS_XKB_VERSION
   Install prefix            $prefix
   Build ui gtk3             $enable_gtk3
-  Build gconf modules       $enable_gconf
   Build python modules      $enable_python
+  Build gconf modules       $enable_gconf
   Build introspection       $found_introspection
   IBus-1.0.gir scannerflags "$IBUS_GIR_SCANNERFLAGS"
   Build libgnomebkd         $enable_libgnomekbd
