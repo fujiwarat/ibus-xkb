@@ -1,36 +1,34 @@
-# Japanese translations for ibus-xkb
+# Castilian Spanish translations for ibus-xkb
 # Copyright (C) 2011-2012 Takao Fujiwara <takao.fujiwara1@gmail.com>
 # This file is distributed under the same license as the ibus-xkb package.
 #
 # Translators:
-# UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2008.
-# Hyu_gabaru Ryu_ichi <hyu_gabaru@yahoo.co.jp>, 2009.
-# IWAI, Masaharu <iwai@alib.jp>, 2009.
-# Kiyoto Hashida <khashida@redhat.com>, 2010.
-# Makoto Mizukami <makoto@fedoraporject.org>, 2010.
+# Claudio Rodrigo Pereyra Diaz <elsupergomez@gmail.com>, 2011.
+# Héctor Daniel Cabrera <logan@fedoraproject.org>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: ibus-xkb HEAD\n"
 "Report-Msgid-Bugs-To: http://code.google.com/p/ibus/issues/entry\n"
 "POT-Creation-Date: 2012-05-18 10:43+0900\n"
-"PO-Revision-Date: 2011-12-15 10:00+0900\n"
-"Last-Translator: Makoto Mizukami <makoto@fedoraporject.org>\n"
-"Language-Team: Japanese <trans-ja@lists.fedoraproject.org>\n"
-"Language: ja\n"
+"PO-Revision-Date: 2011-05-17 11:48+0000\n"
+"Last-Translator: elsupergomez <elsupergomez@gmail.com>\n"
+"Language-Team: Spanish (Castilian) <trans-es@lists.fedoraproject.org>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: ARGENTINA\n"
 
 #: ../data/ibus-xkb.schemas.in.h:1
 #, fuzzy
 msgid "Trigger shortcut keys for gtk_accelerator_parse"
-msgstr "トリガーショートカットキー"
+msgstr "Activadora de los Atajos de teclado"
 
 #: ../data/ibus-xkb.schemas.in.h:2
 msgid "The shortcut keys for turning input method on or off"
-msgstr "インプットメソッドをオン、オフするためのショートカットキーを設定します"
+msgstr "Atajo de teclado para encender o apagar el método de entrada"
 
 #: ../data/ibus-xkb.schemas.in.h:3
 msgid "This is used for gnome-shell to work shift + modifiers"
@@ -82,35 +80,35 @@ msgstr ""
 #: ../setup/engineabout.py:35 ../ui/gtk2/engineabout.py:34
 #: ../ui/gtk2/languagebar.py:358
 msgid "About"
-msgstr "情報"
+msgstr "Acerca de"
 
 #: ../setup/engineabout.py:68 ../ui/gtk2/engineabout.py:62
 #, python-format
 msgid "Language: %s\n"
-msgstr "言語: %s\n"
+msgstr "Idioma: %s\n"
 
 #: ../setup/engineabout.py:71 ../ui/gtk2/engineabout.py:64
 #, python-format
 msgid "Keyboard layout: %s\n"
-msgstr "キーボードレイアウト: %s\n"
+msgstr "Diseño del teclado: %s\n"
 
 #: ../setup/engineabout.py:74 ../ui/gtk2/engineabout.py:66
 #, python-format
 msgid "Author: %s\n"
-msgstr "作者: %s\n"
+msgstr "Autor: %s\n"
 
 #: ../setup/engineabout.py:77 ../ui/gtk2/engineabout.py:68
 msgid "Description:\n"
-msgstr "説明:\n"
+msgstr "Descripción:\n"
 
 #: ../setup/enginecombobox.py:137
 msgid "Select an input method"
-msgstr "インプットメソッドの選択"
+msgstr "Seleccione un método de entrada"
 
 #. create im name & icon column
 #: ../setup/enginetreeview.py:65
 msgid "Input Method"
-msgstr "インプットメソッド"
+msgstr "Métodos de Entrada"
 
 #: ../setup/enginetreeview.py:93
 msgid "Kbd"
@@ -118,51 +116,51 @@ msgstr "Kbd"
 
 #: ../setup/ibus-setup-xkb.desktop.in.h:1
 msgid "IBus Preferences"
-msgstr "IBus の設定"
+msgstr "Preferencias de IBus"
 
 #: ../setup/ibus-setup-xkb.desktop.in.h:2
 msgid "Set IBus Preferences"
-msgstr "IBus を設定します"
+msgstr "Defina las preferencias de IBus"
 
 #: ../setup/keyboardshortcut.py:55
 msgid "Keyboard shortcuts"
-msgstr "キーボードショートカット"
+msgstr "Atajos de teclado"
 
 #: ../setup/keyboardshortcut.py:66
 msgid "Key code:"
-msgstr "キーコード:"
+msgstr "Código clave:"
 
 #: ../setup/keyboardshortcut.py:81
 msgid "Modifiers:"
-msgstr "モディファイア:"
+msgstr "Modificadores:"
 
 #: ../setup/keyboardshortcut.py:236
 msgid ""
 "Please press a key (or a key combination).\n"
 "The dialog will be closed when the key is released."
 msgstr ""
-"キーもしくはキーの組み合わせを入力してください。\n"
-"キーを離すとダイアログを閉じます"
+"Por favor, presione una tecla (o una combinación de tecla).\n"
+"El diálogo será cerrado cuando la tecla sea soltada."
 
 #: ../setup/keyboardshortcut.py:238
 msgid "Please press a key (or a key combination)"
-msgstr "キーもしくはキーの組み合わせを入力してください"
+msgstr "Por favor, presione una tecla (o combinación de teclas)"
 
 #: ../setup/main.py:80
 msgid "trigger"
-msgstr "トリガー"
+msgstr "activador"
 
 #: ../setup/main.py:81
 msgid "enable"
-msgstr "有効"
+msgstr "habilitar"
 
 #: ../setup/main.py:82
 msgid "disable"
-msgstr "無効"
+msgstr "deshabilitar"
 
 #: ../setup/main.py:339
 msgid "IBus daemon is not started. Do you want to start it now?"
-msgstr "IBus デーモンが動いていません。起動しますか？"
+msgstr "El demonio IBUS no fue iniciado. ¿Desea iniciarlo ahora?"
 
 #: ../setup/main.py:360
 msgid ""
@@ -172,8 +170,8 @@ msgid ""
 "  export XMODIFIERS=@im=ibus\n"
 "  export QT_IM_MODULE=ibus"
 msgstr ""
-"IBus を開始しました。IBus を使えない場合は次の行を$HOME/.bashrc に書き加えて"
-"再ログインしてください。\n"
+"¡IBus ha sido iniciado! Si no puede usar IBus, por favor, agregue las "
+"siguientes líneas a $HOME/.bashrc, y reingrese a su escritorio.\n"
 "  export GTK_IM_MODULE=ibus\n"
 "  export XMODIFIERS=@im=ibus\n"
 "  export QT_IM_MODULE=ibus"
@@ -186,7 +184,7 @@ msgstr ""
 #: ../setup/main.py:385
 #, python-format
 msgid "Select keyboard shortcut for %s"
-msgstr "%s のキーボードショートカットを選択"
+msgstr "Seleccione la tecla de atajo para %s"
 
 #: ../setup/xkbsetup.py:44 ../setup/xkbsetup.py:112 ../setup/xkbsetup.py:408
 msgid "Default"
@@ -195,12 +193,12 @@ msgstr ""
 #: ../setup/xkbsetup.py:207
 #, fuzzy
 msgid "Select keyboard layouts"
-msgstr "%s のキーボードショートカットを選択"
+msgstr "Seleccione la tecla de atajo para %s"
 
 #: ../setup/xkbsetup.py:212
 #, fuzzy
 msgid "Keyboard Layouts"
-msgstr "キーボードレイアウト: %s\n"
+msgstr "Diseño del teclado: %s\n"
 
 #: ../setup/xkbsetup.py:241
 #, fuzzy, python-format
@@ -208,13 +206,13 @@ msgid ""
 "<small><i>The system keyboard layouts can be set less than or equal to %d.\n"
 "You may use Up/Down buttons to change the order.</i></small>"
 msgstr ""
-"<small><i>デフォルトのインプットメソッドはリストの中で一番上のものです。\n"
-"「上へ/下へ」ボタンを使ってデフォルトを変更できます。</i></small>"
+"<small><i>El método de entrada determinado está al comienzo de la lista.\n"
+"Puede usar los botones arriba/abajo para cambiarlo.</i></small>"
 
 #: ../setup/xkbsetup.py:380 ../setup/xkbsetup.py:435
 #, fuzzy
 msgid "Please restart IBus to reload your configuration."
-msgstr "キーもしくはキーの組み合わせを入力してください"
+msgstr "Por favor, presione una tecla (o combinación de teclas)"
 
 #: ../setup/xkbsetup.py:425
 msgid "The keyboard option cannot be chosen."
@@ -222,54 +220,51 @@ msgstr ""
 
 #: ../ui/gtk2/candidatepanel.py:264
 msgid "Previous page"
-msgstr "前のページ"
+msgstr "Página anterior"
 
 #: ../ui/gtk2/candidatepanel.py:269
 msgid "Next page"
-msgstr "次のページ"
+msgstr "Siguiente página"
 
 #: ../ui/gtk2/languagebar.py:107
 msgid "About the input method"
-msgstr "インプットメソッドについて"
+msgstr "Acerca del método de entrada"
 
 #: ../ui/gtk2/languagebar.py:215
 msgid "Switch input method"
-msgstr "インプットメソッドがありません"
+msgstr "Cambiar método de entrada"
 
 #: ../ui/gtk2/languagebar.py:362
 msgid "About the Input Method"
-msgstr "インプットメソッドについて"
+msgstr "Acerca del Método de Entrada"
 
 #: ../ui/gtk2/panel.py:117
 msgid "IBus Panel"
-msgstr "IBus パネル"
+msgstr "Panel IBus"
 
 #: ../ui/gtk2/panel.py:123
 msgid "IBus input method framework"
-msgstr "IBus インプットメソッドフレームワーク"
+msgstr "Marco de trabajo para métodos de entrada IBus"
 
 #: ../ui/gtk2/panel.py:353
 msgid "Restart"
-msgstr "再起動"
+msgstr "Reiniciar"
 
 #: ../ui/gtk2/panel.py:444
 msgid "Turn off input method"
-msgstr "インプットメソッドをオフにする"
+msgstr "Desactivar métodos de entrada"
 
 #: ../ui/gtk2/panel.py:483
 msgid "No input window"
-msgstr "入力ウィンドウがありません"
+msgstr "Sin ventana de entrada"
 
 #: ../ui/gtk2/panel.py:514
 msgid "IBus is an intelligent input bus for Linux/Unix."
-msgstr "IBus は、Linux/Unix のためのインテリジェントなインプットバスです。"
+msgstr "IBus es un bus de entrada inteligente para Linux/Unix."
 
 #: ../ui/gtk2/panel.py:518
 msgid "translator-credits"
-msgstr ""
-"UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
-"IWAI, Masaharu <iwai@alib.jp>\n"
-"日向原 龍一 <hyu_gabaru@yahoo.co.jp>"
+msgstr "Domingo Becker, <domingobecker@gmail.com>, 2009"
 
 #: ../xkb/ibus-engine-xkb-main.c:201
 msgid "Default Layout"
@@ -291,7 +286,7 @@ msgstr ""
 #: ../xkb/ibus-xkb-main.c:49
 #, fuzzy
 msgid "Set xkb layout"
-msgstr "システムキーボードレイアウトを使用する"
+msgstr "Usar el diseño del teclado del sistema"
 
 #: ../xkb/ibus-xkb-main.c:50
 msgid "Set xkb model"
@@ -309,10 +304,10 @@ msgstr ""
 #~ msgstr "IBus"
 
 #~ msgid "Input Method Framework"
-#~ msgstr "インプットメソッドフレームワーク"
+#~ msgstr "Marco de trabajo para métodos de entrada"
 
 #~ msgid "Start IBus Input Method Framework"
-#~ msgstr "IBus インプットメソッドフレームワークを起動"
+#~ msgstr "Inicie el marco de trabajo para métodos de entrada IBus"
 
 #~ msgid ""
 #~ "Copyright (c) 2007-2010 Peng Huang\n"
@@ -322,145 +317,149 @@ msgstr ""
 #~ "Copyright (c) 2007-2010 Red Hat, Inc."
 
 #~ msgid "Other"
-#~ msgstr "その他"
+#~ msgstr "Otro"
 
 #~ msgid ""
 #~ "Some input methods have been installed, removed or updated. Please "
 #~ "restart ibus input platform."
 #~ msgstr ""
-#~ "いくつかのインプットメソッドがインストール、削除、または更新されています。"
-#~ "IBus 入力プラットフォームを再起動してください。"
+#~ "Algunos métodos de entrada han sido instalados, eliminados o "
+#~ "actualizados. Por favor, reinicie la plataforma de entrada ibus."
 
 #~ msgid "Restart Now"
-#~ msgstr "今すぐに再起動する"
+#~ msgstr "Reiniciar ahora"
 
 #~ msgid "Later"
-#~ msgstr "後でする"
+#~ msgstr "Más tarde"
 
 #~ msgid "next input method"
-#~ msgstr "次のインプットメソッド"
+#~ msgstr "siguiente método de entrada"
 
 #~ msgid "previous input method"
-#~ msgstr "ひとつ前のインプットメソッド"
+#~ msgstr "método de entrada anterior"
 
 #~ msgid "Auto hide"
-#~ msgstr "自動的に隠す"
+#~ msgstr "Auto Ocultar"
 
 #~ msgid "Custom font"
-#~ msgstr "カスタムフォント"
+#~ msgstr "Fuente personalizada"
 
 #~ msgid "Custom font name for language panel"
-#~ msgstr "言語パネル用のカスタムフォント名"
+#~ msgstr "Nombre de fuente personalizado para el panel de idioma"
 
 #~ msgid "Disable shortcut keys"
-#~ msgstr "ショートカットキーを無効にする"
+#~ msgstr "Deshabilitar atajos de teclado"
 
 #~ msgid "Embed Preedit Text"
-#~ msgstr "前編集テキストを組み込む"
+#~ msgstr "Insertar texto preeditado"
 
 #~ msgid "Embed Preedit Text in Application Window"
-#~ msgstr "アプリケーションウィンドウにプリエディットテキストを組み込む"
+#~ msgstr "Insertar texto previamente editado en la ventana de la aplicación"
 
 #~ msgid "Enable input method by default"
-#~ msgstr "標準でインプットメソッドを有効にする"
+#~ msgstr "Habilitar método de entrada en forma predeterminada"
 
 #~ msgid "Enable input method by default when the application gets input focus"
 #~ msgstr ""
-#~ "アプリケーションに入力フォーカスが当たったとき標準でインプットメソッドを有"
-#~ "効にする"
+#~ "Habilitar método de entrada en forma predeterminada cuando la aplicación "
+#~ "en uso solicite alguno"
 
 #~ msgid "Enable shortcut keys"
-#~ msgstr "ショートカットキーを有効にする"
+#~ msgstr "Habilitar atajos de teclado"
 
 #~ msgid "Language panel position"
-#~ msgstr "言語パネルの位置"
+#~ msgstr "Posición del panel de idioma"
 
 #~ msgid "Next engine shortcut keys"
-#~ msgstr "次のエンジンへのショートカットキー"
+#~ msgstr "Atajo de teclado para el siguiente motor"
 
 #~ msgid "Orientation of lookup table"
-#~ msgstr "検索テーブルの方位"
+#~ msgstr "Orientación de búsqueda en la tabla "
 
 #~ msgid "Orientation of lookup table. 0 = Horizontal, 1 = Vertical"
-#~ msgstr "検索テーブルの方位。0 = 横、1 = 縦"
+#~ msgstr "Orientación de la tabla de búsqueda. 0 = Horizontal, 1 = Vertical"
 
 #~ msgid "Preload engines"
-#~ msgstr "エンジンのプリロード"
+#~ msgstr "Precargar máquinas"
 
 #~ msgid "Preload engines during ibus starts up"
-#~ msgstr "ibus の開始中にエンジンをプリロード"
+#~ msgstr "Precargar los motores durante el inicio de ibus"
 
 #~ msgid "Prev engine shortcut keys"
-#~ msgstr "前のエンジンへのショートカットキー"
+#~ msgstr "Atajo de teclado para la máquina previa"
 
 #~ msgid "Share the same input method among all applications"
-#~ msgstr "すべてのアプリケーション間で同じインプットメソッドを共有する"
+#~ msgstr "Compartir el mismo método de entrada con todas las aplicaciones"
 
 #~ msgid "Show icon on system tray"
-#~ msgstr "システムトレイにアイコンを表示する"
+#~ msgstr "Mostrar un ícono en el área de notificación"
 
 #~ msgid "Show input method name"
-#~ msgstr "インプットメソッド名を表示する"
+#~ msgstr "Mostrar el nombre del método de entrada"
 
 #~ msgid "Show input method name on language bar"
-#~ msgstr "言語バーにインプットメソッド名を表示する"
+#~ msgstr "Mostrar el nombre del método de entrada en la barra de idioma"
 
 #~ msgid ""
 #~ "The behavior of language panel. 0 = Embedded in menu, 1 = Auto hide, 2 = "
 #~ "Always show"
 #~ msgstr ""
-#~ "言語パネルの動作。0 = メニューに組み込む、1 = 自動的に隠す、2 = 常に表示"
+#~ "El comportamiento del panel de idioma. 0 = Incrustado en el menú, 1 = "
+#~ "Ocultarlo automáticamente, 2 = Mostrarlo siempre"
 
 #~ msgid ""
 #~ "The position of the language panel. 0 = Top left corner, 1 = Top right "
 #~ "corner, 2 = Bottom left corner, 3 = Bottom right corner, 4 = Custom"
 #~ msgstr ""
-#~ "言語パネルの位置。0 = 左上隅、1 = 右上隅、2 = 左下隅、3 = 右下隅、4 = カス"
-#~ "タム"
+#~ "La posicion el panel de idioma. 0 = esquina superior izquierda, 1 = "
+#~ "esquina superior derecha, 2 = esquina inferior izquierda, 3 = esquina "
+#~ "inferior derecha, 4 = personalizado"
 
 #~ msgid "The shortcut keys for switching to the next input method in the list"
 #~ msgstr ""
-#~ "リスト中の次のインプットメソッドに切り替えるためのショートカットキー"
+#~ "Los atajos de teclado para avanzar al siguiente método de entrada de la "
+#~ "lista"
 
 #~ msgid "The shortcut keys for switching to the previous input method"
 #~ msgstr ""
-#~ "リスト中のひとつ前のインプットメソッドに切り替えるためのショートカットキー"
+#~ "Los atajos de teclado para retroceder al método de entrada anterior en la "
+#~ "lista"
 
 #~ msgid "The shortcut keys for turning input method off"
-#~ msgstr "インプットメソッドをオフに切り替えるためのショートカットキー"
+#~ msgstr "Los atajos de teclado para deshabilitar el método de entrada"
 
 #~ msgid "The shortcut keys for turning input method on"
-#~ msgstr "インプットメソッドをオンに切り替えるためのショートカットキー"
+#~ msgstr "Los atajos de teclado para habilitar el método de entrada"
 
 #~ msgid "Use custom font"
-#~ msgstr "カスタムフォントを使う"
+#~ msgstr "Usar fuente personalizada"
 
 #~ msgid "Use custom font name for language panel"
-#~ msgstr "言語パネル用にカスタムフォント名を使用する"
+#~ msgstr "Usar nombre de fuente personalizada para el panel de idioma"
 
 #~ msgid "Use global input method"
-#~ msgstr "グローバルインプットメソッドを使用する"
+#~ msgstr "Utilizar método de entrada global"
 
 #~ msgid "Use system keyboard (XKB) layout"
-#~ msgstr "システムキーボード (XKB) レイアウトを使用する"
+#~ msgstr "Usar el diseño del teclado del sistema (XKB)"
 
 #~ msgid "..."
-#~ msgstr "..."
+#~ msgstr "…"
 
 #~ msgid "<b>Font and Style</b>"
-#~ msgstr "<b>フォントとスタイル</b>"
+#~ msgstr "<b>Fuente y Estilo</b>"
 
 #~ msgid "<b>Global input method settings</b>"
-#~ msgstr "<b>グローバルインプットメソッドの設定</b>"
+#~ msgstr "<b>Configuraciones globales de método de entrada</b>"
 
 #~ msgid "<b>Keyboard Layout</b>"
-#~ msgstr "<b>キーボードレイアウト</b>"
+#~ msgstr "<b>Diseño del Teclado</b>"
 
 #~ msgid "<b>Keyboard Shortcuts</b>"
-#~ msgstr "<b>キーボードショートカット</b>"
+#~ msgstr "<b>Atajos de teclado</b>"
 
 #~ msgid "<b>Startup</b>"
-#~ msgstr "<b>スタートアップ</b>"
+#~ msgstr "<b>Inicio</b>"
 
 #~ msgid ""
 #~ "<big><b>IBus</b></big>\n"
@@ -471,123 +470,126 @@ msgstr ""
 #~ "\n"
 #~ msgstr ""
 #~ "<big><b>IBus</b></big>\n"
-#~ "<small>インテリジェントなインプットバス</small>\n"
-#~ "ホームページ: http://code.google.com/p/ibus\n"
+#~ "<small>El bus de entrada inteligente</small>\n"
+#~ "Sitio web: http://code.google.com/p/ibus\n"
 #~ "\n"
 #~ "\n"
 #~ "\n"
 
 #~ msgid "Add the selected input method into the enabled input methods"
-#~ msgstr "選択したインプットメソッドを有効なインプットメソッドへ追加します"
+#~ msgstr ""
+#~ "Agregar el método de entrada seleccionado a los métodos de entrada "
+#~ "habilitados"
 
 #~ msgid "Advanced"
-#~ msgstr "詳細"
+#~ msgstr "Avanzado"
 
 #~ msgid "Always"
-#~ msgstr "常に表示する"
+#~ msgstr "Siempre"
 
 #~ msgid "Bottom left corner"
-#~ msgstr "左下隅"
+#~ msgstr "Esquina inferior izquierda"
 
 #~ msgid "Bottom right corner"
-#~ msgstr "右下隅"
+#~ msgstr "Esquina inferior derecha"
 
 #~ msgid "Candidates orientation:"
-#~ msgstr "候補ウィンドウの向き:"
+#~ msgstr "Orientaciones candidato:"
 
 #~ msgid "Custom"
-#~ msgstr "カスタム"
+#~ msgstr "Personalizado"
 
 #~ msgid "Disable:"
-#~ msgstr "無効:"
+#~ msgstr "Deshabilitar:"
 
 #~ msgid "Embed preedit text in application window"
-#~ msgstr "アプリケーションウィンドウに前編集テキストを組み込む"
+#~ msgstr "Insertar texto previamente editado en la ventana de la aplicación"
 
 #~ msgid "Embed the preedit text of input method in the application window"
 #~ msgstr ""
-#~ "アプリケーションウィンドウにインプットメソッドのプリエディットテキストを組"
-#~ "み込みます"
+#~ "Insertar el texto previamente editado del método de entrada en la ventana "
+#~ "de la aplicación"
 
 #~ msgid "Embedded in menu"
-#~ msgstr "メニューに組み込む"
+#~ msgstr "Menú incrustado"
 
 #~ msgid "Enable or disable:"
-#~ msgstr "切り替え"
+#~ msgstr "Habilitar o deshabilitar:"
 
 #~ msgid "Enable:"
-#~ msgstr "有効:"
+#~ msgstr "Habilitar:"
 
 #~ msgid "General"
-#~ msgstr "一般"
+#~ msgstr "General"
 
 #~ msgid "Horizontal"
-#~ msgstr "横"
+#~ msgstr "Horizontal"
 
 #~ msgid "Language panel position:"
-#~ msgstr "言語パネルの位置"
+#~ msgstr "Posición del panel de idioma:"
 
 #~ msgid "Move down the selected input method in the enabled input methods"
 #~ msgstr ""
-#~ "選択したインプットメソッドを有効なインプットメソッドの中で下へ移動します"
+#~ "Mover abajo el método de entrada seleccionado en los métodos de entrada "
+#~ "habilitados"
 
 #~ msgid "Move up the selected input method in the enabled input methods list"
 #~ msgstr ""
-#~ "選択したインプットメソッドを有効なインプットメソッドの中で上へ移動します"
+#~ "Mover arriba el método de entrada seleccionado en la lista de métodos de "
+#~ "entrada habilitados"
 
 #~ msgid "Next input method:"
-#~ msgstr "次のインプットメソッド:"
+#~ msgstr "Siguiente método de entrada:"
 
 #~ msgid "Previous input method:"
-#~ msgstr "ひとつ前のインプットメソッド:"
+#~ msgstr "Método de entrada anterior:"
 
 #~ msgid "Remove the selected input method from the enabled input methods"
-#~ msgstr "選択したインプットメソッドを有効なインプットメソッドから削除します"
+#~ msgstr ""
+#~ "Eliminar el método de entrada seleccionado de los métodos de entrada "
+#~ "habilitados"
 
 #~ msgid "Set the behavior of ibus how to show or hide language bar"
 #~ msgstr ""
-#~ "言語バーをどのように表示するもしくは隠すかの ibus の動作を設定します"
+#~ "Configurar el comportamiento de ibus sobre cómo mostrar u ocultar la "
+#~ "barra de idiomas"
 
 #~ msgid "Set the orientation of candidates in lookup table"
-#~ msgstr "ルックアップテーブルの中で候補ウィンドウの向きを設定します"
+#~ msgstr "Poner la orientación de la tabla de búsqueda de candidatos"
 
 #~ msgid "Show information of the selected input method"
-#~ msgstr "選択したインプットメソッドの情報を表示します"
+#~ msgstr "Mostrar información sobre el método de entrada seleccionado"
 
 #~ msgid "Show input method's name on language bar when check the checkbox"
 #~ msgstr ""
-#~ "チェックボックスをチェックしたときに言語バー上でインプットメソッドの名前を"
-#~ "表示します"
+#~ "Mostrar el nombre del método de entrada en la barra de idioma cuando se "
+#~ "marque la casilla"
 
 #~ msgid "Show language panel:"
-#~ msgstr "言語パネルの表示:"
-
-#~ msgid "Show setup of the selected input method"
-#~ msgstr "選択したインプットメソッドの設定を表示します"
+#~ msgstr "Mostrar el panel de idioma:"
 
 #~ msgid "Start ibus on login"
-#~ msgstr "ログイン時に IBus を起動"
+#~ msgstr "Iniciar ibus al ingresar"
 
 #~ msgid "The shortcut keys for switching to next input method in the list"
 #~ msgstr ""
-#~ "リストの中で次のインプットメソッドに切り替えるためのショートカットキー"
+#~ "Tecla programada para cambiar al siguiente método de entrada en la lista"
 
 #~ msgid "The shortcut keys for switching to previous input method in the list"
 #~ msgstr ""
-#~ "リストの中でひとつ前のインプットメソッドに切り替えるためのショートカット"
-#~ "キー"
+#~ "Tecla programada para cambiar al método de entrada anterior en la lista"
 
 #~ msgid "Top left corner"
-#~ msgstr "左上隅"
+#~ msgstr "Esquina superior izquierda"
 
 #~ msgid "Top right corner"
-#~ msgstr "右上隅"
+#~ msgstr "Esquina superior derecha"
 
 #~ msgid "Use custom font:"
-#~ msgstr "カスタムフォントを使う:"
+#~ msgstr "Usar fuente personalizada:"
 
 #~ msgid "Vertical"
-#~ msgstr "縦"
+#~ msgstr "Vertical"
 
 #~ msgid "When active"
-#~ msgstr "アクティブであるとき"
+#~ msgstr "Cuando esté activo"
