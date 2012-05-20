@@ -15,17 +15,34 @@ trap 'rm -rf $TMPDIR; kill $DBUS_SESSION_BUS_PID' ERR
 # in case that schema is not installed on the system
 glib-compile-schemas --targetdir "$GSETTINGS_SCHEMA_DIR" "$PWD"
 
-gsettings list-recursively org.freedesktop.ibus.xkb.general | \
-while read schema key val; do
-    gsettings set "$schema" "$key" "$val"
+cat <<EOF
+# This file is a part of the IBus packaging and should not be changed.
+#
+# Instead create your own file next to it with a higher numbered prefix,
+# and run
+#
+#       dconf update
+#
+EOF
+
+# Loop over top level schemas since "gsettings list-recursively" only
+# looks for direct children.
+schemas="org.freedesktop.ibus.xkb"
+current_schema=
+for schema in $schemas; do
+  gsettings list-recursively $schema | \
+  while read schema key val; do
+    if test "$schema" != "$current_schema"; then
+      echo
+      echo $schema | sed 's/org\.freedesktop\(.*\)/[desktop\1]/' | \
+          sed 's/desktop\.ibus\.xkb/desktop\.ibus\.general/' | \
+          tr '.' '/'
+      current_schema="$schema"
+    fi
+    echo "$key=$val"
+  done
 done
 
-gsettings list-recursively org.freedesktop.ibus.xkb.panel | \
-while read schema key val; do
-    gsettings set "$schema" "$key" "$val"
-done
-
-mv $XDG_CONFIG_HOME/dconf/user "$1"
 rm -rf $TMPDIR
 
 kill $DBUS_SESSION_BUS_PID

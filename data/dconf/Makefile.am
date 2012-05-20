@@ -33,6 +33,7 @@ EXTRA_DIST = \
 	$(gsettings_schemas_in_files) \
 	make-dconf-override-db.sh \
 	profile/ibus-xkb \
+	01-xkb \
 	$(NULL)
 
 DISTCLEANFILES = \
@@ -41,23 +42,26 @@ DISTCLEANFILES = \
 
 MAINTAINERCLEANFILES = \
 	$(gsettings_schemas_in_files) \
+	01-xkb \
 	$(NULL)
 
-CLEANFILES = \
-	db/ibus-xkb \
-	$(NULL)
+#dconfprofiledir = $(sysconfdir)/dconf/profile
+#dconfprofile_DATA = profile/ibus-xkb
 
-dconfprofiledir = $(sysconfdir)/dconf
-nobase_dconfprofile_DATA = db/ibus-xkb profile/ibus-xkb
+dconfdbdir = $(sysconfdir)/dconf/db/ibus.d
+dconfdb_DATA = 01-xkb
 
 org.freedesktop.ibus.xkb.gschema.xml.in: $(top_srcdir)/data/ibus-xkb.schemas.in
 	$(AM_V_GEN) gsettings-schema-convert --force --gconf --xml \
 		--schema-id "org.freedesktop.ibus.xkb" \
 		--output $@ $<
 
-db/ibus-xkb: $(srcdir)/make-dconf-override-db.sh $(gsettings_SCHEMAS)
+01-xkb: $(srcdir)/make-dconf-override-db.sh $(gsettings_SCHEMAS)
 	@$(MKDIR_P) db
-	$(AM_V_GEN) $(srcdir)/make-dconf-override-db.sh $@ || \
+	$(AM_V_GEN) $(srcdir)/make-dconf-override-db.sh > $@ || \
 		{ rc=$$?; $(RM) -rf $@; exit $$rc; }
+
+install-data-hook:
+	dconf update
 
 -include $(top_srcdir)/git.mk
