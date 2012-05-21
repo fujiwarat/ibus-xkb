@@ -177,6 +177,52 @@ AC_DEFINE(HAVE_XKB, 1, [define to 1 if you have xkbfile])
 HAVE_IBUS_XKB=true
 AC_SUBST(HAVE_IBUS_XKB)
 
+# --enable-dconf option.
+AC_ARG_ENABLE(dconf,
+    AS_HELP_STRING([--enable-dconf],
+                   [Enable configure base on dconf]),
+    [enable_dconf=$enableval],
+    [enable_dconf=no]
+)
+
+if test x"$enable_dconf" = x"yes"; then
+    # check dconf
+    PKG_CHECK_MODULES(DCONF,
+        [dconf >= 0.7.5], ,
+        enable_dconf=no
+    )
+    # check glib-compile-schemas
+    GLIB_GSETTINGS
+fi
+AM_CONDITIONAL([ENABLE_DCONF], [test x"$enable_dconf" = x"yes"])
+
+# --disable-gconf option.
+AC_ARG_ENABLE(gconf,
+    AS_HELP_STRING([--disable-gconf],
+                   [Do not use GConf code]),
+    [enable_gconf=$enableval],
+    [enable_gconf=yes]
+)
+AM_CONDITIONAL([ENABLE_GCONF], [test x"$enable_gconf" = x"yes"])
+
+if test x"$enable_gconf" = x"yes"; then
+    # check gconf
+    PKG_CHECK_MODULES(GCONF,
+        [gconf-2.0 >= 2.12],
+    )
+
+    AC_PATH_PROG(GCONFTOOL, gconftool-2, no)
+    if test x"$GCONFTOOL" = xno; then
+        AC_MSG_ERROR([gconftool-2 executable not found in your path - should be installed with GConf])
+    fi
+
+    AM_GCONF_SOURCE_2
+    # GCONF_SCHEMAS_INSTALL should be set in macro AM_GCONF_SOURCE_2
+else
+    AM_CONDITIONAL([GCONF_SCHEMAS_INSTALL], [false])
+    enable_gconf="no (disabled, use --enable-gconf to enable)"
+fi
+
 # --enable-libgnomekbd option.
 AC_ARG_ENABLE(libgnomekbd,
     AS_HELP_STRING([--enable-libgnomekbd],
@@ -310,7 +356,6 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package])
 
 AM_GLIB_GNU_GETTEXT
 
-
 # check iso-codes
 PKG_CHECK_MODULES(ISOCODES, [
     iso-codes
@@ -323,6 +368,8 @@ AC_CONFIG_FILES([ po/Makefile.in
 Makefile
 ibus-xkb.pc
 ibus-xkb.spec
+data/Makefile
+data/dconf/Makefile
 engine/Makefile
 engine/xkb.xml.in
 setup/Makefile
@@ -341,6 +388,7 @@ Build options:
   Build ui gtk3             $enable_gtk3
   Build python modules      $enable_python
   Build gconf modules       $enable_gconf
+  Build dconf modules       $enable_dconf
   Build introspection       $found_introspection
   IBus-1.0.gir scannerflags "$IBUS_GIR_SCANNERFLAGS"
   Build libgnomebkd         $enable_libgnomekbd

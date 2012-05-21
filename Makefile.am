@@ -20,7 +20,7 @@
 # Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 # Boston, MA  02111-1307  USA
 
-SUBDIRS = src engine ui setup po
+SUBDIRS = src engine ui setup data po
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = ibus-xkb.pc

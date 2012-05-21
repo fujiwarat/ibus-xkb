@@ -21,6 +21,12 @@
 # Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 # Boston, MA  02111-1307  USA
 
+SUBDIRS =
+
+if ENABLE_DCONF
+SUBDIRS += dconf
+endif
+
 schemasdir = $(GCONF_SCHEMA_FILE_DIR)
 schemas_in_files = ibus-xkb.schemas.in
 schemas_DATA = $(schemas_in_files:.schemas.in=.schemas)
