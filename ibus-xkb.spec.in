@@ -1,6 +1,7 @@
 %define gconf2_version 2.12.0
 %define dbus_python_version 0.83.0
 %define with_dconf 1
+%define with_pygobject3 1
 
 Name:       ibus-xkb
 Version:    @PACKAGE_VERSION@
@@ -20,20 +21,38 @@ BuildRequires:  intltool
 BuildRequires:  iso-codes-devel
 BuildRequires:  libtool
 BuildRequires:  python
-BuildRequires:  pygobject2-devel
+%if %with_dconf
+BuildRequires:  dconf-devel
+BuildRequires:  dbus-x11
+BuildRequires:  vala
+BuildRequires:  vala-tools
+%endif
+# for AM_GCONF_SOURCE_2 in configure.ac
+BuildRequires:  GConf2-devel
+%if %with_pygobject3
+BuildRequires:  gobject-introspection-devel
+%endif
 
 Requires:   %{name}-libs = %{version}-%{release}
 
 Requires:   ibus
 Requires:   iso-codes
 Requires:   dbus-python >= %{dbus_python_version}
+%if %with_dconf
+Requires:   dconf
+%else
 Requires:   GConf2 >= %{gconf2_version}
-Requires:   pygtk2
+%endif
+%if %with_pygobject3
+Requires:   pygobject3
+%endif
 Requires:   pyxdg
 
+%if !%with_dconf
 Requires(pre): GConf2 >= %{gconf2_version}
 Requires(post): GConf2 >= %{gconf2_version}
 Requires(preun): GConf2 >= %{gconf2_version}
+%endif
 
 %define _xinputconf %{_sysconfdir}/X11/xinit/xinput.d/ibus.conf
 
@@ -68,7 +87,10 @@ docs for ibus-xkb.
 %build
 %configure \
     --disable-static \
-    --enable-libgnomekbd \
+%if %with_dconf
+    --disable-gconf \
+    --enable-dconf \
+%endif
     --enable-introspection
 
 # make -C po update-gmo
@@ -106,6 +128,20 @@ if [ "$1" -eq 0 ]; then
 fi
 %endif
 
+%postun
+if [ "$1" -eq 0 ]; then
+%if %with_dconf
+  glib-compile-schemas %{_datadir}/glib-2.0/schemas &>/dev/null || :
+  dconf update
+%endif
+fi
+
+%posttrans
+%if %with_dconf
+glib-compile-schemas %{_datadir}/glib-2.0/schemas &>/dev/null || :
+dconf update
+%endif
+
 %post libs -p /sbin/ldconfig
 
 %postun libs -p /sbin/ldconfig
@@ -117,9 +153,17 @@ fi
 %{_datadir}/applications/*.desktop
 %{_datadir}/ibus/setup-xkb
 %{_datadir}/ibus/component/*.xml
+%if %with_dconf
+%{_datadir}/GConf/gsettings/*
+%{_datadir}/glib-2.0/schemas/*.xml
+%endif
 %{_libexecdir}/ibus-engine-xkb
 %{_libexecdir}/ibus-xkb-ui-gtk3
-%{_libexecdir}/ibus-xkb
+%if %with_dconf
+%{_sysconfdir}/dconf/db/ibus.d/01-xkb
+%else
+%{_sysconfdir}/gconf/schemas/ibus.schemas
+%endif
 
 %files libs
 %defattr(-,root,root,-)
@@ -132,6 +176,8 @@ fi
 %{_libdir}/pkgconfig/*
 %{_includedir}/*
 %{_datadir}/gir-1.0/IBusXKB-1.0.gir
+%{_datadir}/vala/vapi/ibus-xkb-1.0.deps
+%{_datadir}/vala/vapi/ibus-xkb-1.0.vapi
 
 %changelog
 * @DATE_DISPLAY@ Takao Fujiwara <takao.fujiwara1@gmail.com> - @VERSION@-1

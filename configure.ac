@@ -121,6 +121,9 @@ PKG_CHECK_MODULES(IBUS, [
     ibus-1.0 >= ibus_required_version
 ])
 
+IBUS_VERSION=`$PKG_CONFIG --modversion ibus-1.0`
+AC_SUBST(IBUS_VERSION)
+
 # Check glib2
 AM_PATH_GLIB_2_0
 PKG_CHECK_MODULES(GLIB2, [
@@ -368,6 +371,8 @@ AC_CONFIG_FILES([ po/Makefile.in
 Makefile
 ibus-xkb.pc
 ibus-xkb.spec
+bindings/Makefile
+bindings/vala/Makefile
 data/Makefile
 data/dconf/Makefile
 engine/Makefile
@@ -384,6 +389,7 @@ AC_OUTPUT
 AC_MSG_RESULT([
 Build options:
   Version                   $IBUS_XKB_VERSION
+  IBus Version              $IBUS_VERSION
   Install prefix            $prefix
   Build ui gtk3             $enable_gtk3
   Build python modules      $enable_python

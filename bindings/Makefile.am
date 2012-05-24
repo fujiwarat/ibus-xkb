@@ -2,8 +2,9 @@
 #
 # ibus-xkb - IBus XKB
 #
-# Copyright (C) 2011-2012 Takao Fujiwara <takao.fujiwara1@gmail.com>
-# Copyright (c) 2011-2012 Red Hat, Inc.
+# Copyright (c) 2012 Takao Fujiwara <takao.fujiwara1@gmail.com>
+# Copyright (c) 2007-2010 Peng Huang <shawn.p.huang@gmail.com>
+# Copyright (c) 2007-2012 Red Hat, Inc.
 #
 # This library is free software; you can redistribute it and/or
 # modify it under the terms of the GNU Lesser General Public
@@ -20,24 +21,12 @@
 # Free Software Foundation, Inc., 59 Temple Place, Suite 330,
 # Boston, MA  02111-1307  USA
 
-SUBDIRS = src bindings engine ui setup data po
+if ENABLE_VALA
+VALA_DIR = vala
+endif
 
-pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = ibus-xkb.pc
+SUBDIRS = \
+	$(VALA_DIR) \
+	$(NULL)
 
-dist-hook:
-	if test -d .git ; then \
-	    git log --name-status --date=iso > $(distdir)/ChangeLog ; \
-	fi
-
-EXTRA_DIST = \
-    autogen.sh \
-    ibus-xkb.pc.in \
-    ibus-xkb.spec.in \
-    $(NULL)
-
-DISTCLEANFILES = \
-    $(pkgconfig_DATA) \
-    stamp-h2 \
-    ibus-xkb.spec \
-    $(NULL)
+-include $(top_srcdir)/git.mk

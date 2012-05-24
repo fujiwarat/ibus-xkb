@@ -324,18 +324,21 @@ class Panel : IBus.PanelService {
     private void show_about_dialog() {
         if (m_about_dialog == null) {
             m_about_dialog = new Gtk.AboutDialog();
-            m_about_dialog.set_program_name("IBus");
+            m_about_dialog.set_program_name("IBus XKB");
             m_about_dialog.set_version(IBUS_VERSION);
 
             string copyright = _(
+                "Copyright (c) 2012 Takao Fujiwara\n" +
                 "Copyright (c) 2007-2012 Peng Huang\n" +
-                "Copyright (c) 2007-2010 Red Hat, Inc.\n");
+                "Copyright (c) 2007-2012 Red Hat, Inc.\n");
 
             m_about_dialog.set_copyright(copyright);
             m_about_dialog.set_license("LGPL");
             m_about_dialog.set_comments(_("IBus is an intelligent input bus for Linux/Unix."));
             m_about_dialog.set_website("http://code.google.com/p/ibus");
-            m_about_dialog.set_authors({"Peng Huang <shawn.p.huang@gmail.com>"});
+            m_about_dialog.set_authors({"Takao Fujiwara <takao.fujiwara1@gmail.com>",
+                                        "Peng Huang <shawn.p.huang@gmail.com>"
+                                        });
             m_about_dialog.set_documenters({"Peng Huang <shawn.p.huang@gmail.com>"});
             m_about_dialog.set_translator_credits(_("translator-credits"));
             m_about_dialog.set_logo_icon_name("ibus");

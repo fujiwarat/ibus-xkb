@@ -34,7 +34,7 @@
 #endif
 
 #define IBUS_XKB_CONFIG_REGISTRY_GET_PRIVATE(o)  \
-   (G_TYPE_INSTANCE_GET_PRIVATE ((o), IBUS_TYPE_XKB_CONFIG_REGISTRY, IBusXKBConfigRegistryPrivate))
+   (G_TYPE_INSTANCE_GET_PRIVATE ((o), IBUS_XKB_TYPE_CONFIG_REGISTRY, IBusXKBConfigRegistryPrivate))
 
 typedef struct _IBusXKBConfigRegistryPrivate IBusXKBConfigRegistryPrivate;
 
@@ -388,7 +388,7 @@ ibus_xkb_config_registry_new (void)
 {
     IBusXKBConfigRegistry *xkb_config;
 
-    xkb_config = IBUS_XKB_CONFIG_REGISTRY (g_object_new (IBUS_TYPE_XKB_CONFIG_REGISTRY, NULL));
+    xkb_config = IBUS_XKB_CONFIG_REGISTRY (g_object_new (IBUS_XKB_TYPE_CONFIG_REGISTRY, NULL));
     return xkb_config;
 }
 

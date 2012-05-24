@@ -3,7 +3,7 @@
 	<description>A table based xkb engine</description>
 	<exec>${libexecdir}/ibus-engine-xkb</exec>
 	<version>@VERSION@</version>
-	<author>Peng Huang &lt;shawn.p.huang@gmail.com&gt;</author>
+	<author>Takao Fujiwara &lt;takao.fujiwara1@gmail.com&gt;</author>
 	<license>GPL</license>
 	<homepage>http://code.google.com/p/ibus</homepage>
 	<textdomain>ibus</textdomain>

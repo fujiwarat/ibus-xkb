@@ -58,7 +58,7 @@ AM_CFLAGS = \
 	-DLIBEXECDIR=\"$(libexecdir)\" \
 	-DBINDIR=\"@bindir@\" \
     -DIBUS_DISABLE_DEPRECATED \
-	-DIBUS_VERSION=\"@IBUS_VERSION@\" \
+	-DIBUS_VERSION="\"@IBUS_XKB_VERSION@ (IBus: @IBUS_VERSION@)\"" \
 	-Wno-unused-variable \
 	-Wno-unused-but-set-variable \
 	-Wno-unused-function \
@@ -82,6 +82,7 @@ AM_VALAFLAGS = \
 	--pkg=gtk+-3.0 \
 	--pkg=gdk-x11-3.0 \
 	--pkg=ibus-1.0 \
+	--pkg=ibus-xkb-1.0 \
 	$(NULL)
 
 libexec_PROGRAMS = ibus-xkb-ui-gtk3

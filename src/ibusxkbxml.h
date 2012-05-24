@@ -29,18 +29,18 @@
  * Type macros.
  */
 /* define IBusXKBConfigRegistry macros */
-#define IBUS_TYPE_XKB_CONFIG_REGISTRY                   \
+#define IBUS_XKB_TYPE_CONFIG_REGISTRY                   \
     (ibus_xkb_config_registry_get_type ())
 #define IBUS_XKB_CONFIG_REGISTRY(obj)                   \
-    (G_TYPE_CHECK_INSTANCE_CAST ((obj), IBUS_TYPE_XKB_CONFIG_REGISTRY, IBusXKBConfigRegistry))
+    (G_TYPE_CHECK_INSTANCE_CAST ((obj), IBUS_XKB_TYPE_CONFIG_REGISTRY, IBusXKBConfigRegistry))
 #define IBUS_XKB_CONFIG_REGISTRY_CLASS(klass)           \
-    (G_TYPE_CHECK_CLASS_CAST ((klass), IBUS_TYPE_XKB_CONFIG_REGISTRY, IBusXKBConfigRegistryClass))
+    (G_TYPE_CHECK_CLASS_CAST ((klass), IBUS_XKB_TYPE_CONFIG_REGISTRY, IBusXKBConfigRegistryClass))
 #define IBUS_IS_XKB_CONFIG_REGISTRY(obj)                \
-    (G_TYPE_CHECK_INSTANCE_TYPE ((obj), IBUS_TYPE_XKB_CONFIG_REGISTRY))
+    (G_TYPE_CHECK_INSTANCE_TYPE ((obj), IBUS_XKB_TYPE_CONFIG_REGISTRY))
 #define IBUS_IS_XKB_CONFIG_REGISTRY_CLASS(klass)        \
-    (G_TYPE_CHECK_CLASS_TYPE ((klass), IBUS_TYPE_XKB_CONFIG_REGISTRY))
+    (G_TYPE_CHECK_CLASS_TYPE ((klass), IBUS_XKB_TYPE_CONFIG_REGISTRY))
 #define IBUS_XKB_CONFIG_REGISTRY_GET_CLASS(obj)         \
-    (G_TYPE_INSTANCE_GET_CLASS ((obj), IBUS_TYPE_XKB_CONFIG_REGISTRY, IBusXKBConfigRegistryClass))
+    (G_TYPE_INSTANCE_GET_CLASS ((obj), IBUS_XKB_TYPE_CONFIG_REGISTRY, IBusXKBConfigRegistryClass))
 
 G_BEGIN_DECLS
 

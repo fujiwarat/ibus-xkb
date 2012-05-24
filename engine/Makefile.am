@@ -57,6 +57,7 @@ AM_LDADD = \
 AM_VALAFLAGS = \
 	--vapidir=$(top_builddir)/bindings/vala \
 	--pkg=ibus-1.0 \
+	--pkg=ibus-xkb-1.0 \
 	$(NULL)
 
 libexec_PROGRAMS = \
