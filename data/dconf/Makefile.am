@@ -36,7 +36,7 @@ EXTRA_DIST = \
 	01-xkb \
 	$(NULL)
 
-DISTCLEANFILES = \
+CLEANFILES = \
 	$(gsettings_SCHEMAS) \
 	$(NULL)
 
@@ -56,7 +56,7 @@ org.freedesktop.ibus.xkb.gschema.xml.in: $(top_srcdir)/data/ibus-xkb.schemas.in
 		--schema-id "org.freedesktop.ibus.xkb" \
 		--output $@ $<
 
-01-xkb: $(srcdir)/make-dconf-override-db.sh $(gsettings_SCHEMAS)
+01-xkb: $(srcdir)/make-dconf-override-db.sh | $(gsettings_SCHEMAS)
 	@$(MKDIR_P) db
 	$(AM_V_GEN) $(srcdir)/make-dconf-override-db.sh > $@ || \
 		{ rc=$$?; $(RM) -rf $@; exit $$rc; }
