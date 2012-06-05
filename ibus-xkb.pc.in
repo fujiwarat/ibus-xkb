@@ -7,5 +7,5 @@ ibus_xkb=@libexecdir@/ibus-xkb
 Name: IBus-XKB
 Description: IBus XKB
 Version: @VERSION@
-Libs: -L${libdir} -libus-xkb
+Libs: -L${libdir} -libus-xkb-1.0
 Cflags: -I${includedir}/ibus-xkb-@IBUS_XKB_API_VERSION@
