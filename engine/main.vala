@@ -36,16 +36,6 @@ public int main(string[] args) {
         return 1;
     }
 
-    uint flags = 
-        IBus.BusNameFlag.REPLACE_EXISTING |
-        IBus.BusNameFlag.ALLOW_REPLACEMENT;
-    uint retval = bus.request_name("org.freedesktop.IBus.XKB", flags);
-
-    if (retval == 0) {
-        warning("Registry bus name org.freedesktop.IBus.XKB failed!");
-        return 1;
-    }
-
     bus.disconnected.connect((bus) => {
         debug("bus disconnected");
         IBus.quit();
@@ -62,6 +52,16 @@ public int main(string[] args) {
             path.printf(++id), bus.get_connection());
         return engine;
     });
+
+    uint flags = 
+        IBus.BusNameFlag.REPLACE_EXISTING |
+        IBus.BusNameFlag.ALLOW_REPLACEMENT;
+    uint retval = bus.request_name("org.freedesktop.IBus.XKB", flags);
+
+    if (retval == 0) {
+        warning("Registry bus name org.freedesktop.IBus.XKB failed!");
+        return 1;
+    }
 
     IBus.main();
 
