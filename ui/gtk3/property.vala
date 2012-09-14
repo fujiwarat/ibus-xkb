@@ -21,10 +21,6 @@
  * Boston, MA  02111-1307  USA
  */
 
-using IBus;
-using GLib;
-using Gtk;
-
 public class PropertyManager {
     private IBus.PropList m_props;
 

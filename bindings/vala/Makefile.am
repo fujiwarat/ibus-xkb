@@ -42,6 +42,7 @@ ibus-xkb-@IBUS_XKB_API_VERSION@.vapi: $(vapi_deps)
 
 EXTRA_DIST = \
 	IBusXKB-1.0.metadata \
+	config.vapi \
 	$(NULL)
 
 MAINTAINERCLEANFILES = ibus-xkb-@IBUS_XKB_API_VERSION@.vapi

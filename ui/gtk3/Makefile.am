@@ -45,6 +45,9 @@ INCLUDES = \
 
 USE_SYMBOL_ICON = FALSE
 
+# force include config.h before gi18n.h.
+AM_CPPFLAGS = -include $(CONFIG_HEADER)
+
 AM_CFLAGS = \
 	@GLIB2_CFLAGS@ \
 	@GIO2_CFLAGS@ \
@@ -53,13 +56,9 @@ AM_CFLAGS = \
 	@X11_CFLAGS@ \
 	@IBUS_CFLAGS@ \
 	$(INCLUDES) \
-	-DGETTEXT_PACKAGE=\"@GETTEXT_PACKAGE@\" \
-	-DGLIB_LOCALE_DIR=\"@GLIB_LOCALE_DIR@\" \
 	-DG_LOG_DOMAIN=\"IBUS\" \
-	-DPKGDATADIR=\"$(pkgdatadir)\" \
-	-DLIBEXECDIR=\"$(libexecdir)\" \
-	-DBINDIR=\"@bindir@\" \
-    -DIBUS_DISABLE_DEPRECATED \
+	-DBINDIR=\"$(bindir)\" \
+	-DIBUS_DISABLE_DEPRECATED \
 	-DIBUS_VERSION="\"@IBUS_XKB_VERSION@ (IBus: @IBUS_VERSION@)\"" \
 	-DSWITCHER_USE_SYMBOL_ICON=$(USE_SYMBOL_ICON) \
 	-Wno-unused-variable \
@@ -81,11 +80,13 @@ AM_LDADD = \
 
 AM_VALAFLAGS = \
 	--vapidir=$(top_builddir)/bindings/vala \
+	--vapidir=$(top_srcdir)/bindings/vala \
 	--pkg=posix \
 	--pkg=gtk+-3.0 \
 	--pkg=gdk-x11-3.0 \
 	--pkg=ibus-1.0 \
 	--pkg=ibus-xkb-1.0 \
+	--pkg=config \
 	$(NULL)
 
 libexec_PROGRAMS = ibus-xkb-ui-gtk3
