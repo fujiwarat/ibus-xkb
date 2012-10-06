@@ -43,7 +43,7 @@ INCLUDES = \
 	-I$(top_builddir)/src \
 	$(NULL)
 
-USE_SYMBOL_ICON = FALSE
+USE_SYMBOL_ICON = TRUE
 
 # force include config.h before gi18n.h.
 AM_CPPFLAGS = -include $(CONFIG_HEADER)

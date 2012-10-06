@@ -128,6 +128,7 @@ class Switcher : Gtk.Window {
         /* Let gtk recalculate the window size. */
         resize(1, 1);
 
+        m_result = 0;
         m_selected_engine = index;
         m_label.set_text(m_buttons[index].longname);
         m_buttons[index].grab_focus();
@@ -366,6 +367,11 @@ class Switcher : Gtk.Window {
                     break;
                 default:
                     debug("0x%04x", pe->keyval);
+                    if (m_loop != null) {
+                        m_loop.quit();
+                        m_loop = null;
+                    }
+                    retval = false;
                     break;
             }
         } while (false);
