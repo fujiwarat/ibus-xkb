@@ -25,7 +25,6 @@ class Switcher : Gtk.Window {
     public extern const bool USE_SYMBOL_ICON;
     private const int DEFAULT_FONT_SIZE = 16;
     private const int DESC_LABEL_MAX_LEN = 20;
-    private const int ICON_SIZE = 48;
 
     private class IBusEngineButton : Gtk.Button {
         public IBusEngineButton(IBus.EngineDesc engine) {
@@ -37,7 +36,8 @@ class Switcher : Gtk.Window {
             add(align);
 
             if (!USE_SYMBOL_ICON) {
-                IconWidget icon = new IconWidget(engine.get_icon(), ICON_SIZE);
+                IconWidget icon = new IconWidget(engine.get_icon(),
+                                                 Gtk.IconSize.DIALOG);
                 align.add(icon);
             } else {
                 var language = engine.get_language();
