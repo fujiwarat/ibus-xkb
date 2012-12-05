@@ -180,31 +180,31 @@ AC_DEFINE(HAVE_XKB, 1, [define to 1 if you have xkbfile])
 HAVE_IBUS_XKB=true
 AC_SUBST(HAVE_IBUS_XKB)
 
-# --enable-dconf option.
+# --disable-dconf option.
 AC_ARG_ENABLE(dconf,
-    AS_HELP_STRING([--enable-dconf],
-                   [Enable configure base on dconf]),
+    AS_HELP_STRING([--disable-dconf],
+                   [Disable configure base on dconf]),
     [enable_dconf=$enableval],
-    [enable_dconf=no]
+    [enable_dconf=yes]
 )
+AM_CONDITIONAL([ENABLE_DCONF], [test x"$enable_dconf" = x"yes"])
 
 if test x"$enable_dconf" = x"yes"; then
     # check dconf
     PKG_CHECK_MODULES(DCONF,
-        [dconf >= 0.7.5], ,
-        enable_dconf=no
+        [dconf >= 0.7.5],
     )
     # check glib-compile-schemas
     GLIB_GSETTINGS
+    enable_dconf="yes (enabled, use --disable-dconf to disable)"
 fi
-AM_CONDITIONAL([ENABLE_DCONF], [test x"$enable_dconf" = x"yes"])
 
-# --disable-gconf option.
+# --enable-gconf option.
 AC_ARG_ENABLE(gconf,
-    AS_HELP_STRING([--disable-gconf],
-                   [Do not use GConf code]),
+    AS_HELP_STRING([--enable-gconf],
+                   [Use GConf code]),
     [enable_gconf=$enableval],
-    [enable_gconf=yes]
+    [enable_gconf=no]
 )
 AM_CONDITIONAL([ENABLE_GCONF], [test x"$enable_gconf" = x"yes"])
 
