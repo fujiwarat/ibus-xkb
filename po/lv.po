@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ibus-xkb HEAD\n"
 "Report-Msgid-Bugs-To: http://code.google.com/p/ibus/issues/entry\n"
-"POT-Creation-Date: 2012-05-18 10:43+0900\n"
+"POT-Creation-Date: 2012-05-16 10:14+0900\n"
 "PO-Revision-Date: 2011-09-28 14:03+0000\n"
 "Last-Translator: Tranzistors <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian (http://www.transifex.net/projects/p/fedora/team/"
@@ -20,120 +20,437 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
-#: ../data/ibus-xkb.schemas.in.h:1
-#, fuzzy
-msgid "Trigger shortcut keys for gtk_accelerator_parse"
-msgstr "Trigera saīsņu taustiņi"
+#: ../setup/setup.ui.h:1
+msgid "Horizontal"
+msgstr "Horizontāli"
 
-#: ../data/ibus-xkb.schemas.in.h:2
+#: ../setup/setup.ui.h:2
+msgid "Vertical"
+msgstr "Vertikāli"
+
+#: ../setup/setup.ui.h:3
+msgid "Embedded in menu"
+msgstr "Iegults izvēlnē"
+
+#: ../setup/setup.ui.h:4
+msgid "When active"
+msgstr "Kad aktīvs"
+
+#: ../setup/setup.ui.h:5
+msgid "Always"
+msgstr "Vienmēr"
+
+#: ../setup/setup.ui.h:6
+msgid "Top left corner"
+msgstr "Augšējais kreisais stūris"
+
+#: ../setup/setup.ui.h:7
+msgid "Top right corner"
+msgstr "Augšējais labais stūris"
+
+#: ../setup/setup.ui.h:8
+msgid "Bottom left corner"
+msgstr "Apakšējais kreisais stūris"
+
+#: ../setup/setup.ui.h:9
+msgid "Bottom right corner"
+msgstr "Apakšējais labais stūris"
+
+#: ../setup/setup.ui.h:10
+msgid "Custom"
+msgstr "Izvēlēts"
+
+#: ../setup/setup.ui.h:11 ../setup/ibus-setup.desktop.in.h:1
+msgid "IBus Preferences"
+msgstr "IBus iestatījumi"
+
+#: ../setup/setup.ui.h:12
+msgid "The shortcut keys for switching to next input method in the list"
+msgstr "Saīsņu taustiņi, lai pārslēgtos uz nākošo ievades metodi sarakstā"
+
+#: ../setup/setup.ui.h:13
+msgid "Next input method:"
+msgstr "Nākamā ievades metode"
+
+#: ../setup/setup.ui.h:14
+msgid "The shortcut keys for switching to previous input method in the list"
+msgstr "Saīsņu taustiņi, lai pārslēgtos uz iepriekšējo ievades metodi sarakstā"
+
+#: ../setup/setup.ui.h:15
+msgid "Previous input method:"
+msgstr "Iepriekšējā ievades metode:"
+
+#: ../setup/setup.ui.h:16
+msgid "..."
+msgstr "..."
+
+#: ../setup/setup.ui.h:17 ../data/ibus.schemas.in.h:6
 msgid "The shortcut keys for turning input method on or off"
 msgstr "Saīsņu taustiņi, lai ieslēgtu vai izslēgtu ievades metodi"
 
-#: ../data/ibus-xkb.schemas.in.h:3
-msgid "This is used for gnome-shell to work shift + modifiers"
-msgstr ""
+#: ../setup/setup.ui.h:18
+msgid "Enable or disable:"
+msgstr "Aktivēt vai deaktivēt:"
 
-#: ../data/ibus-xkb.schemas.in.h:4
+#: ../setup/setup.ui.h:19
+msgid "Enable:"
+msgstr "Aktivēt:"
+
+#: ../setup/setup.ui.h:20
+msgid "Disable:"
+msgstr "Deaktivēt:"
+
+#: ../setup/setup.ui.h:21
+msgid "<b>Keyboard Shortcuts</b>"
+msgstr "<b>Tastatūras īsceļi</b>"
+
+#: ../setup/setup.ui.h:22
+msgid "Set the orientation of candidates in lookup table"
+msgstr "Iestatīt kandidātu orientāciju apsekošanas tabulā"
+
+#: ../setup/setup.ui.h:23
+msgid "Candidates orientation:"
+msgstr "Kandidātu orientācija:"
+
+#: ../setup/setup.ui.h:24
+msgid "Set the behavior of ibus how to show or hide language bar"
+msgstr "Iestatīt ibus uzvedību kā rādīt vai slēpt valodas joslu"
+
+#: ../setup/setup.ui.h:25
+msgid "Show language panel:"
+msgstr "Parādīt valodas paneli:"
+
+#: ../setup/setup.ui.h:26
+msgid "Language panel position:"
+msgstr "Valodas paneļa pozīcija:"
+
+#: ../setup/setup.ui.h:27 ../data/ibus.schemas.in.h:21
+msgid "Show icon on system tray"
+msgstr "Rādīt ikonu sistēmas ikonu joslā"
+
+#: ../setup/setup.ui.h:28 ../data/ibus.schemas.in.h:23
+msgid "Show input method name on language bar"
+msgstr "Parādīt ievades metodes nosaukumu valodas joslā"
+
+#: ../setup/setup.ui.h:29
+msgid "Show input method's name on language bar when check the checkbox"
+msgstr ""
+"Parādīt ievades metodes nosaukumu valodas joslā, kad tiek atzīmēta izvēles "
+"rūtiņa"
+
+#: ../setup/setup.ui.h:30
+msgid "Embed preedit text in application window"
+msgstr "Iegult pirmsrediģēšanas tekstu lietotnes logā"
+
+#: ../setup/setup.ui.h:31
+msgid "Embed the preedit text of input method in the application window"
+msgstr "Iegult ievades metodes pirmsrediģēšanas tekstu lietotnes logā"
+
+#: ../setup/setup.ui.h:32
+msgid "Use custom font:"
+msgstr "Lietot izvēlētu fontu:"
+
+#: ../setup/setup.ui.h:33
+msgid "<b>Font and Style</b>"
+msgstr "<b>Fonts un stils</b>"
+
+#: ../setup/setup.ui.h:34
+msgid "General"
+msgstr "Vispārīgi"
+
+#: ../setup/setup.ui.h:35
+msgid "Add the selected input method into the enabled input methods"
+msgstr "Pievienot izvēlēto ievades metodi pie aktivētajām ievades metodēm"
+
+#: ../setup/setup.ui.h:36
+msgid "Remove the selected input method from the enabled input methods"
+msgstr "Noņemt izvēlēto metodi no ieslēgto ievades metožu saraksta"
+
+#: ../setup/setup.ui.h:37
+msgid "Move up the selected input method in the enabled input methods list"
+msgstr ""
+"Pārvietojiet augšup izvēlēto ievades metodi ieslēgto ievades metožu sarakstā"
+
+#: ../setup/setup.ui.h:38
+msgid "Move down the selected input method in the enabled input methods"
+msgstr ""
+"Pārvietojiet lejup izvēlēto ievades metodi ieslēgto ievades metožu sarakstā"
+
+#: ../setup/setup.ui.h:39
+msgid "Show information of the selected input method"
+msgstr "Parādīt informāciju par izvēlēto ievades metodi"
+
+#: ../setup/setup.ui.h:40
+#, fuzzy
+msgid "Show setup of the selected input method"
+msgstr "Parādīt informāciju par izvēlēto ievades metodi"
+
+#: ../setup/setup.ui.h:41
 msgid ""
-"This is used for gnome-shell to work shift + modifiers Currently gnome-shell "
-"assigns the shift reverse by dconf key and the shift reverse works with "
-"modifiers. But ibus supports multiple trigger keys; &lt;Control&gt;space "
-"(with modifiers) Zenkaku_hankaku (without modifiers) I copy the modifier "
-"trigger keys here to set the shift reverse at the moment."
+"<small><i>The default input method is the top one in the list.\n"
+"You may use up/down buttons to change it.</i></small>"
 msgstr ""
+"<small><i>Noklusētā ievades metode atrodas saraksta augšpusē.\n"
+"Jūs varat izmantot pogas uz augšu/uz leju, lai to izmainītu.</i></small>"
 
-#: ../data/ibus-xkb.schemas.in.h:5
-msgid "Trigger shortcut keys for ja gtk_accelerator_parse"
-msgstr ""
+#. create im name & icon column
+#: ../setup/setup.ui.h:43 ../setup/enginetreeview.py:64
+msgid "Input Method"
+msgstr "Ievades metode"
 
-#: ../data/ibus-xkb.schemas.in.h:6
-msgid "Trigger shortcut keys for ko gtk_accelerator_parse"
-msgstr ""
+#: ../setup/setup.ui.h:44 ../data/ibus.schemas.in.h:24
+msgid "Use system keyboard layout"
+msgstr "Izmantot sistēmas tastatūras izkārtojumu"
 
-#: ../data/ibus-xkb.schemas.in.h:7
-msgid "Use xmodmap"
-msgstr ""
+#: ../setup/setup.ui.h:45 ../data/ibus.schemas.in.h:25
+msgid "Use system keyboard (XKB) layout"
+msgstr "Izmantot sistēmas tastatūras (XKB) izkārtojumu "
 
-#: ../data/ibus-xkb.schemas.in.h:8
-msgid "Run xmodmap if .xmodmap/.Xmodmap exists."
-msgstr ""
+#: ../setup/setup.ui.h:46
+msgid "<b>Keyboard Layout</b>"
+msgstr "<b>Tastatūras izkārtojums</b>"
 
-#: ../data/ibus-xkb.schemas.in.h:9
-msgid "Latin layout which have no ASCII"
-msgstr ""
+#: ../setup/setup.ui.h:47 ../data/ibus.schemas.in.h:33
+msgid "Share the same input method among all applications"
+msgstr "Starp lietotnēm izmantot vienu un to pašu ievades metodi"
 
-#: ../data/ibus-xkb.schemas.in.h:10
-msgid "us layout is appended to the latin layouts. variant is not needed."
-msgstr ""
+#: ../setup/setup.ui.h:48
+msgid "<b>Global input method settings</b>"
+msgstr "<b>Globālās ievades metodes iestatījumi</b>"
 
-#: ../data/ibus-xkb.schemas.in.h:11
-msgid "XKB layout list which is shown on ibus-setup"
-msgstr ""
+#: ../setup/setup.ui.h:49
+msgid "Advanced"
+msgstr "Paplašināti"
 
-#: ../data/ibus-xkb.schemas.in.h:12
+#: ../setup/setup.ui.h:50
 msgid ""
-"XKB layout list which is shown on ibus-setup. The format is \"layout\" or "
-"\"layout(variant)\"."
+"<big><b>IBus</b></big>\n"
+"<small>The intelligent input bus</small>\n"
+"Homepage: http://code.google.com/p/ibus\n"
+"\n"
+"\n"
+"\n"
 msgstr ""
+"<big><b>IBus</b></big>\n"
+"<small>Inteliģentā ievades kopne</small>\n"
+"Mājas lapa: http://code.google.com/p/ibus\n"
+"\n"
+"\n"
+"\n"
 
-#: ../setup/engineabout.py:35 ../ui/gtk2/engineabout.py:34
-#: ../ui/gtk2/languagebar.py:358
+#: ../setup/setup.ui.h:57
+msgid "Start ibus on login"
+msgstr "Startēt ibus līdz ar pieslēgšanos"
+
+#: ../setup/setup.ui.h:58
+msgid "<b>Startup</b>"
+msgstr "<b>Startēšana</b>"
+
+#: ../setup/setup.ui.h:59 ../setup/engineabout.py:34
 msgid "About"
 msgstr "Par"
 
-#: ../setup/engineabout.py:68 ../ui/gtk2/engineabout.py:62
+#: ../bus/ibus.desktop.in.h:1
+msgid "IBus"
+msgstr "IBus"
+
+#: ../bus/ibus.desktop.in.h:2
+msgid "Input Method Framework"
+msgstr "Ievades metožu rāmja sistēma"
+
+#: ../bus/ibus.desktop.in.h:3
+msgid "Start IBus Input Method Framework"
+msgstr "Startēt IBus ievades metožu rāmja sistēmu"
+
+#: ../data/ibus.schemas.in.h:1
+msgid "Preload engines"
+msgstr "Pārlādēt dzinējus"
+
+#: ../data/ibus.schemas.in.h:2
+msgid "Preload engines during ibus starts up"
+msgstr "Laicīgi ielādēt dzinējus ibus ielādes laikā"
+
+#: ../data/ibus.schemas.in.h:3
+msgid "Engines order"
+msgstr ""
+
+#: ../data/ibus.schemas.in.h:4
+msgid "Saved engines order in input method list"
+msgstr ""
+
+#: ../data/ibus.schemas.in.h:5
+msgid "Trigger shortcut keys"
+msgstr "Trigera saīsņu taustiņi"
+
+#: ../data/ibus.schemas.in.h:7
+msgid "Enable shortcut keys"
+msgstr "Aktivēt īsinājuma taustiņus"
+
+#: ../data/ibus.schemas.in.h:8
+msgid "The shortcut keys for turning input method on"
+msgstr "Saīsņu taustiņi, lai ieslēgtu ievades metodi "
+
+#: ../data/ibus.schemas.in.h:9
+msgid "Disable shortcut keys"
+msgstr "Deaktivēt īsinājumu taustiņus"
+
+#: ../data/ibus.schemas.in.h:10
+msgid "The shortcut keys for turning input method off"
+msgstr "Saīsņu taustiņi, lai izslēgtu ievades metodi "
+
+#: ../data/ibus.schemas.in.h:11
+msgid "Next engine shortcut keys"
+msgstr "Nākošā dzinēja saīsņu taustiņi"
+
+#: ../data/ibus.schemas.in.h:12
+msgid "The shortcut keys for switching to the next input method in the list"
+msgstr "Saīsņu taustiņi, lai pārslēgtos uz nākamo ievades metodi sarakstā"
+
+#: ../data/ibus.schemas.in.h:13
+msgid "Prev engine shortcut keys"
+msgstr "Iepriekšējā dzinēja saīsņu taustiņi"
+
+#: ../data/ibus.schemas.in.h:14
+msgid "The shortcut keys for switching to the previous input method"
+msgstr "Saīsņu taustiņi, lai pārslēgtos uz iepriekšējo ievades metodi sarakstā"
+
+#: ../data/ibus.schemas.in.h:15
+msgid "Auto hide"
+msgstr "Autom. slēpšana"
+
+#: ../data/ibus.schemas.in.h:16
+msgid ""
+"The behavior of language panel. 0 = Embedded in menu, 1 = Auto hide, 2 = "
+"Always show"
+msgstr ""
+"Valodas paneļa uzvedība. 0 = iegults izvēlnē, 1 = automātiski slēpt, 2 = "
+"vienmēr rādīt"
+
+#: ../data/ibus.schemas.in.h:17
+msgid "Language panel position"
+msgstr "Valodas paneļa pozīcija"
+
+#: ../data/ibus.schemas.in.h:18
+msgid ""
+"The position of the language panel. 0 = Top left corner, 1 = Top right "
+"corner, 2 = Bottom left corner, 3 = Bottom right corner, 4 = Custom"
+msgstr ""
+"Valodas paneļa pozīcija. 0 = augšējais kreisais stūris, 1 = augšējais labais "
+"stūris, 2 = apakšējais kreisais stūris, 3 = apakšējais labais stūris, 4 = "
+"izvēlēts"
+
+#: ../data/ibus.schemas.in.h:19
+msgid "Orientation of lookup table"
+msgstr "Apsekošanas tabulas novietojums"
+
+#: ../data/ibus.schemas.in.h:20
+msgid "Orientation of lookup table. 0 = Horizontal, 1 = Vertical"
+msgstr "Apsekošanas tabulas novietojums. 0 = horizontāls, 1 = vertikāls"
+
+#: ../data/ibus.schemas.in.h:22
+msgid "Show input method name"
+msgstr "Rādīt ievades metodes nosaukumu"
+
+#: ../data/ibus.schemas.in.h:26
+msgid "Use custom font"
+msgstr "Izmantot izvēles fontu"
+
+#: ../data/ibus.schemas.in.h:27
+msgid "Use custom font name for language panel"
+msgstr "Izmantojamais izvēles fonta nosaukums valodas panelim"
+
+#: ../data/ibus.schemas.in.h:28
+msgid "Custom font"
+msgstr "Izvēlēts fonts"
+
+#: ../data/ibus.schemas.in.h:29
+msgid "Custom font name for language panel"
+msgstr "Izvēlētā fonta nosaukums valodas panelim"
+
+#: ../data/ibus.schemas.in.h:30
+msgid "Embed Preedit Text"
+msgstr "Iegult pirmsrediģēšanas tekstu"
+
+#: ../data/ibus.schemas.in.h:31
+msgid "Embed Preedit Text in Application Window"
+msgstr "Iegult pirmsrediģēšanas tekstu lietotnes logā"
+
+#: ../data/ibus.schemas.in.h:32
+msgid "Use global input method"
+msgstr "Izmantot  globālo ievades metodi"
+
+#: ../data/ibus.schemas.in.h:34
+msgid "Enable input method by default"
+msgstr "Aktivēt ievades metodi pēc noklusējuma"
+
+#: ../data/ibus.schemas.in.h:35
+msgid "Enable input method by default when the application gets input focus"
+msgstr "Aktivēt ievades metodi pēc noklusējuma, kad lietotne saņem fokusu"
+
+#: ../data/ibus.schemas.in.h:36
+msgid "DConf preserve name prefixes"
+msgstr ""
+
+#: ../data/ibus.schemas.in.h:37
+msgid "Prefixes of DConf keys to stop name conversion"
+msgstr ""
+
+#: ../ibus/_config.py.in:41
+msgid ""
+"Copyright (c) 2007-2010 Peng Huang\n"
+"Copyright (c) 2007-2010 Red Hat, Inc."
+msgstr ""
+"Autortiesības (c) 2007-2010 Peng Huang\n"
+"Autortiesības (c) 2007-2010 Red Hat, Inc."
+
+#: ../ibus/lang.py:41 ../src/ibusutil.c:150 ../src/ibusutil.c:152
+msgid "Other"
+msgstr "Cits"
+
+#: ../setup/engineabout.py:67
 #, python-format
 msgid "Language: %s\n"
 msgstr "Valoda: %s\n"
 
-#: ../setup/engineabout.py:71 ../ui/gtk2/engineabout.py:64
+#: ../setup/engineabout.py:70
 #, python-format
 msgid "Keyboard layout: %s\n"
 msgstr "Tastatūras izkārtojums: %s\n"
 
-#: ../setup/engineabout.py:74 ../ui/gtk2/engineabout.py:66
+#: ../setup/engineabout.py:73
 #, python-format
 msgid "Author: %s\n"
 msgstr "Autors: %s\n"
 
-#: ../setup/engineabout.py:77 ../ui/gtk2/engineabout.py:68
+#: ../setup/engineabout.py:76
 msgid "Description:\n"
 msgstr "Apraksts:\n"
 
-#: ../setup/enginecombobox.py:137
+#: ../setup/enginecombobox.py:136
 msgid "Select an input method"
 msgstr "Izvēlieties ievades metodi"
 
-#. create im name & icon column
-#: ../setup/enginetreeview.py:65
-msgid "Input Method"
-msgstr "Ievades metode"
-
-#: ../setup/enginetreeview.py:93
+#: ../setup/enginetreeview.py:92
 msgid "Kbd"
 msgstr "Kbd"
 
-#: ../setup/ibus-setup-xkb.desktop.in.h:1
-msgid "IBus Preferences"
-msgstr "IBus iestatījumi"
-
-#: ../setup/ibus-setup-xkb.desktop.in.h:2
+#: ../setup/ibus-setup.desktop.in.h:2
 msgid "Set IBus Preferences"
 msgstr "Iestatīt IBus iestatījumus"
 
-#: ../setup/keyboardshortcut.py:55
+#: ../setup/keyboardshortcut.py:54
 msgid "Keyboard shortcuts"
 msgstr "Tastatūras saīsnes"
 
-#: ../setup/keyboardshortcut.py:66
+#: ../setup/keyboardshortcut.py:65
 msgid "Key code:"
 msgstr "Taustiņa kods:"
 
-#: ../setup/keyboardshortcut.py:81
+#: ../setup/keyboardshortcut.py:80
 msgid "Modifiers:"
 msgstr "Modifikatoru taustiņi:"
 
-#: ../setup/keyboardshortcut.py:236
+#: ../setup/keyboardshortcut.py:235
 msgid ""
 "Please press a key (or a key combination).\n"
 "The dialog will be closed when the key is released."
@@ -141,30 +458,32 @@ msgstr ""
 "Lūdzu, nospiediet taustiņu (vai taustiņu kombināciju).\n"
 "Dialoga logs tiks aizvērts, kad taustiņš tiks atlaists."
 
-#: ../setup/keyboardshortcut.py:238
+#: ../setup/keyboardshortcut.py:237
 msgid "Please press a key (or a key combination)"
 msgstr "Lūdzu, nospiediet taustiņu (vai taustiņu kombināciju)"
 
-#: ../setup/main.py:80
+#: ../setup/main.py:79
 msgid "trigger"
 msgstr "trigeris"
 
-#: ../setup/main.py:81
+#: ../setup/main.py:80
 msgid "enable"
 msgstr "aktivēt"
 
-#: ../setup/main.py:82
+#: ../setup/main.py:81
 msgid "disable"
 msgstr "deaktivēt"
 
-#: ../setup/main.py:339
-msgid "IBus daemon is not started. Do you want to start it now?"
+#: ../setup/main.py:323
+#, fuzzy
+msgid "The IBus daemon is not running. Do you wish to start it?"
 msgstr "IBus dēmons nav startēts. Vai vēlaties to startēt tagad?"
 
-#: ../setup/main.py:360
+#: ../setup/main.py:344
+#, fuzzy
 msgid ""
-"IBus has been started! If you can not use IBus, please add below lines in "
-"$HOME/.bashrc, and relogin your desktop.\n"
+"IBus has been started! If you cannot use IBus, add the following lines to "
+"your $HOME/.bashrc; then relog into your desktop.\n"
 "  export GTK_IM_MODULE=ibus\n"
 "  export XMODIFIERS=@im=ibus\n"
 "  export QT_IM_MODULE=ibus"
@@ -175,151 +494,43 @@ msgstr ""
 "  export XMODIFIERS=@im=ibus\n"
 "  export QT_IM_MODULE=ibus"
 
-#: ../setup/main.py:373
+#: ../setup/main.py:357
 #, python-format
 msgid "IBus daemon coundn't be started in %d seconds"
 msgstr ""
 
-#: ../setup/main.py:385
+#: ../setup/main.py:369
 #, python-format
 msgid "Select keyboard shortcut for %s"
 msgstr "Izvēlieties tastatūras saīsni priekš %s"
 
-#: ../setup/xkbsetup.py:44 ../setup/xkbsetup.py:112 ../setup/xkbsetup.py:408
-msgid "Default"
-msgstr ""
-
-#: ../setup/xkbsetup.py:207
+#: ../ui/gtk3/panel.vala:330
 #, fuzzy
-msgid "Select keyboard layouts"
-msgstr "Izvēlieties tastatūras saīsni priekš %s"
-
-#: ../setup/xkbsetup.py:212
-#, fuzzy
-msgid "Keyboard Layouts"
-msgstr "Tastatūras izkārtojums: %s\n"
-
-#: ../setup/xkbsetup.py:241
-#, fuzzy, python-format
-msgid ""
-"<small><i>The system keyboard layouts can be set less than or equal to %d.\n"
-"You may use Up/Down buttons to change the order.</i></small>"
+msgid "Copyright (c) 2007-2012 Peng Huang\n"
 msgstr ""
-"<small><i>Noklusētā ievades metode atrodas saraksta augšpusē.\n"
-"Jūs varat izmantot pogas uz augšu/uz leju, lai to izmainītu.</i></small>"
+"Autortiesības (c) 2007-2010 Peng Huang\n"
+"Autortiesības (c) 2007-2010 Red Hat, Inc."
 
-#: ../setup/xkbsetup.py:380 ../setup/xkbsetup.py:435
-#, fuzzy
-msgid "Please restart IBus to reload your configuration."
-msgstr "Lūdzu, nospiediet taustiņu (vai taustiņu kombināciju)"
-
-#: ../setup/xkbsetup.py:425
-msgid "The keyboard option cannot be chosen."
-msgstr ""
-
-#: ../ui/gtk2/candidatepanel.py:264
-msgid "Previous page"
-msgstr "Iepriekšējā lapa"
-
-#: ../ui/gtk2/candidatepanel.py:269
-msgid "Next page"
-msgstr "Nākamā lapa"
-
-#: ../ui/gtk2/languagebar.py:107
-msgid "About the input method"
-msgstr "Par ievades metodi"
-
-#: ../ui/gtk2/languagebar.py:215
-msgid "Switch input method"
-msgstr "Pārslēgt ievades metodi"
-
-#: ../ui/gtk2/languagebar.py:362
-msgid "About the Input Method"
-msgstr "Par ievades metodi"
-
-#: ../ui/gtk2/panel.py:117
-msgid "IBus Panel"
-msgstr "IBus panelis"
-
-#: ../ui/gtk2/panel.py:123
-msgid "IBus input method framework"
-msgstr "IBus ievades metodes rāmja sistēma"
-
-#: ../ui/gtk2/panel.py:353
-msgid "Restart"
-msgstr "Pārstartēt"
-
-#: ../ui/gtk2/panel.py:444
-msgid "Turn off input method"
-msgstr "Izslēgt ievades metodi"
-
-#: ../ui/gtk2/panel.py:483
-msgid "No input window"
-msgstr "Nav ievades loga"
-
-#: ../ui/gtk2/panel.py:514
+#: ../ui/gtk3/panel.vala:335
 msgid "IBus is an intelligent input bus for Linux/Unix."
 msgstr "IBus ir inteliģenta ievades kopne Linux/Unix."
 
-#: ../ui/gtk2/panel.py:518
+#: ../ui/gtk3/panel.vala:339
 msgid "translator-credits"
 msgstr ""
 "Arvis Lācis\n"
 "Pēteris Krišjānis\n"
 "Rūdolfs Mazurs"
 
-#: ../xkb/ibus-engine-xkb-main.c:201
-msgid "Default Layout"
-msgstr ""
+#: ../ui/gtk3/panel.vala:371
+msgid "Restart"
+msgstr "Pārstartēt"
 
-#: ../xkb/ibus-simple-engine.c:179
-msgid "Setup"
-msgstr ""
+#~ msgid "Previous page"
+#~ msgstr "Iepriekšējā lapa"
 
-#: ../xkb/ibus-simple-engine.c:180
-msgid "Configure XKB engine"
-msgstr ""
-
-#: ../xkb/ibus-xkb-main.c:47
-msgid "Get current xkb layout"
-msgstr ""
-
-#. Translators: the "layout" should not be translated due to a variable.
-#: ../xkb/ibus-xkb-main.c:49
-#, fuzzy
-msgid "Set xkb layout"
-msgstr "Izmantot sistēmas tastatūras izkārtojumu"
-
-#: ../xkb/ibus-xkb-main.c:50
-msgid "Set xkb model"
-msgstr ""
-
-#: ../xkb/ibus-xkb-main.c:51
-msgid "Set xkb option"
-msgstr ""
-
-#: ../xkb/ibus-xkb-main.c:52
-msgid "Get current xkb state"
-msgstr ""
-
-#~ msgid "IBus"
-#~ msgstr "IBus"
-
-#~ msgid "Input Method Framework"
-#~ msgstr "Ievades metožu rāmja sistēma"
-
-#~ msgid "Start IBus Input Method Framework"
-#~ msgstr "Startēt IBus ievades metožu rāmja sistēmu"
-
-#~ msgid ""
-#~ "Copyright (c) 2007-2010 Peng Huang\n"
-#~ "Copyright (c) 2007-2010 Red Hat, Inc."
-#~ msgstr ""
-#~ "Autortiesības (c) 2007-2010 Peng Huang\n"
-#~ "Autortiesības (c) 2007-2010 Red Hat, Inc."
-
-#~ msgid "Other"
-#~ msgstr "Cits"
+#~ msgid "Next page"
+#~ msgstr "Nākamā lapa"
 
 #~ msgid ""
 #~ "Some input methods have been installed, removed or updated. Please "
@@ -334,250 +545,29 @@ msgstr ""
 #~ msgid "Later"
 #~ msgstr "Vēlāk"
 
+#~ msgid "IBus Panel"
+#~ msgstr "IBus panelis"
+
+#~ msgid "IBus input method framework"
+#~ msgstr "IBus ievades metodes rāmja sistēma"
+
+#~ msgid "Turn off input method"
+#~ msgstr "Izslēgt ievades metodi"
+
+#~ msgid "No input window"
+#~ msgstr "Nav ievades loga"
+
+#~ msgid "About the input method"
+#~ msgstr "Par ievades metodi"
+
+#~ msgid "Switch input method"
+#~ msgstr "Pārslēgt ievades metodi"
+
+#~ msgid "About the Input Method"
+#~ msgstr "Par ievades metodi"
+
 #~ msgid "next input method"
 #~ msgstr "nākošā ievades metode"
 
 #~ msgid "previous input method"
 #~ msgstr "iepriekšējā ievades metode"
-
-#~ msgid "Auto hide"
-#~ msgstr "Autom. slēpšana"
-
-#~ msgid "Custom font"
-#~ msgstr "Izvēlēts fonts"
-
-#~ msgid "Custom font name for language panel"
-#~ msgstr "Izvēlētā fonta nosaukums valodas panelim"
-
-#~ msgid "Disable shortcut keys"
-#~ msgstr "Deaktivēt īsinājumu taustiņus"
-
-#~ msgid "Embed Preedit Text"
-#~ msgstr "Iegult pirmsrediģēšanas tekstu"
-
-#~ msgid "Embed Preedit Text in Application Window"
-#~ msgstr "Iegult pirmsrediģēšanas tekstu lietotnes logā"
-
-#~ msgid "Enable input method by default"
-#~ msgstr "Aktivēt ievades metodi pēc noklusējuma"
-
-#~ msgid "Enable input method by default when the application gets input focus"
-#~ msgstr "Aktivēt ievades metodi pēc noklusējuma, kad lietotne saņem fokusu"
-
-#~ msgid "Enable shortcut keys"
-#~ msgstr "Aktivēt īsinājuma taustiņus"
-
-#~ msgid "Language panel position"
-#~ msgstr "Valodas paneļa pozīcija"
-
-#~ msgid "Next engine shortcut keys"
-#~ msgstr "Nākošā dzinēja saīsņu taustiņi"
-
-#~ msgid "Orientation of lookup table"
-#~ msgstr "Apsekošanas tabulas novietojums"
-
-#~ msgid "Orientation of lookup table. 0 = Horizontal, 1 = Vertical"
-#~ msgstr "Apsekošanas tabulas novietojums. 0 = horizontāls, 1 = vertikāls"
-
-#~ msgid "Preload engines"
-#~ msgstr "Pārlādēt dzinējus"
-
-#~ msgid "Preload engines during ibus starts up"
-#~ msgstr "Laicīgi ielādēt dzinējus ibus ielādes laikā"
-
-#~ msgid "Prev engine shortcut keys"
-#~ msgstr "Iepriekšējā dzinēja saīsņu taustiņi"
-
-#~ msgid "Share the same input method among all applications"
-#~ msgstr "Starp lietotnēm izmantot vienu un to pašu ievades metodi"
-
-#~ msgid "Show icon on system tray"
-#~ msgstr "Rādīt ikonu sistēmas ikonu joslā"
-
-#~ msgid "Show input method name"
-#~ msgstr "Rādīt ievades metodes nosaukumu"
-
-#~ msgid "Show input method name on language bar"
-#~ msgstr "Parādīt ievades metodes nosaukumu valodas joslā"
-
-#~ msgid ""
-#~ "The behavior of language panel. 0 = Embedded in menu, 1 = Auto hide, 2 = "
-#~ "Always show"
-#~ msgstr ""
-#~ "Valodas paneļa uzvedība. 0 = iegults izvēlnē, 1 = automātiski slēpt, 2 = "
-#~ "vienmēr rādīt"
-
-#~ msgid ""
-#~ "The position of the language panel. 0 = Top left corner, 1 = Top right "
-#~ "corner, 2 = Bottom left corner, 3 = Bottom right corner, 4 = Custom"
-#~ msgstr ""
-#~ "Valodas paneļa pozīcija. 0 = augšējais kreisais stūris, 1 = augšējais "
-#~ "labais stūris, 2 = apakšējais kreisais stūris, 3 = apakšējais labais "
-#~ "stūris, 4 = izvēlēts"
-
-#~ msgid "The shortcut keys for switching to the next input method in the list"
-#~ msgstr "Saīsņu taustiņi, lai pārslēgtos uz nākamo ievades metodi sarakstā"
-
-#~ msgid "The shortcut keys for switching to the previous input method"
-#~ msgstr ""
-#~ "Saīsņu taustiņi, lai pārslēgtos uz iepriekšējo ievades metodi sarakstā"
-
-#~ msgid "The shortcut keys for turning input method off"
-#~ msgstr "Saīsņu taustiņi, lai izslēgtu ievades metodi "
-
-#~ msgid "The shortcut keys for turning input method on"
-#~ msgstr "Saīsņu taustiņi, lai ieslēgtu ievades metodi "
-
-#~ msgid "Use custom font"
-#~ msgstr "Izmantot izvēles fontu"
-
-#~ msgid "Use custom font name for language panel"
-#~ msgstr "Izmantojamais izvēles fonta nosaukums valodas panelim"
-
-#~ msgid "Use global input method"
-#~ msgstr "Izmantot  globālo ievades metodi"
-
-#~ msgid "Use system keyboard (XKB) layout"
-#~ msgstr "Izmantot sistēmas tastatūras (XKB) izkārtojumu "
-
-#~ msgid "..."
-#~ msgstr "..."
-
-#~ msgid "<b>Font and Style</b>"
-#~ msgstr "<b>Fonts un stils</b>"
-
-#~ msgid "<b>Global input method settings</b>"
-#~ msgstr "<b>Globālās ievades metodes iestatījumi</b>"
-
-#~ msgid "<b>Keyboard Layout</b>"
-#~ msgstr "<b>Tastatūras izkārtojums</b>"
-
-#~ msgid "<b>Keyboard Shortcuts</b>"
-#~ msgstr "<b>Tastatūras īsceļi</b>"
-
-#~ msgid "<b>Startup</b>"
-#~ msgstr "<b>Startēšana</b>"
-
-#~ msgid ""
-#~ "<big><b>IBus</b></big>\n"
-#~ "<small>The intelligent input bus</small>\n"
-#~ "Homepage: http://code.google.com/p/ibus\n"
-#~ "\n"
-#~ "\n"
-#~ "\n"
-#~ msgstr ""
-#~ "<big><b>IBus</b></big>\n"
-#~ "<small>Inteliģentā ievades kopne</small>\n"
-#~ "Mājas lapa: http://code.google.com/p/ibus\n"
-#~ "\n"
-#~ "\n"
-#~ "\n"
-
-#~ msgid "Add the selected input method into the enabled input methods"
-#~ msgstr "Pievienot izvēlēto ievades metodi pie aktivētajām ievades metodēm"
-
-#~ msgid "Advanced"
-#~ msgstr "Paplašināti"
-
-#~ msgid "Always"
-#~ msgstr "Vienmēr"
-
-#~ msgid "Bottom left corner"
-#~ msgstr "Apakšējais kreisais stūris"
-
-#~ msgid "Bottom right corner"
-#~ msgstr "Apakšējais labais stūris"
-
-#~ msgid "Candidates orientation:"
-#~ msgstr "Kandidātu orientācija:"
-
-#~ msgid "Custom"
-#~ msgstr "Izvēlēts"
-
-#~ msgid "Disable:"
-#~ msgstr "Deaktivēt:"
-
-#~ msgid "Embed preedit text in application window"
-#~ msgstr "Iegult pirmsrediģēšanas tekstu lietotnes logā"
-
-#~ msgid "Embed the preedit text of input method in the application window"
-#~ msgstr "Iegult ievades metodes pirmsrediģēšanas tekstu lietotnes logā"
-
-#~ msgid "Embedded in menu"
-#~ msgstr "Iegults izvēlnē"
-
-#~ msgid "Enable or disable:"
-#~ msgstr "Aktivēt vai deaktivēt:"
-
-#~ msgid "Enable:"
-#~ msgstr "Aktivēt:"
-
-#~ msgid "General"
-#~ msgstr "Vispārīgi"
-
-#~ msgid "Horizontal"
-#~ msgstr "Horizontāli"
-
-#~ msgid "Language panel position:"
-#~ msgstr "Valodas paneļa pozīcija:"
-
-#~ msgid "Move down the selected input method in the enabled input methods"
-#~ msgstr ""
-#~ "Pārvietojiet lejup izvēlēto ievades metodi ieslēgto ievades metožu "
-#~ "sarakstā"
-
-#~ msgid "Move up the selected input method in the enabled input methods list"
-#~ msgstr ""
-#~ "Pārvietojiet augšup izvēlēto ievades metodi ieslēgto ievades metožu "
-#~ "sarakstā"
-
-#~ msgid "Next input method:"
-#~ msgstr "Nākamā ievades metode"
-
-#~ msgid "Previous input method:"
-#~ msgstr "Iepriekšējā ievades metode:"
-
-#~ msgid "Remove the selected input method from the enabled input methods"
-#~ msgstr "Noņemt izvēlēto metodi no ieslēgto ievades metožu saraksta"
-
-#~ msgid "Set the behavior of ibus how to show or hide language bar"
-#~ msgstr "Iestatīt ibus uzvedību kā rādīt vai slēpt valodas joslu"
-
-#~ msgid "Set the orientation of candidates in lookup table"
-#~ msgstr "Iestatīt kandidātu orientāciju apsekošanas tabulā"
-
-#~ msgid "Show information of the selected input method"
-#~ msgstr "Parādīt informāciju par izvēlēto ievades metodi"
-
-#~ msgid "Show input method's name on language bar when check the checkbox"
-#~ msgstr ""
-#~ "Parādīt ievades metodes nosaukumu valodas joslā, kad tiek atzīmēta "
-#~ "izvēles rūtiņa"
-
-#~ msgid "Show language panel:"
-#~ msgstr "Parādīt valodas paneli:"
-
-#~ msgid "Start ibus on login"
-#~ msgstr "Startēt ibus līdz ar pieslēgšanos"
-
-#~ msgid "The shortcut keys for switching to next input method in the list"
-#~ msgstr "Saīsņu taustiņi, lai pārslēgtos uz nākošo ievades metodi sarakstā"
-
-#~ msgid "The shortcut keys for switching to previous input method in the list"
-#~ msgstr ""
-#~ "Saīsņu taustiņi, lai pārslēgtos uz iepriekšējo ievades metodi sarakstā"
-
-#~ msgid "Top left corner"
-#~ msgstr "Augšējais kreisais stūris"
-
-#~ msgid "Top right corner"
-#~ msgstr "Augšējais labais stūris"
-
-#~ msgid "Use custom font:"
-#~ msgstr "Lietot izvēlētu fontu:"
-
-#~ msgid "Vertical"
-#~ msgstr "Vertikāli"
-
-#~ msgid "When active"
-#~ msgstr "Kad aktīvs"

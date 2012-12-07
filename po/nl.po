@@ -2,584 +2,544 @@
 # Copyright (C) 2011-2012 Takao Fujiwara <takao.fujiwara1@gmail.com>
 # This file is distributed under the same license as the ibus-xkb package.
 #
-# Geert Warrink <geert.warrink@onsnet.nu>, 2011.
+# Translators:
+# Geert Warrink <geert.warrink@onsnet.nu>, 2011-2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: ibus-xkb HEAD\n"
 "Report-Msgid-Bugs-To: http://code.google.com/p/ibus/issues/entry\n"
-"POT-Creation-Date: 2012-05-18 10:43+0900\n"
-"PO-Revision-Date: 2011-05-13 15:18+0000\n"
-"Last-Translator: warrink <geert.warrink@onsnet.nu>\n"
-"Language-Team: Dutch (http://www.transifex.net/projects/p/fedora/team/nl/)\n"
-"Language: nl\n"
+"POT-Creation-Date: 2012-10-15 11:55+0900\n"
+"PO-Revision-Date: 2012-10-15 10:34+0000\n"
+"Last-Translator: Geert Warrink <geert.warrink@onsnet.nu>\n"
+"Language-Team: Dutch <trans-nl@lists.fedoraproject.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../data/ibus-xkb.schemas.in.h:1
-#, fuzzy
-msgid "Trigger shortcut keys for gtk_accelerator_parse"
-msgstr "Trigger sneltoetsen"
+#: ../setup/setup.ui.h:1
+msgid "Horizontal"
+msgstr "Horizontaal"
 
-#: ../data/ibus-xkb.schemas.in.h:2
+#: ../setup/setup.ui.h:2
+msgid "Vertical"
+msgstr "Verticaal"
+
+#: ../setup/setup.ui.h:3
+msgid "Top left corner"
+msgstr "Linksboven"
+
+#: ../setup/setup.ui.h:4
+msgid "Top right corner"
+msgstr "Rechtsboven"
+
+#: ../setup/setup.ui.h:5
+msgid "Bottom left corner"
+msgstr "Linksonder"
+
+#: ../setup/setup.ui.h:6
+msgid "Bottom right corner"
+msgstr "Rechtsonder"
+
+#: ../setup/setup.ui.h:7
+msgid "Custom"
+msgstr "Aangepast"
+
+#: ../setup/setup.ui.h:8
+msgid "Embedded in menu"
+msgstr "Ingebed in menu"
+
+#: ../setup/setup.ui.h:9
+msgid "When active"
+msgstr "Als deze actief is"
+
+#: ../setup/setup.ui.h:10
+msgid "Always"
+msgstr "Altijd"
+
+#: ../setup/setup.ui.h:11 ../setup/ibus-setup.desktop.in.h:1
+msgid "IBus Preferences"
+msgstr "IBus voorkeuren"
+
+#: ../setup/setup.ui.h:12
+msgid "The shortcut keys for switching to next input method in the list"
+msgstr "De sneltoetsen voor het schakelen naar de volgende invoermethode in de lijst"
+
+#: ../setup/setup.ui.h:13
+msgid "Next input method:"
+msgstr "Volgende invoermethode:"
+
+#: ../setup/setup.ui.h:14
+msgid "The shortcut keys for switching to previous input method in the list"
+msgstr "De sneltoetsen voor het schakelen naar de vorige invoermethode in de lijst"
+
+#: ../setup/setup.ui.h:15
+msgid "Previous input method:"
+msgstr "Vorige invoermethode:"
+
+#: ../setup/setup.ui.h:16
+msgid "..."
+msgstr "..."
+
+#: ../setup/setup.ui.h:17 ../data/ibus.schemas.in.h:6
 msgid "The shortcut keys for turning input method on or off"
 msgstr "De sneltoetsen om invoermethode aan of uit te zetten"
 
-#: ../data/ibus-xkb.schemas.in.h:3
-msgid "This is used for gnome-shell to work shift + modifiers"
-msgstr ""
+#: ../setup/setup.ui.h:18
+msgid "Enable or disable:"
+msgstr "Aan- of uitzetten:"
 
-#: ../data/ibus-xkb.schemas.in.h:4
+#: ../setup/setup.ui.h:19
+msgid "Enable:"
+msgstr "Aanzetten:"
+
+#: ../setup/setup.ui.h:20
+msgid "Disable:"
+msgstr "Uitzetten:"
+
+#: ../setup/setup.ui.h:21
+msgid "<b>Keyboard Shortcuts</b>"
+msgstr "<b>Sneltoetsen</b>"
+
+#: ../setup/setup.ui.h:22
+msgid "Set the orientation of candidates in lookup table"
+msgstr "Stel de oriëntatie in van de kandidaten in de opzoektabel"
+
+#: ../setup/setup.ui.h:23
+msgid "Candidates orientation:"
+msgstr "Kandidaten oriëntatie:"
+
+#: ../setup/setup.ui.h:24
+msgid "Set the behavior of ibus how to show or hide language bar"
+msgstr "Stel het gedrag van ibus in voor het tonen of verbergen van de taalbalk"
+
+#: ../setup/setup.ui.h:25
+msgid "Show language panel:"
+msgstr "Toon taal paneel:"
+
+#: ../setup/setup.ui.h:26
+msgid "Language panel position:"
+msgstr "Taal panel positie:"
+
+#: ../setup/setup.ui.h:27 ../data/ibus.schemas.in.h:21
+msgid "Show icon on system tray"
+msgstr "Toon icoon op systeemvak"
+
+#: ../setup/setup.ui.h:28 ../data/ibus.schemas.in.h:23
+msgid "Show input method name on language bar"
+msgstr "Toon naam van invoermethode op taalbalk"
+
+#: ../setup/setup.ui.h:29
+msgid "Show input method's name on language bar when check the checkbox"
+msgstr "Toon de naam van de invoermethode op de taalbalk als je het selectievakje aanvinkt"
+
+#: ../setup/setup.ui.h:30
+msgid "Embed preedit text in application window"
+msgstr "Insluiten van pre-edit tekst in toepassingsvenster"
+
+#: ../setup/setup.ui.h:31
+msgid "Embed the preedit text of input method in the application window"
+msgstr "Sluit de pre-edit tekst van invoermethode in in het toepassingsvenster"
+
+#: ../setup/setup.ui.h:32
+msgid "Use custom font:"
+msgstr "Gebruik aangepast lettertype:"
+
+#: ../setup/setup.ui.h:33
+msgid "<b>Font and Style</b>"
+msgstr "<b>Lettertype en stijl</b>"
+
+#: ../setup/setup.ui.h:34
+msgid "General"
+msgstr "Algemeen"
+
+#: ../setup/setup.ui.h:35
+msgid "Add the selected input method into the enabled input methods"
+msgstr "Voeg de geselecteerde invoermethode toe aan de ingeschakelde invoermethoden"
+
+#: ../setup/setup.ui.h:36
+msgid "Remove the selected input method from the enabled input methods"
+msgstr "Verwijder de geselecteerde invoermethode uit de aangezette invoermethoden"
+
+#: ../setup/setup.ui.h:37
+msgid "Move up the selected input method in the enabled input methods list"
+msgstr "Verplaats de geselecteerde invoermethode omhoog in de aangezette invoermethoden lijst"
+
+#: ../setup/setup.ui.h:38
+msgid "Move down the selected input method in the enabled input methods"
+msgstr "Verplaats de geselecteerde invoermethode omlaag in de aangezette invoermethoden lijst"
+
+#: ../setup/setup.ui.h:39
+msgid "Show information of the selected input method"
+msgstr "Toon informatie over de geselecteerde invoermethode"
+
+#: ../setup/setup.ui.h:40
+msgid "Show setup of the selected input method"
+msgstr "Toon instelling van de geselecteerde invoermethode"
+
+#: ../setup/setup.ui.h:41
 msgid ""
-"This is used for gnome-shell to work shift + modifiers Currently gnome-shell "
-"assigns the shift reverse by dconf key and the shift reverse works with "
-"modifiers. But ibus supports multiple trigger keys; &lt;Control&gt;space "
-"(with modifiers) Zenkaku_hankaku (without modifiers) I copy the modifier "
-"trigger keys here to set the shift reverse at the moment."
-msgstr ""
+"<small><i>The default input method is the top one in the list.\n"
+"You may use up/down buttons to change it.</i></small>"
+msgstr "<small><i>De standaard invoermethode is de bovenste in de lijst.\nje kunt op/neer toetsen gebruiken om dit te veranderen.</i></small>"
 
-#: ../data/ibus-xkb.schemas.in.h:5
-msgid "Trigger shortcut keys for ja gtk_accelerator_parse"
-msgstr ""
+#. create im name & icon column
+#: ../setup/setup.ui.h:43 ../setup/enginetreeview.py:64
+msgid "Input Method"
+msgstr "Invoermethode"
 
-#: ../data/ibus-xkb.schemas.in.h:6
-msgid "Trigger shortcut keys for ko gtk_accelerator_parse"
-msgstr ""
+#: ../setup/setup.ui.h:44 ../data/ibus.schemas.in.h:24
+msgid "Use system keyboard layout"
+msgstr "Gebruik systeem toetsenbordindeling"
 
-#: ../data/ibus-xkb.schemas.in.h:7
-msgid "Use xmodmap"
-msgstr ""
+#: ../setup/setup.ui.h:45 ../data/ibus.schemas.in.h:25
+msgid "Use system keyboard (XKB) layout"
+msgstr "Gebruik systeem toetsenbord (XKB) indeling"
 
-#: ../data/ibus-xkb.schemas.in.h:8
-msgid "Run xmodmap if .xmodmap/.Xmodmap exists."
-msgstr ""
+#: ../setup/setup.ui.h:46
+msgid "<b>Keyboard Layout</b>"
+msgstr "<b>Toetsenbordindeling</b>"
 
-#: ../data/ibus-xkb.schemas.in.h:9
-msgid "Latin layout which have no ASCII"
-msgstr ""
+#: ../setup/setup.ui.h:47 ../data/ibus.schemas.in.h:33
+msgid "Share the same input method among all applications"
+msgstr "Deel dezelfde input-methode voor alle toepassingen"
 
-#: ../data/ibus-xkb.schemas.in.h:10
-msgid "us layout is appended to the latin layouts. variant is not needed."
-msgstr ""
+#: ../setup/setup.ui.h:48
+msgid "<b>Global input method settings</b>"
+msgstr "<b>Globale invoermethode instellingen</b>"
 
-#: ../data/ibus-xkb.schemas.in.h:11
-msgid "XKB layout list which is shown on ibus-setup"
-msgstr ""
+#: ../setup/setup.ui.h:49
+msgid "Advanced"
+msgstr "Geavanceerd"
 
-#: ../data/ibus-xkb.schemas.in.h:12
+#: ../setup/setup.ui.h:50
 msgid ""
-"XKB layout list which is shown on ibus-setup. The format is \"layout\" or "
-"\"layout(variant)\"."
-msgstr ""
+"<big><b>IBus</b></big>\n"
+"<small>The intelligent input bus</small>\n"
+"Homepage: http://code.google.com/p/ibus\n"
+"\n"
+"\n"
+"\n"
+msgstr "<bib><b>IBus</b></big>\n<small>De intelligente invoer bus</small>\nHomepagina: http://code.google.com/p/ibus\n\n\n\n"
 
-#: ../setup/engineabout.py:35 ../ui/gtk2/engineabout.py:34
-#: ../ui/gtk2/languagebar.py:358
+#: ../setup/setup.ui.h:57
+msgid "Start ibus on login"
+msgstr "Start ibus bij inloggen"
+
+#: ../setup/setup.ui.h:58
+msgid "<b>Startup</b>"
+msgstr "<b>Opstarten</b>"
+
+#: ../setup/setup.ui.h:59 ../setup/engineabout.py:34
 msgid "About"
 msgstr "Over"
 
-#: ../setup/engineabout.py:68 ../ui/gtk2/engineabout.py:62
+#: ../bus/ibus.desktop.in.h:1
+msgid "IBus"
+msgstr "IBus"
+
+#: ../bus/ibus.desktop.in.h:2
+msgid "Input Method Framework"
+msgstr "Invoer methode kader"
+
+#: ../bus/ibus.desktop.in.h:3
+msgid "Start IBus Input Method Framework"
+msgstr "Start IBus invoer methode kader"
+
+#: ../data/ibus.schemas.in.h:1
+msgid "Preload engines"
+msgstr "Engines voor-laden"
+
+#: ../data/ibus.schemas.in.h:2
+msgid "Preload engines during ibus starts up"
+msgstr "Engines voor-laden tijdens opstarten van ibus"
+
+#: ../data/ibus.schemas.in.h:3
+msgid "Engines order"
+msgstr "Machine volgorde"
+
+#: ../data/ibus.schemas.in.h:4
+msgid "Saved engines order in input method list"
+msgstr "Opgeslagen machine volgorde in invoermethode lijst"
+
+#: ../data/ibus.schemas.in.h:5
+msgid "Trigger shortcut keys"
+msgstr "Trigger sneltoetsen"
+
+#: ../data/ibus.schemas.in.h:7
+msgid "Enable shortcut keys"
+msgstr "Zet sneltoetsen aan"
+
+#: ../data/ibus.schemas.in.h:8
+msgid "The shortcut keys for turning input method on"
+msgstr "De sneltoetsen om invoermethode aan te zetten"
+
+#: ../data/ibus.schemas.in.h:9
+msgid "Disable shortcut keys"
+msgstr "Zet sneltoetsen uit"
+
+#: ../data/ibus.schemas.in.h:10
+msgid "The shortcut keys for turning input method off"
+msgstr "De sneltoetsen om invoermethode uit te zetten"
+
+#: ../data/ibus.schemas.in.h:11
+msgid "Next engine shortcut keys"
+msgstr "Volgende engine sneltoetsen"
+
+#: ../data/ibus.schemas.in.h:12
+msgid "The shortcut keys for switching to the next input method in the list"
+msgstr "De sneltoetsen voor het omschakelen naar de volgende invoermethode in de lijst"
+
+#: ../data/ibus.schemas.in.h:13
+msgid "Prev engine shortcut keys"
+msgstr "Vorige engine sneltoetsen"
+
+#: ../data/ibus.schemas.in.h:14
+msgid "The shortcut keys for switching to the previous input method"
+msgstr "De sneltoetsen voor het omschakelen naar de vorige invoermethode"
+
+#: ../data/ibus.schemas.in.h:15
+msgid "Auto hide"
+msgstr "Automatisch verbergen"
+
+#: ../data/ibus.schemas.in.h:16
+msgid ""
+"The behavior of language panel. 0 = Embedded in menu, 1 = Auto hide, 2 = "
+"Always show"
+msgstr "Het gedrag van het taal paneel. 0 = Ingebed in het menu, 1 = Automatisch verbergen, 2 = Altijd tonen"
+
+#: ../data/ibus.schemas.in.h:17
+msgid "Language panel position"
+msgstr "Taal-paneel positie"
+
+#: ../data/ibus.schemas.in.h:18
+msgid ""
+"The position of the language panel. 0 = Top left corner, 1 = Top right "
+"corner, 2 = Bottom left corner, 3 = Bottom right corner, 4 = Custom"
+msgstr "De positie van de taal paneel. 0 = linksboven, 1 = rechtsboven, 2 = linksonder,  3 = rechtsonder, 4 = aangepast"
+
+#: ../data/ibus.schemas.in.h:19
+msgid "Orientation of lookup table"
+msgstr "Oriëntatie van opzoektabel"
+
+#: ../data/ibus.schemas.in.h:20
+msgid "Orientation of lookup table. 0 = Horizontal, 1 = Vertical"
+msgstr "Oriëntatie van opzoektabel. 0 = horizontaal, 1 = verticaal"
+
+#: ../data/ibus.schemas.in.h:22
+msgid "Show input method name"
+msgstr "Toon naam van invoermethode"
+
+#: ../data/ibus.schemas.in.h:26
+msgid "Use custom font"
+msgstr "Gebruik aangepast lettertype"
+
+#: ../data/ibus.schemas.in.h:27
+msgid "Use custom font name for language panel"
+msgstr "Gebruik aangepaste lettertype naam voor taal-paneel"
+
+#: ../data/ibus.schemas.in.h:28
+msgid "Custom font"
+msgstr "Aangepaste lettertype"
+
+#: ../data/ibus.schemas.in.h:29
+msgid "Custom font name for language panel"
+msgstr "Aangepaste lettertype naam voor taal-paneel"
+
+#: ../data/ibus.schemas.in.h:30
+msgid "Embed Preedit Text"
+msgstr "Voeg pre-edit tekst in"
+
+#: ../data/ibus.schemas.in.h:31
+msgid "Embed Preedit Text in Application Window"
+msgstr "Voeg pre-edit tekst in in toepassingsvenster"
+
+#: ../data/ibus.schemas.in.h:32
+msgid "Use global input method"
+msgstr "Gebruik globale invoermethode"
+
+#: ../data/ibus.schemas.in.h:34
+msgid "Enable input method by default"
+msgstr "Zet invoer-methode standaard aan"
+
+#: ../data/ibus.schemas.in.h:35
+msgid "Enable input method by default when the application gets input focus"
+msgstr "Zet invoer-methode standaard aan als de toepassing input focus krijgt"
+
+#: ../data/ibus.schemas.in.h:36
+msgid "DConf preserve name prefixes"
+msgstr "DConf behoud van naam voorvoegsels"
+
+#: ../data/ibus.schemas.in.h:37
+msgid "Prefixes of DConf keys to stop name conversion"
+msgstr "Voorvoegsels van DConf sleutels voor het stoppen van naamconversie"
+
+#: ../ibus/_config.py.in:41
+msgid ""
+"Copyright (c) 2007-2010 Peng Huang\n"
+"Copyright (c) 2007-2010 Red Hat, Inc."
+msgstr "Copyright (c) 2007-2010 Peng Huang\nCopyright (c) 2007-2010 Red Hat, Inc."
+
+#: ../ibus/lang.py:41 ../src/ibusutil.c:150 ../src/ibusutil.c:152
+msgid "Other"
+msgstr "Andere"
+
+#: ../setup/engineabout.py:67
 #, python-format
 msgid "Language: %s\n"
 msgstr "Taal: %s\n"
 
-#: ../setup/engineabout.py:71 ../ui/gtk2/engineabout.py:64
+#: ../setup/engineabout.py:70
 #, python-format
 msgid "Keyboard layout: %s\n"
 msgstr "Toetsenbordindeling: %s\n"
 
-#: ../setup/engineabout.py:74 ../ui/gtk2/engineabout.py:66
+#: ../setup/engineabout.py:73
 #, python-format
 msgid "Author: %s\n"
 msgstr "Auteur: %s\n"
 
-#: ../setup/engineabout.py:77 ../ui/gtk2/engineabout.py:68
+#: ../setup/engineabout.py:76
 msgid "Description:\n"
 msgstr "Beschrijving:\n"
 
-#: ../setup/enginecombobox.py:137
+#: ../setup/enginecombobox.py:135
 msgid "Select an input method"
 msgstr "Selecteer een invoermethode"
 
-#. create im name & icon column
-#: ../setup/enginetreeview.py:65
-msgid "Input Method"
-msgstr "Invoermethode"
-
-#: ../setup/enginetreeview.py:93
+#: ../setup/enginetreeview.py:92
 msgid "Kbd"
 msgstr "Toetsenbord"
 
-#: ../setup/ibus-setup-xkb.desktop.in.h:1
-msgid "IBus Preferences"
-msgstr "IBus voorkeuren"
-
-#: ../setup/ibus-setup-xkb.desktop.in.h:2
+#: ../setup/ibus-setup.desktop.in.h:2
 msgid "Set IBus Preferences"
 msgstr "Stel IBus voorkeuren in"
 
-#: ../setup/keyboardshortcut.py:55
+#: ../setup/keyboardshortcut.py:54
 msgid "Keyboard shortcuts"
 msgstr "Sneltoetsen"
 
-#: ../setup/keyboardshortcut.py:66
+#: ../setup/keyboardshortcut.py:65
 msgid "Key code:"
 msgstr "Toetscode:"
 
-#: ../setup/keyboardshortcut.py:81
+#: ../setup/keyboardshortcut.py:80
 msgid "Modifiers:"
 msgstr "Modificatietoetsen:"
 
-#: ../setup/keyboardshortcut.py:236
+#: ../setup/keyboardshortcut.py:251
 msgid ""
 "Please press a key (or a key combination).\n"
 "The dialog will be closed when the key is released."
-msgstr ""
-"Druk op een toets (of een toetsencombinatie).\n"
-"De dialoog wordt afgesloten als de toets losgelaten wordt."
+msgstr "Druk op een toets (of een toetsencombinatie).\nDe dialoog wordt afgesloten als de toets losgelaten wordt."
 
-#: ../setup/keyboardshortcut.py:238
+#: ../setup/keyboardshortcut.py:253
 msgid "Please press a key (or a key combination)"
 msgstr "Druk op een toets (of een toetsencombinatie)"
 
-#: ../setup/main.py:80
+#: ../setup/main.py:87
 msgid "trigger"
 msgstr "trigger"
 
-#: ../setup/main.py:81
+#: ../setup/main.py:88
 msgid "enable"
 msgstr "aanzetten"
 
-#: ../setup/main.py:82
+#: ../setup/main.py:89
 msgid "disable"
 msgstr "uitzetten"
 
-#: ../setup/main.py:339
-msgid "IBus daemon is not started. Do you want to start it now?"
-msgstr "IBus daemon was niet gestart. Wil je het nu starten?"
+#: ../setup/main.py:331
+msgid "The IBus daemon is not running. Do you wish to start it?"
+msgstr "De IBus daemon draait niet. Wil je het starten?"
 
-#: ../setup/main.py:360
+#: ../setup/main.py:352
 msgid ""
-"IBus has been started! If you can not use IBus, please add below lines in "
-"$HOME/.bashrc, and relogin your desktop.\n"
+"IBus has been started! If you cannot use IBus, add the following lines to your $HOME/.bashrc; then relog into your desktop.\n"
 "  export GTK_IM_MODULE=ibus\n"
 "  export XMODIFIERS=@im=ibus\n"
 "  export QT_IM_MODULE=ibus"
-msgstr ""
-"IBus is gestart! Als je IBus niet kunt gebruiken, voeg dan de onderstaande "
-"regels toe aan $HOME/.bashrc, en log opnieuw in op je bureaublad.\n"
-"  export GTK_IM_MODULE=ibus\n"
-"  export XMODIFIERS=@im=ibus\n"
-"  export QT_IM_MODULE=ibus"
+msgstr "IBus is gestart! Als je IBus niet kunt gebruiken, voeg je de volgende regels toe aan je $HOME/.bashrc; log daarna opnieuw in op je bureaublad.\n  export GTK_IM_MODULE=ibus\n  export XMODIFIERS=@im=ibus\n  export QT_IM_MODULE=ibus"
 
-#: ../setup/main.py:373
+#. Translators: %d == 5 currently
+#: ../setup/main.py:366
 #, python-format
-msgid "IBus daemon coundn't be started in %d seconds"
-msgstr ""
+msgid "IBus daemon could not be started in %d seconds"
+msgstr "IBus daemon kon niet binnen %d seconden gestart worden"
 
-#: ../setup/main.py:385
+#: ../setup/main.py:378
 #, python-format
 msgid "Select keyboard shortcut for %s"
 msgstr "Selecteer sneltoets voor %s"
 
-#: ../setup/xkbsetup.py:44 ../setup/xkbsetup.py:112 ../setup/xkbsetup.py:408
-msgid "Default"
-msgstr ""
+#: ../tools/main.vala:40
+msgid "List engine name only"
+msgstr "Toon alleen machinenamen"
 
-#: ../setup/xkbsetup.py:207
-#, fuzzy
-msgid "Select keyboard layouts"
-msgstr "Selecteer sneltoets voor %s"
+#: ../tools/main.vala:44
+msgid "command [OPTIONS]"
+msgstr "commando[OPTIES]"
 
-#: ../setup/xkbsetup.py:212
-#, fuzzy
-msgid "Keyboard Layouts"
-msgstr "Toetsenbordindeling: %s\n"
+#: ../tools/main.vala:56 ../tools/main.vala:138 ../tools/main.vala:148
+#, c-format
+msgid "Can't connect to IBus.\n"
+msgstr "Kan niet met IBus verbinden.\n"
 
-#: ../setup/xkbsetup.py:241
-#, fuzzy, python-format
+#: ../tools/main.vala:82
+#, c-format
+msgid "language: %s\n"
+msgstr "taal:%s\n"
+
+#: ../tools/main.vala:100
+#, c-format
+msgid "No engine is set.\n"
+msgstr "Er is geen machine ingesteld.\n"
+
+#: ../tools/main.vala:108
+#, c-format
+msgid "Set global engine failed.\n"
+msgstr "Instellen van globale machine is mislukt.\n"
+
+#: ../tools/main.vala:113
+#, c-format
+msgid "Get global engine failed.\n"
+msgstr "Verkrijgen van globale machine is mislukt.\n"
+
+#: ../tools/main.vala:120
+#, c-format
+msgid "Switch xkb layout to %s failed."
+msgstr "Omschakelen van xkb indeling naar %s is mislukt."
+
+#: ../tools/main.vala:185
+#, c-format
 msgid ""
-"<small><i>The system keyboard layouts can be set less than or equal to %d.\n"
-"You may use Up/Down buttons to change the order.</i></small>"
-msgstr ""
-"<small><i>De standaard invoermethode is de bovenste in de lijst.\n"
-"je kunt op/neer toetsen gebruiken om dit te veranderen.</i></small>"
+"Usage: %s COMMAND [OPTION...]\n"
+"\n"
+msgstr "Gebruik: %s COMMANDO [OPTIE...]\n\n"
 
-#: ../setup/xkbsetup.py:380 ../setup/xkbsetup.py:435
-#, fuzzy
-msgid "Please restart IBus to reload your configuration."
-msgstr "Druk op een toets (of een toetsencombinatie)"
+#: ../tools/main.vala:186
+#, c-format
+msgid "Commands:\n"
+msgstr "Commando's:\n"
 
-#: ../setup/xkbsetup.py:425
-msgid "The keyboard option cannot be chosen."
-msgstr ""
+#: ../tools/main.vala:208
+#, c-format
+msgid "%s is unknown command!\n"
+msgstr "%s is een onbekend commando!\n"
 
-#: ../ui/gtk2/candidatepanel.py:264
-msgid "Previous page"
-msgstr "Vorige pagina"
+#: ../ui/gtk3/panel.vala:361
+msgid "Copyright (c) 2007-2012 Peng Huang\n"
+msgstr "Copyright (c) 2007-2012 Peng Huang\n"
 
-#: ../ui/gtk2/candidatepanel.py:269
-msgid "Next page"
-msgstr "Volgende pagina"
-
-#: ../ui/gtk2/languagebar.py:107
-msgid "About the input method"
-msgstr "Over de invoer methode"
-
-#: ../ui/gtk2/languagebar.py:215
-msgid "Switch input method"
-msgstr "Schakel invoer methode om"
-
-#: ../ui/gtk2/languagebar.py:362
-msgid "About the Input Method"
-msgstr "Over de invoer methode"
-
-#: ../ui/gtk2/panel.py:117
-msgid "IBus Panel"
-msgstr "IBus paneel"
-
-#: ../ui/gtk2/panel.py:123
-msgid "IBus input method framework"
-msgstr "IBus invoermethode kader"
-
-#: ../ui/gtk2/panel.py:353
-msgid "Restart"
-msgstr "Opnieuw starten"
-
-#: ../ui/gtk2/panel.py:444
-msgid "Turn off input method"
-msgstr "Schakel invoer methode uit"
-
-#: ../ui/gtk2/panel.py:483
-msgid "No input window"
-msgstr "Geen input venster"
-
-#: ../ui/gtk2/panel.py:514
+#: ../ui/gtk3/panel.vala:366
 msgid "IBus is an intelligent input bus for Linux/Unix."
 msgstr "IBus is een intelligente invoer bus voor Linux/Unix."
 
-#: ../ui/gtk2/panel.py:518
+#: ../ui/gtk3/panel.vala:370
 msgid "translator-credits"
 msgstr "Geert Warrink"
 
-#: ../xkb/ibus-engine-xkb-main.c:201
-msgid "Default Layout"
-msgstr ""
-
-#: ../xkb/ibus-simple-engine.c:179
-msgid "Setup"
-msgstr ""
-
-#: ../xkb/ibus-simple-engine.c:180
-msgid "Configure XKB engine"
-msgstr ""
-
-#: ../xkb/ibus-xkb-main.c:47
-msgid "Get current xkb layout"
-msgstr ""
-
-#. Translators: the "layout" should not be translated due to a variable.
-#: ../xkb/ibus-xkb-main.c:49
-#, fuzzy
-msgid "Set xkb layout"
-msgstr "Gebruik systeem toetsenbordindeling"
-
-#: ../xkb/ibus-xkb-main.c:50
-msgid "Set xkb model"
-msgstr ""
-
-#: ../xkb/ibus-xkb-main.c:51
-msgid "Set xkb option"
-msgstr ""
-
-#: ../xkb/ibus-xkb-main.c:52
-msgid "Get current xkb state"
-msgstr ""
-
-#~ msgid "IBus"
-#~ msgstr "IBus"
-
-#~ msgid "Input Method Framework"
-#~ msgstr "Invoer methode kader"
-
-#~ msgid "Start IBus Input Method Framework"
-#~ msgstr "Start IBus invoer methode kader"
-
-#~ msgid ""
-#~ "Copyright (c) 2007-2010 Peng Huang\n"
-#~ "Copyright (c) 2007-2010 Red Hat, Inc."
-#~ msgstr ""
-#~ "Copyright (c) 2007-2010 Peng Huang\n"
-#~ "Copyright (c) 2007-2010 Red Hat, Inc."
-
-#~ msgid "Other"
-#~ msgstr "Andere"
-
-#~ msgid ""
-#~ "Some input methods have been installed, removed or updated. Please "
-#~ "restart ibus input platform."
-#~ msgstr ""
-#~ "Sommige invoermethoden zijn geïnstalleerd, verwijderd of bijgewerkt. "
-#~ "Start ibus invoer platform opnieuw op."
-
-#~ msgid "Restart Now"
-#~ msgstr "Nu opnieuw opstarten"
-
-#~ msgid "Later"
-#~ msgstr "Later"
-
-#~ msgid "next input method"
-#~ msgstr "volgende invoermethode"
-
-#~ msgid "previous input method"
-#~ msgstr "vorige invoermethode"
-
-#~ msgid "Auto hide"
-#~ msgstr "Automatisch verbergen"
-
-#~ msgid "Custom font"
-#~ msgstr "Aangepaste lettertype"
-
-#~ msgid "Custom font name for language panel"
-#~ msgstr "Aangepaste lettertype naam voor taal-paneel"
-
-#~ msgid "Disable shortcut keys"
-#~ msgstr "Zet sneltoetsen uit"
-
-#~ msgid "Embed Preedit Text"
-#~ msgstr "Voeg pre-edit tekst in"
-
-#~ msgid "Embed Preedit Text in Application Window"
-#~ msgstr "Voeg pre-edit tekst in in toepassingsvenster"
-
-#~ msgid "Enable input method by default"
-#~ msgstr "Zet invoer-methode standaard aan"
-
-#~ msgid "Enable input method by default when the application gets input focus"
-#~ msgstr ""
-#~ "Zet invoer-methode standaard aan als de toepassing input focus krijgt"
-
-#~ msgid "Enable shortcut keys"
-#~ msgstr "Zet sneltoetsen aan"
-
-#~ msgid "Language panel position"
-#~ msgstr "Taal-paneel positie"
-
-#~ msgid "Next engine shortcut keys"
-#~ msgstr "Volgende engine sneltoetsen"
-
-#~ msgid "Orientation of lookup table"
-#~ msgstr "Oriëntatie van opzoektabel"
-
-#~ msgid "Orientation of lookup table. 0 = Horizontal, 1 = Vertical"
-#~ msgstr "Oriëntatie van opzoektabel. 0 = horizontaal, 1 = verticaal"
-
-#~ msgid "Preload engines"
-#~ msgstr "Engines voor-laden"
-
-#~ msgid "Preload engines during ibus starts up"
-#~ msgstr "Engines voor-laden tijdens opstarten van ibus"
-
-#~ msgid "Prev engine shortcut keys"
-#~ msgstr "Vorige engine sneltoetsen"
-
-#~ msgid "Share the same input method among all applications"
-#~ msgstr "Deel dezelfde input-methode voor alle toepassingen"
-
-#~ msgid "Show icon on system tray"
-#~ msgstr "Toon icoon op systeemvak"
-
-#~ msgid "Show input method name"
-#~ msgstr "Toon naam van invoermethode"
-
-#~ msgid "Show input method name on language bar"
-#~ msgstr "Toon naam van invoermethode op taalbalk"
-
-#~ msgid ""
-#~ "The behavior of language panel. 0 = Embedded in menu, 1 = Auto hide, 2 = "
-#~ "Always show"
-#~ msgstr ""
-#~ "Het gedrag van het taal paneel. 0 = Ingebed in het menu, 1 = Automatisch "
-#~ "verbergen, 2 = Altijd tonen"
-
-#~ msgid ""
-#~ "The position of the language panel. 0 = Top left corner, 1 = Top right "
-#~ "corner, 2 = Bottom left corner, 3 = Bottom right corner, 4 = Custom"
-#~ msgstr ""
-#~ "De positie van de taal paneel. 0 = linksboven, 1 = rechtsboven, 2 = "
-#~ "linksonder,  3 = rechtsonder, 4 = aangepast"
-
-#~ msgid "The shortcut keys for switching to the next input method in the list"
-#~ msgstr ""
-#~ "De sneltoetsen voor het omschakelen naar de volgende invoermethode in de "
-#~ "lijst"
-
-#~ msgid "The shortcut keys for switching to the previous input method"
-#~ msgstr "De sneltoetsen voor het omschakelen naar de vorige invoermethode"
-
-#~ msgid "The shortcut keys for turning input method off"
-#~ msgstr "De sneltoetsen om invoermethode uit te zetten"
-
-#~ msgid "The shortcut keys for turning input method on"
-#~ msgstr "De sneltoetsen om invoermethode aan te zetten"
-
-#~ msgid "Use custom font"
-#~ msgstr "Gebruik aangepast lettertype"
-
-#~ msgid "Use custom font name for language panel"
-#~ msgstr "Gebruik aangepaste lettertype naam voor taal-paneel"
-
-#~ msgid "Use global input method"
-#~ msgstr "Gebruik globale invoermethode"
-
-#~ msgid "Use system keyboard (XKB) layout"
-#~ msgstr "Gebruik systeem toetsenbord (XKB) indeling"
-
-#~ msgid "..."
-#~ msgstr "..."
-
-#~ msgid "<b>Font and Style</b>"
-#~ msgstr "<b>Lettertype en stijl</b>"
-
-#~ msgid "<b>Global input method settings</b>"
-#~ msgstr "<b>Globale invoermethode instellingen</b>"
-
-#~ msgid "<b>Keyboard Layout</b>"
-#~ msgstr "<b>Toetsenbordindeling</b>"
-
-#~ msgid "<b>Keyboard Shortcuts</b>"
-#~ msgstr "<b>Sneltoetsen</b>"
-
-#~ msgid "<b>Startup</b>"
-#~ msgstr "<b>Opstarten</b>"
-
-#~ msgid ""
-#~ "<big><b>IBus</b></big>\n"
-#~ "<small>The intelligent input bus</small>\n"
-#~ "Homepage: http://code.google.com/p/ibus\n"
-#~ "\n"
-#~ "\n"
-#~ "\n"
-#~ msgstr ""
-#~ "<bib><b>IBus</b></big>\n"
-#~ "<small>De intelligente invoer bus</small>\n"
-#~ "Homepagina: http://code.google.com/p/ibus\n"
-#~ "\n"
-#~ "\n"
-#~ "\n"
-
-#~ msgid "Add the selected input method into the enabled input methods"
-#~ msgstr ""
-#~ "Voeg de geselecteerde invoermethode toe aan de ingeschakelde "
-#~ "invoermethoden"
-
-#~ msgid "Advanced"
-#~ msgstr "Geavanceerd"
-
-#~ msgid "Always"
-#~ msgstr "Altijd"
-
-#~ msgid "Bottom left corner"
-#~ msgstr "Linksonder"
-
-#~ msgid "Bottom right corner"
-#~ msgstr "Rechtsonder"
-
-#~ msgid "Candidates orientation:"
-#~ msgstr "Kandidaten oriëntatie:"
-
-#~ msgid "Custom"
-#~ msgstr "Aangepast"
-
-#~ msgid "Disable:"
-#~ msgstr "Uitzetten:"
-
-#~ msgid "Embed preedit text in application window"
-#~ msgstr "Insluiten van pre-edit tekst in toepassingsvenster"
-
-#~ msgid "Embed the preedit text of input method in the application window"
-#~ msgstr ""
-#~ "Sluit de pre-edit tekst van invoermethode in in het toepassingsvenster"
-
-#~ msgid "Embedded in menu"
-#~ msgstr "Ingebed in menu"
-
-#~ msgid "Enable or disable:"
-#~ msgstr "Aan- of uitzetten:"
-
-#~ msgid "Enable:"
-#~ msgstr "Aanzetten:"
-
-#~ msgid "General"
-#~ msgstr "Algemeen"
-
-#~ msgid "Horizontal"
-#~ msgstr "Horizontaal"
-
-#~ msgid "Language panel position:"
-#~ msgstr "Taal panel positie:"
-
-#~ msgid "Move down the selected input method in the enabled input methods"
-#~ msgstr ""
-#~ "Verplaats de geselecteerde invoermethode omlaag in de aangezette "
-#~ "invoermethoden lijst"
-
-#~ msgid "Move up the selected input method in the enabled input methods list"
-#~ msgstr ""
-#~ "Verplaats de geselecteerde invoermethode omhoog in de aangezette "
-#~ "invoermethoden lijst"
-
-#~ msgid "Next input method:"
-#~ msgstr "Volgende invoermethode:"
-
-#~ msgid "Previous input method:"
-#~ msgstr "Vorige invoermethode:"
-
-#~ msgid "Remove the selected input method from the enabled input methods"
-#~ msgstr ""
-#~ "Verwijder de geselecteerde invoermethode uit de aangezette invoermethoden"
-
-#~ msgid "Set the behavior of ibus how to show or hide language bar"
-#~ msgstr ""
-#~ "Stel het gedrag van ibus in voor het tonen of verbergen van de taalbalk"
-
-#~ msgid "Set the orientation of candidates in lookup table"
-#~ msgstr "Stel de oriëntatie in van de kandidaten in de opzoektabel"
-
-#~ msgid "Show information of the selected input method"
-#~ msgstr "Toon informatie over de geselecteerde invoermethode"
-
-#~ msgid "Show input method's name on language bar when check the checkbox"
-#~ msgstr ""
-#~ "Toon de naam van de invoermethode op de taalbalk als je het selectievakje "
-#~ "aanvinkt"
-
-#~ msgid "Show language panel:"
-#~ msgstr "Toon taal paneel:"
-
-#~ msgid "Start ibus on login"
-#~ msgstr "Start ibus bij inloggen"
-
-#~ msgid "The shortcut keys for switching to next input method in the list"
-#~ msgstr ""
-#~ "De sneltoetsen voor het schakelen naar de volgende invoermethode in de "
-#~ "lijst"
-
-#~ msgid "The shortcut keys for switching to previous input method in the list"
-#~ msgstr ""
-#~ "De sneltoetsen voor het schakelen naar de vorige invoermethode in de lijst"
-
-#~ msgid "Top left corner"
-#~ msgstr "Linksboven"
-
-#~ msgid "Top right corner"
-#~ msgstr "Rechtsboven"
-
-#~ msgid "Use custom font:"
-#~ msgstr "Gebruik aangepast lettertype:"
-
-#~ msgid "Vertical"
-#~ msgstr "Verticaal"
-
-#~ msgid "When active"
-#~ msgstr "Als deze actief is"
+#: ../ui/gtk3/panel.vala:402
+msgid "Restart"
+msgstr "Opnieuw starten"

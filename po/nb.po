@@ -1,66 +1,66 @@
-# Tajik translations for ibus-xkb
+# Norwegian Bokmål translations for ibus-xkb
 # Copyright (C) 2011-2012 Takao Fujiwara <takao.fujiwara1@gmail.com>
 # This file is distributed under the same license as the ibus-xkb package.
 #
 # Translators:
-# tajikfedora <victor.ibragimov@gmail.com>, 2011.
+# Kjartan Maraas <kmaraas@gnome.org>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: ibus-xkb HEAD\n"
 "Report-Msgid-Bugs-To: http://code.google.com/p/ibus/issues/entry\n"
-"POT-Creation-Date: 2012-05-16 10:14+0900\n"
-"PO-Revision-Date: 2011-12-09 09:55+0000\n"
-"Last-Translator: tajikfedora <victor.ibragimov@gmail.com>\n"
-"Language-Team: Tajik (http://www.transifex.net/projects/p/fedora/team/tg/)\n"
-"Language: tg\n"
+"POT-Creation-Date: 2012-10-15 11:55+0900\n"
+"PO-Revision-Date: 2012-10-15 03:22+0000\n"
+"Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
+"Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nb\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../setup/setup.ui.h:1
 msgid "Horizontal"
-msgstr "Уфуқӣ"
+msgstr "Horisontal"
 
 #: ../setup/setup.ui.h:2
 msgid "Vertical"
-msgstr "Амудӣ"
+msgstr "Vertikal"
 
 #: ../setup/setup.ui.h:3
-msgid "Embedded in menu"
-msgstr ""
-
-#: ../setup/setup.ui.h:4
-msgid "When active"
-msgstr ""
-
-#: ../setup/setup.ui.h:5
-msgid "Always"
-msgstr "Ҳамеша"
-
-#: ../setup/setup.ui.h:6
 msgid "Top left corner"
 msgstr ""
 
-#: ../setup/setup.ui.h:7
+#: ../setup/setup.ui.h:4
 msgid "Top right corner"
 msgstr ""
 
-#: ../setup/setup.ui.h:8
+#: ../setup/setup.ui.h:5
 msgid "Bottom left corner"
+msgstr "Nederste venstre hjørne"
+
+#: ../setup/setup.ui.h:6
+msgid "Bottom right corner"
+msgstr "Nederste høyre hjørne"
+
+#: ../setup/setup.ui.h:7
+msgid "Custom"
+msgstr "Egendefinert"
+
+#: ../setup/setup.ui.h:8
+msgid "Embedded in menu"
 msgstr ""
 
 #: ../setup/setup.ui.h:9
-msgid "Bottom right corner"
+msgid "When active"
 msgstr ""
 
 #: ../setup/setup.ui.h:10
-msgid "Custom"
-msgstr "Танзимот"
+msgid "Always"
+msgstr "Alltid"
 
 #: ../setup/setup.ui.h:11 ../setup/ibus-setup.desktop.in.h:1
 msgid "IBus Preferences"
-msgstr ""
+msgstr "Brukervalg for IBus"
 
 #: ../setup/setup.ui.h:12
 msgid "The shortcut keys for switching to next input method in the list"
@@ -68,7 +68,7 @@ msgstr ""
 
 #: ../setup/setup.ui.h:13
 msgid "Next input method:"
-msgstr ""
+msgstr "Neste inndatametode:"
 
 #: ../setup/setup.ui.h:14
 msgid "The shortcut keys for switching to previous input method in the list"
@@ -76,11 +76,11 @@ msgstr ""
 
 #: ../setup/setup.ui.h:15
 msgid "Previous input method:"
-msgstr ""
+msgstr "Forrige inndatametode:"
 
 #: ../setup/setup.ui.h:16
 msgid "..."
-msgstr "..."
+msgstr ""
 
 #: ../setup/setup.ui.h:17 ../data/ibus.schemas.in.h:6
 msgid "The shortcut keys for turning input method on or off"
@@ -88,19 +88,19 @@ msgstr ""
 
 #: ../setup/setup.ui.h:18
 msgid "Enable or disable:"
-msgstr ""
+msgstr "Slå på eller av:"
 
 #: ../setup/setup.ui.h:19
 msgid "Enable:"
-msgstr "Фаъолсозӣ:"
+msgstr "Slå på:"
 
 #: ../setup/setup.ui.h:20
 msgid "Disable:"
-msgstr "Хомӯшкунӣ:"
+msgstr "Slå av:"
 
 #: ../setup/setup.ui.h:21
 msgid "<b>Keyboard Shortcuts</b>"
-msgstr ""
+msgstr "<b>Tastatursnarveier</b>"
 
 #: ../setup/setup.ui.h:22
 msgid "Set the orientation of candidates in lookup table"
@@ -116,11 +116,11 @@ msgstr ""
 
 #: ../setup/setup.ui.h:25
 msgid "Show language panel:"
-msgstr ""
+msgstr "Vis språkpanel:"
 
 #: ../setup/setup.ui.h:26
 msgid "Language panel position:"
-msgstr ""
+msgstr "Posisjon for språkpanel:"
 
 #: ../setup/setup.ui.h:27 ../data/ibus.schemas.in.h:21
 msgid "Show icon on system tray"
@@ -144,15 +144,15 @@ msgstr ""
 
 #: ../setup/setup.ui.h:32
 msgid "Use custom font:"
-msgstr ""
+msgstr "Bruk egendefinert skrift:"
 
 #: ../setup/setup.ui.h:33
 msgid "<b>Font and Style</b>"
-msgstr ""
+msgstr "<b>Skrift og stil</b>"
 
 #: ../setup/setup.ui.h:34
 msgid "General"
-msgstr "Умумӣ"
+msgstr "Generelt"
 
 #: ../setup/setup.ui.h:35
 msgid "Add the selected input method into the enabled input methods"
@@ -172,7 +172,7 @@ msgstr ""
 
 #: ../setup/setup.ui.h:39
 msgid "Show information of the selected input method"
-msgstr ""
+msgstr "Vis informasjon om valgt inndatametode"
 
 #: ../setup/setup.ui.h:40
 msgid "Show setup of the selected input method"
@@ -187,7 +187,7 @@ msgstr ""
 #. create im name & icon column
 #: ../setup/setup.ui.h:43 ../setup/enginetreeview.py:64
 msgid "Input Method"
-msgstr ""
+msgstr "Inndatametode"
 
 #: ../setup/setup.ui.h:44 ../data/ibus.schemas.in.h:24
 msgid "Use system keyboard layout"
@@ -199,7 +199,7 @@ msgstr ""
 
 #: ../setup/setup.ui.h:46
 msgid "<b>Keyboard Layout</b>"
-msgstr ""
+msgstr "<b>Tastaturutforming</b>"
 
 #: ../setup/setup.ui.h:47 ../data/ibus.schemas.in.h:33
 msgid "Share the same input method among all applications"
@@ -207,11 +207,11 @@ msgstr ""
 
 #: ../setup/setup.ui.h:48
 msgid "<b>Global input method settings</b>"
-msgstr ""
+msgstr "<b>Globale innstillinger for inndatametode</b>"
 
 #: ../setup/setup.ui.h:49
 msgid "Advanced"
-msgstr ""
+msgstr "Avansert"
 
 #: ../setup/setup.ui.h:50
 msgid ""
@@ -225,27 +225,27 @@ msgstr ""
 
 #: ../setup/setup.ui.h:57
 msgid "Start ibus on login"
-msgstr ""
+msgstr "Start ibus ved pålogging"
 
 #: ../setup/setup.ui.h:58
 msgid "<b>Startup</b>"
-msgstr ""
+msgstr "<b>Oppstart</b>"
 
 #: ../setup/setup.ui.h:59 ../setup/engineabout.py:34
 msgid "About"
-msgstr "Дар бораи"
+msgstr "Om"
 
 #: ../bus/ibus.desktop.in.h:1
 msgid "IBus"
-msgstr ""
+msgstr "IBus"
 
 #: ../bus/ibus.desktop.in.h:2
 msgid "Input Method Framework"
-msgstr ""
+msgstr "Rammeverk for inndatametode"
 
 #: ../bus/ibus.desktop.in.h:3
 msgid "Start IBus Input Method Framework"
-msgstr ""
+msgstr "Start IBus rammeverk for inndatametode"
 
 #: ../data/ibus.schemas.in.h:1
 msgid "Preload engines"
@@ -277,7 +277,7 @@ msgstr ""
 
 #: ../data/ibus.schemas.in.h:9
 msgid "Disable shortcut keys"
-msgstr ""
+msgstr "Slå av snarveitaster"
 
 #: ../data/ibus.schemas.in.h:10
 msgid "The shortcut keys for turning input method off"
@@ -301,7 +301,7 @@ msgstr ""
 
 #: ../data/ibus.schemas.in.h:15
 msgid "Auto hide"
-msgstr "Пинҳонкунии худкор"
+msgstr "Skjul automatisk"
 
 #: ../data/ibus.schemas.in.h:16
 msgid ""
@@ -341,11 +341,11 @@ msgstr ""
 
 #: ../data/ibus.schemas.in.h:28
 msgid "Custom font"
-msgstr ""
+msgstr "Egendefinert skrift"
 
 #: ../data/ibus.schemas.in.h:29
 msgid "Custom font name for language panel"
-msgstr ""
+msgstr "Egendefinert skriftnavn for språkpanelet"
 
 #: ../data/ibus.schemas.in.h:30
 msgid "Embed Preedit Text"
@@ -361,7 +361,7 @@ msgstr ""
 
 #: ../data/ibus.schemas.in.h:34
 msgid "Enable input method by default"
-msgstr ""
+msgstr "Slå på inndatametode som forvalg"
 
 #: ../data/ibus.schemas.in.h:35
 msgid "Enable input method by default when the application gets input focus"
@@ -379,124 +379,167 @@ msgstr ""
 msgid ""
 "Copyright (c) 2007-2010 Peng Huang\n"
 "Copyright (c) 2007-2010 Red Hat, Inc."
-msgstr ""
+msgstr "Opphavsrett © 2007-2010 Peng Huang\nOpphavsrett © 2007-2010 Red Hat, Inc."
 
 #: ../ibus/lang.py:41 ../src/ibusutil.c:150 ../src/ibusutil.c:152
 msgid "Other"
-msgstr "Дигар"
+msgstr "Annet"
 
 #: ../setup/engineabout.py:67
 #, python-format
 msgid "Language: %s\n"
-msgstr "Забон: %s\n"
+msgstr "Språk: %s\n"
 
 #: ../setup/engineabout.py:70
 #, python-format
 msgid "Keyboard layout: %s\n"
-msgstr ""
+msgstr "Tastaturutforming: %s\n"
 
 #: ../setup/engineabout.py:73
 #, python-format
 msgid "Author: %s\n"
-msgstr "Муаллиф: %s\n"
+msgstr "Forfatter: %s\n"
 
 #: ../setup/engineabout.py:76
 msgid "Description:\n"
-msgstr "Шарҳ:\n"
+msgstr "Beskrivelse: \n"
 
-#: ../setup/enginecombobox.py:136
+#: ../setup/enginecombobox.py:135
 msgid "Select an input method"
-msgstr ""
+msgstr "Velg en inndatametode"
 
 #: ../setup/enginetreeview.py:92
 msgid "Kbd"
-msgstr "Kbd"
+msgstr "Tastatur"
 
 #: ../setup/ibus-setup.desktop.in.h:2
 msgid "Set IBus Preferences"
-msgstr ""
+msgstr "Sett brukervalg for IBus"
 
 #: ../setup/keyboardshortcut.py:54
 msgid "Keyboard shortcuts"
-msgstr "Миёнбурҳои клавиатура"
+msgstr "Tastatursnarveier"
 
 #: ../setup/keyboardshortcut.py:65
 msgid "Key code:"
-msgstr "Рамзи тугма:"
+msgstr "Tastekode:"
 
 #: ../setup/keyboardshortcut.py:80
 msgid "Modifiers:"
-msgstr ""
+msgstr "Endringstaster:"
 
-#: ../setup/keyboardshortcut.py:235
+#: ../setup/keyboardshortcut.py:251
 msgid ""
 "Please press a key (or a key combination).\n"
 "The dialog will be closed when the key is released."
-msgstr ""
+msgstr "Vennligst trykk en tast (eller en tastekombinasjon)\nDialogen vil lukkes når tasten slippes."
 
-#: ../setup/keyboardshortcut.py:237
+#: ../setup/keyboardshortcut.py:253
 msgid "Please press a key (or a key combination)"
-msgstr ""
+msgstr "Vennligst trykk en tast (eller en tastekombinasjon)"
 
-#: ../setup/main.py:79
+#: ../setup/main.py:87
 msgid "trigger"
-msgstr "оғоздиҳӣ"
+msgstr "utløser"
 
-#: ../setup/main.py:80
+#: ../setup/main.py:88
 msgid "enable"
-msgstr "фаъол"
+msgstr "slå på"
 
-#: ../setup/main.py:81
+#: ../setup/main.py:89
 msgid "disable"
-msgstr "ғайрифаъол"
+msgstr "slå av"
 
-#: ../setup/main.py:323
+#: ../setup/main.py:331
 msgid "The IBus daemon is not running. Do you wish to start it?"
 msgstr ""
 
-#: ../setup/main.py:344
+#: ../setup/main.py:352
 msgid ""
-"IBus has been started! If you cannot use IBus, add the following lines to "
-"your $HOME/.bashrc; then relog into your desktop.\n"
+"IBus has been started! If you cannot use IBus, add the following lines to your $HOME/.bashrc; then relog into your desktop.\n"
 "  export GTK_IM_MODULE=ibus\n"
 "  export XMODIFIERS=@im=ibus\n"
 "  export QT_IM_MODULE=ibus"
 msgstr ""
 
-#: ../setup/main.py:357
+#. Translators: %d == 5 currently
+#: ../setup/main.py:366
 #, python-format
-msgid "IBus daemon coundn't be started in %d seconds"
+msgid "IBus daemon could not be started in %d seconds"
 msgstr ""
 
-#: ../setup/main.py:369
+#: ../setup/main.py:378
 #, python-format
 msgid "Select keyboard shortcut for %s"
+msgstr "Velg tastatursnarvei for %s"
+
+#: ../tools/main.vala:40
+msgid "List engine name only"
 msgstr ""
 
-#: ../ui/gtk3/panel.vala:330
+#: ../tools/main.vala:44
+msgid "command [OPTIONS]"
+msgstr ""
+
+#: ../tools/main.vala:56 ../tools/main.vala:138 ../tools/main.vala:148
+#, c-format
+msgid "Can't connect to IBus.\n"
+msgstr ""
+
+#: ../tools/main.vala:82
+#, c-format
+msgid "language: %s\n"
+msgstr ""
+
+#: ../tools/main.vala:100
+#, c-format
+msgid "No engine is set.\n"
+msgstr ""
+
+#: ../tools/main.vala:108
+#, c-format
+msgid "Set global engine failed.\n"
+msgstr ""
+
+#: ../tools/main.vala:113
+#, c-format
+msgid "Get global engine failed.\n"
+msgstr ""
+
+#: ../tools/main.vala:120
+#, c-format
+msgid "Switch xkb layout to %s failed."
+msgstr ""
+
+#: ../tools/main.vala:185
+#, c-format
+msgid ""
+"Usage: %s COMMAND [OPTION...]\n"
+"\n"
+msgstr ""
+
+#: ../tools/main.vala:186
+#, c-format
+msgid "Commands:\n"
+msgstr ""
+
+#: ../tools/main.vala:208
+#, c-format
+msgid "%s is unknown command!\n"
+msgstr ""
+
+#: ../ui/gtk3/panel.vala:361
 msgid "Copyright (c) 2007-2012 Peng Huang\n"
 msgstr ""
 
-#: ../ui/gtk3/panel.vala:335
+#: ../ui/gtk3/panel.vala:366
 msgid "IBus is an intelligent input bus for Linux/Unix."
-msgstr ""
+msgstr "IBus er en intelligent inndatabuss for Linux/Unix."
 
-#: ../ui/gtk3/panel.vala:339
+#: ../ui/gtk3/panel.vala:370
 msgid "translator-credits"
-msgstr ""
+msgstr "Kjartan Maraas <kmaraas@gnome.org>"
 
-#: ../ui/gtk3/panel.vala:371
+#: ../ui/gtk3/panel.vala:402
 msgid "Restart"
-msgstr "Бозоғозӣ"
-
-#~ msgid "Previous page"
-#~ msgstr "Саҳифаи пешина"
-
-#~ msgid "Next page"
-#~ msgstr "Саҳифаи навбатӣ"
-
-#~ msgid "Later"
-#~ msgstr "Баъдтар"
-
-#~ msgid "IBus Panel"
-#~ msgstr "Лавҳаи IBus"
+msgstr "Start på nytt"

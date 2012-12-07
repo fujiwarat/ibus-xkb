@@ -2,586 +2,544 @@
 # Copyright (C) 2011-2012 Takao Fujiwara <takao.fujiwara1@gmail.com>
 # This file is distributed under the same license as the ibus-xkb package.
 #
-# Piotr Drąg <piotrdrag@gmail.com>, 2009.
-# raven <piotrdrag@gmail.com>, 2011.
+# Translators:
+# Piotr Drąg <piotrdrag@gmail.com>, 2011-2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: ibus-xkb HEAD\n"
 "Report-Msgid-Bugs-To: http://code.google.com/p/ibus/issues/entry\n"
-"POT-Creation-Date: 2012-05-18 10:43+0900\n"
-"PO-Revision-Date: 2011-05-13 07:46+0000\n"
-"Last-Translator: raven <piotrdrag@gmail.com>\n"
+"POT-Creation-Date: 2012-10-15 11:55+0900\n"
+"PO-Revision-Date: 2012-10-15 18:26+0000\n"
+"Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <trans-pl@lists.fedoraproject.org>\n"
-"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../data/ibus-xkb.schemas.in.h:1
-#, fuzzy
-msgid "Trigger shortcut keys for gtk_accelerator_parse"
-msgstr "Klawisze skrótów przełącznika"
+#: ../setup/setup.ui.h:1
+msgid "Horizontal"
+msgstr "Poziomo"
 
-#: ../data/ibus-xkb.schemas.in.h:2
+#: ../setup/setup.ui.h:2
+msgid "Vertical"
+msgstr "Pionowo"
+
+#: ../setup/setup.ui.h:3
+msgid "Top left corner"
+msgstr "Górny lewy róg"
+
+#: ../setup/setup.ui.h:4
+msgid "Top right corner"
+msgstr "Górny prawy róg"
+
+#: ../setup/setup.ui.h:5
+msgid "Bottom left corner"
+msgstr "Dolny lewy róg"
+
+#: ../setup/setup.ui.h:6
+msgid "Bottom right corner"
+msgstr "Dolny prawy róg"
+
+#: ../setup/setup.ui.h:7
+msgid "Custom"
+msgstr "Własna"
+
+#: ../setup/setup.ui.h:8
+msgid "Embedded in menu"
+msgstr "Osadzanie w menu"
+
+#: ../setup/setup.ui.h:9
+msgid "When active"
+msgstr "W czasie aktywności"
+
+#: ../setup/setup.ui.h:10
+msgid "Always"
+msgstr "Zawsze"
+
+#: ../setup/setup.ui.h:11 ../setup/ibus-setup.desktop.in.h:1
+msgid "IBus Preferences"
+msgstr "Preferencje usługi iBus"
+
+#: ../setup/setup.ui.h:12
+msgid "The shortcut keys for switching to next input method in the list"
+msgstr "Klawisz skrótu do przełączenia na następną metodę wprowadzania na liście"
+
+#: ../setup/setup.ui.h:13
+msgid "Next input method:"
+msgstr "Następna metoda wprowadzania:"
+
+#: ../setup/setup.ui.h:14
+msgid "The shortcut keys for switching to previous input method in the list"
+msgstr "Klawisz skrótu do przełączenia na poprzednią metodę wprowadzania na liście"
+
+#: ../setup/setup.ui.h:15
+msgid "Previous input method:"
+msgstr "Poprzednia metoda wprowadzania:"
+
+#: ../setup/setup.ui.h:16
+msgid "..."
+msgstr "..."
+
+#: ../setup/setup.ui.h:17 ../data/ibus.schemas.in.h:6
 msgid "The shortcut keys for turning input method on or off"
 msgstr "Klawisze skrótów do włączania lub wyłączania metody wprowadzania"
 
-#: ../data/ibus-xkb.schemas.in.h:3
-msgid "This is used for gnome-shell to work shift + modifiers"
-msgstr ""
+#: ../setup/setup.ui.h:18
+msgid "Enable or disable:"
+msgstr "Włączenie lub wyłączenie:"
 
-#: ../data/ibus-xkb.schemas.in.h:4
+#: ../setup/setup.ui.h:19
+msgid "Enable:"
+msgstr "Włączone:"
+
+#: ../setup/setup.ui.h:20
+msgid "Disable:"
+msgstr "Wyłączone:"
+
+#: ../setup/setup.ui.h:21
+msgid "<b>Keyboard Shortcuts</b>"
+msgstr "<b>Skróty klawiszowe</b>"
+
+#: ../setup/setup.ui.h:22
+msgid "Set the orientation of candidates in lookup table"
+msgstr "Ustawienie orientacji kandydatów w tablicy wyszukiwania"
+
+#: ../setup/setup.ui.h:23
+msgid "Candidates orientation:"
+msgstr "Orientacja kandydatów:"
+
+#: ../setup/setup.ui.h:24
+msgid "Set the behavior of ibus how to show or hide language bar"
+msgstr "Ustawienie wyświetlania lub ukrywania panela języków usługi iBus"
+
+#: ../setup/setup.ui.h:25
+msgid "Show language panel:"
+msgstr "Wyświetlanie panelu języków:"
+
+#: ../setup/setup.ui.h:26
+msgid "Language panel position:"
+msgstr "Pozycja panelu języków:"
+
+#: ../setup/setup.ui.h:27 ../data/ibus.schemas.in.h:21
+msgid "Show icon on system tray"
+msgstr "Wyświetlanie ikony w obszarze powiadamiania"
+
+#: ../setup/setup.ui.h:28 ../data/ibus.schemas.in.h:23
+msgid "Show input method name on language bar"
+msgstr "Wyświetlanie nazwy metody wprowadzania na panelu języków"
+
+#: ../setup/setup.ui.h:29
+msgid "Show input method's name on language bar when check the checkbox"
+msgstr "Wyświetlanie nazwy metody wprowadzania na panelu języków podczas zaznaczania pola wyboru"
+
+#: ../setup/setup.ui.h:30
+msgid "Embed preedit text in application window"
+msgstr "Osadzanie wcześniej wprowadzonego tekstu metody wejścia"
+
+#: ../setup/setup.ui.h:31
+msgid "Embed the preedit text of input method in the application window"
+msgstr "Osadzanie wcześniej wprowadzonego tekstu metody wejścia w oknie aplikacji"
+
+#: ../setup/setup.ui.h:32
+msgid "Use custom font:"
+msgstr "Użycie własnej czcionki:"
+
+#: ../setup/setup.ui.h:33
+msgid "<b>Font and Style</b>"
+msgstr "<b>Czcionka i styl</b>"
+
+#: ../setup/setup.ui.h:34
+msgid "General"
+msgstr "Ogólne"
+
+#: ../setup/setup.ui.h:35
+msgid "Add the selected input method into the enabled input methods"
+msgstr "Dodanie wybranej metody wprowadzania do włączonych metod wprowadzania"
+
+#: ../setup/setup.ui.h:36
+msgid "Remove the selected input method from the enabled input methods"
+msgstr "Usunięcie zaznaczonej metody wprowadzania we włączonych metodach wprowadzania"
+
+#: ../setup/setup.ui.h:37
+msgid "Move up the selected input method in the enabled input methods list"
+msgstr "Przeniesienie w górę zaznaczonej metody wprowadzania we włączonych metodach wprowadzania"
+
+#: ../setup/setup.ui.h:38
+msgid "Move down the selected input method in the enabled input methods"
+msgstr "Przeniesienie w dół zaznaczonej metody wprowadzania we włączonych metodach wprowadzania"
+
+#: ../setup/setup.ui.h:39
+msgid "Show information of the selected input method"
+msgstr "Wyświetlanie informacji o wybranej metodzie wprowadzania"
+
+#: ../setup/setup.ui.h:40
+msgid "Show setup of the selected input method"
+msgstr "Wyświetlanie ustawień zaznaczonej metody wprowadzania"
+
+#: ../setup/setup.ui.h:41
 msgid ""
-"This is used for gnome-shell to work shift + modifiers Currently gnome-shell "
-"assigns the shift reverse by dconf key and the shift reverse works with "
-"modifiers. But ibus supports multiple trigger keys; &lt;Control&gt;space "
-"(with modifiers) Zenkaku_hankaku (without modifiers) I copy the modifier "
-"trigger keys here to set the shift reverse at the moment."
-msgstr ""
+"<small><i>The default input method is the top one in the list.\n"
+"You may use up/down buttons to change it.</i></small>"
+msgstr "<small><i>Domyślna metoda wprowadzania znajduje się na górze listy.\nMożna użyć klawiszy w górę/w dół, aby ją zmienić.</i></small>"
 
-#: ../data/ibus-xkb.schemas.in.h:5
-msgid "Trigger shortcut keys for ja gtk_accelerator_parse"
-msgstr ""
+#. create im name & icon column
+#: ../setup/setup.ui.h:43 ../setup/enginetreeview.py:64
+msgid "Input Method"
+msgstr "Metoda wprowadzania"
 
-#: ../data/ibus-xkb.schemas.in.h:6
-msgid "Trigger shortcut keys for ko gtk_accelerator_parse"
-msgstr ""
+#: ../setup/setup.ui.h:44 ../data/ibus.schemas.in.h:24
+msgid "Use system keyboard layout"
+msgstr "Użycie systemowych ustawień układu klawiatury"
 
-#: ../data/ibus-xkb.schemas.in.h:7
-msgid "Use xmodmap"
-msgstr ""
+#: ../setup/setup.ui.h:45 ../data/ibus.schemas.in.h:25
+msgid "Use system keyboard (XKB) layout"
+msgstr "Użycie systemowego układu klawiatury (XKB)"
 
-#: ../data/ibus-xkb.schemas.in.h:8
-msgid "Run xmodmap if .xmodmap/.Xmodmap exists."
-msgstr ""
+#: ../setup/setup.ui.h:46
+msgid "<b>Keyboard Layout</b>"
+msgstr "<b>Układ klawiatury</b>"
 
-#: ../data/ibus-xkb.schemas.in.h:9
-msgid "Latin layout which have no ASCII"
-msgstr ""
+#: ../setup/setup.ui.h:47 ../data/ibus.schemas.in.h:33
+msgid "Share the same input method among all applications"
+msgstr "Używanie tej samej metody wprowadzania we wszystkich aplikacjach"
 
-#: ../data/ibus-xkb.schemas.in.h:10
-msgid "us layout is appended to the latin layouts. variant is not needed."
-msgstr ""
+#: ../setup/setup.ui.h:48
+msgid "<b>Global input method settings</b>"
+msgstr "<b>Ustawienia globalnej metody wprowadzania</b>"
 
-#: ../data/ibus-xkb.schemas.in.h:11
-msgid "XKB layout list which is shown on ibus-setup"
-msgstr ""
+#: ../setup/setup.ui.h:49
+msgid "Advanced"
+msgstr "Zaawansowane"
 
-#: ../data/ibus-xkb.schemas.in.h:12
+#: ../setup/setup.ui.h:50
 msgid ""
-"XKB layout list which is shown on ibus-setup. The format is \"layout\" or "
-"\"layout(variant)\"."
-msgstr ""
+"<big><b>IBus</b></big>\n"
+"<small>The intelligent input bus</small>\n"
+"Homepage: http://code.google.com/p/ibus\n"
+"\n"
+"\n"
+"\n"
+msgstr "<big><b>iBus</b></big>\n<small>Inteligentna magistrala wprowadzania</small>\nStrona domowa: http://code.google.com/p/ibus\n\n\n\n"
 
-#: ../setup/engineabout.py:35 ../ui/gtk2/engineabout.py:34
-#: ../ui/gtk2/languagebar.py:358
+#: ../setup/setup.ui.h:57
+msgid "Start ibus on login"
+msgstr "Uruchamianie iBus podczas logowania"
+
+#: ../setup/setup.ui.h:58
+msgid "<b>Startup</b>"
+msgstr "<b>Uruchomienie</b>"
+
+#: ../setup/setup.ui.h:59 ../setup/engineabout.py:34
 msgid "About"
 msgstr "O programie"
 
-#: ../setup/engineabout.py:68 ../ui/gtk2/engineabout.py:62
+#: ../bus/ibus.desktop.in.h:1
+msgid "IBus"
+msgstr "iBus"
+
+#: ../bus/ibus.desktop.in.h:2
+msgid "Input Method Framework"
+msgstr "Struktura metody wprowadzania"
+
+#: ../bus/ibus.desktop.in.h:3
+msgid "Start IBus Input Method Framework"
+msgstr "Uruchomienie struktury metody wprowadzania iBus"
+
+#: ../data/ibus.schemas.in.h:1
+msgid "Preload engines"
+msgstr "Wcześniejsze wczytanie mechanizmów"
+
+#: ../data/ibus.schemas.in.h:2
+msgid "Preload engines during ibus starts up"
+msgstr "Wcześniejsze wczytanie mechanizmów podczas uruchamiania usługi iBus"
+
+#: ../data/ibus.schemas.in.h:3
+msgid "Engines order"
+msgstr "Kolejność mechanizmów"
+
+#: ../data/ibus.schemas.in.h:4
+msgid "Saved engines order in input method list"
+msgstr "Kolejność zapisanych mechanizmów na liście metod wprowadzania"
+
+#: ../data/ibus.schemas.in.h:5
+msgid "Trigger shortcut keys"
+msgstr "Klawisze skrótów przełącznika"
+
+#: ../data/ibus.schemas.in.h:7
+msgid "Enable shortcut keys"
+msgstr "Włącza skróty klawiszowe"
+
+#: ../data/ibus.schemas.in.h:8
+msgid "The shortcut keys for turning input method on"
+msgstr "Skróty klawiszowe do włączania metody wprowadzania"
+
+#: ../data/ibus.schemas.in.h:9
+msgid "Disable shortcut keys"
+msgstr "Wyłącza skróty klawiszowe"
+
+#: ../data/ibus.schemas.in.h:10
+msgid "The shortcut keys for turning input method off"
+msgstr "Skróty klawiszowe do wyłączania metody wprowadzania"
+
+#: ../data/ibus.schemas.in.h:11
+msgid "Next engine shortcut keys"
+msgstr "Klawisze skrótów następnego mechanizmu"
+
+#: ../data/ibus.schemas.in.h:12
+msgid "The shortcut keys for switching to the next input method in the list"
+msgstr "Klawisze skrótu do przełączania na następną metodę wprowadzania na liście"
+
+#: ../data/ibus.schemas.in.h:13
+msgid "Prev engine shortcut keys"
+msgstr "Klawisze skrótów poprzedniego mechanizmu"
+
+#: ../data/ibus.schemas.in.h:14
+msgid "The shortcut keys for switching to the previous input method"
+msgstr "Klawisze skrótu do przełączania na poprzednią metodę wprowadzania na liście"
+
+#: ../data/ibus.schemas.in.h:15
+msgid "Auto hide"
+msgstr "Automatyczne ukrywanie"
+
+#: ../data/ibus.schemas.in.h:16
+msgid ""
+"The behavior of language panel. 0 = Embedded in menu, 1 = Auto hide, 2 = "
+"Always show"
+msgstr "Zachowanie panela języków. 0 = osadzony w menu, 1 = automatycznie ukrywany, 2 = zawsze wyświetlany"
+
+#: ../data/ibus.schemas.in.h:17
+msgid "Language panel position"
+msgstr "Pozycja panela języków"
+
+#: ../data/ibus.schemas.in.h:18
+msgid ""
+"The position of the language panel. 0 = Top left corner, 1 = Top right "
+"corner, 2 = Bottom left corner, 3 = Bottom right corner, 4 = Custom"
+msgstr "Pozycja panela języków. 0 = górny lewy róg, 1 = górny prawy róg, 2 = dolny lewy róg, 3 = dolny prawy róg, 4 = własna"
+
+#: ../data/ibus.schemas.in.h:19
+msgid "Orientation of lookup table"
+msgstr "Orientacja tablicy wyszukiwania"
+
+#: ../data/ibus.schemas.in.h:20
+msgid "Orientation of lookup table. 0 = Horizontal, 1 = Vertical"
+msgstr "Orientacja tablicy wyszukiwania. 0 = pozioma, 1 = pionowa"
+
+#: ../data/ibus.schemas.in.h:22
+msgid "Show input method name"
+msgstr "Wyświetlanie nazwy metody wprowadzania"
+
+#: ../data/ibus.schemas.in.h:26
+msgid "Use custom font"
+msgstr "Użycie własnej czcionki"
+
+#: ../data/ibus.schemas.in.h:27
+msgid "Use custom font name for language panel"
+msgstr "Nazwa własnej czcionki użytej w panelu języków"
+
+#: ../data/ibus.schemas.in.h:28
+msgid "Custom font"
+msgstr "Własna czcionka"
+
+#: ../data/ibus.schemas.in.h:29
+msgid "Custom font name for language panel"
+msgstr "Nazwa własnej czcionki dla panelu języków"
+
+#: ../data/ibus.schemas.in.h:30
+msgid "Embed Preedit Text"
+msgstr "Osadzanie wcześniej wprowadzonego tekstu"
+
+#: ../data/ibus.schemas.in.h:31
+msgid "Embed Preedit Text in Application Window"
+msgstr "Osadzanie wcześniej wprowadzonego tekstu w oknie aplikacji"
+
+#: ../data/ibus.schemas.in.h:32
+msgid "Use global input method"
+msgstr "Użycie globalnej metody wprowadzania"
+
+#: ../data/ibus.schemas.in.h:34
+msgid "Enable input method by default"
+msgstr "Domyślne włączanie metody wprowadzania"
+
+#: ../data/ibus.schemas.in.h:35
+msgid "Enable input method by default when the application gets input focus"
+msgstr "Domyślne włączanie metody wprowadzania, kiedy aplikacja uzyskuje aktywność wprowadzania"
+
+#: ../data/ibus.schemas.in.h:36
+msgid "DConf preserve name prefixes"
+msgstr "DConf zachowuje przedrostki nazw"
+
+#: ../data/ibus.schemas.in.h:37
+msgid "Prefixes of DConf keys to stop name conversion"
+msgstr "Przedrostki kluczy DConf zatrzymujące konwersję nazw"
+
+#: ../ibus/_config.py.in:41
+msgid ""
+"Copyright (c) 2007-2010 Peng Huang\n"
+"Copyright (c) 2007-2010 Red Hat, Inc."
+msgstr "Copyright (c) 2007-2010 Peng Huang\nCopyright (c) 2007-2010 Red Hat, Inc."
+
+#: ../ibus/lang.py:41 ../src/ibusutil.c:150 ../src/ibusutil.c:152
+msgid "Other"
+msgstr "Inne"
+
+#: ../setup/engineabout.py:67
 #, python-format
 msgid "Language: %s\n"
 msgstr "Język: %s\n"
 
-#: ../setup/engineabout.py:71 ../ui/gtk2/engineabout.py:64
+#: ../setup/engineabout.py:70
 #, python-format
 msgid "Keyboard layout: %s\n"
 msgstr "Układ klawiatury: %s\n"
 
-#: ../setup/engineabout.py:74 ../ui/gtk2/engineabout.py:66
+#: ../setup/engineabout.py:73
 #, python-format
 msgid "Author: %s\n"
 msgstr "Autor: %s\n"
 
-#: ../setup/engineabout.py:77 ../ui/gtk2/engineabout.py:68
+#: ../setup/engineabout.py:76
 msgid "Description:\n"
 msgstr "Opis:\n"
 
-#: ../setup/enginecombobox.py:137
+#: ../setup/enginecombobox.py:135
 msgid "Select an input method"
 msgstr "Wybór metodę wprowadzania"
 
-#. create im name & icon column
-#: ../setup/enginetreeview.py:65
-msgid "Input Method"
-msgstr "Metoda wprowadzania"
-
-#: ../setup/enginetreeview.py:93
+#: ../setup/enginetreeview.py:92
 msgid "Kbd"
 msgstr "KBD"
 
-#: ../setup/ibus-setup-xkb.desktop.in.h:1
-msgid "IBus Preferences"
-msgstr "Preferencje usługi iBus"
-
-#: ../setup/ibus-setup-xkb.desktop.in.h:2
+#: ../setup/ibus-setup.desktop.in.h:2
 msgid "Set IBus Preferences"
 msgstr "Ustawianie preferencji usługi iBus"
 
-#: ../setup/keyboardshortcut.py:55
+#: ../setup/keyboardshortcut.py:54
 msgid "Keyboard shortcuts"
 msgstr "Skróty klawiszowe"
 
-#: ../setup/keyboardshortcut.py:66
+#: ../setup/keyboardshortcut.py:65
 msgid "Key code:"
 msgstr "Kod klawisza:"
 
-#: ../setup/keyboardshortcut.py:81
+#: ../setup/keyboardshortcut.py:80
 msgid "Modifiers:"
 msgstr "Modyfikatory:"
 
-#: ../setup/keyboardshortcut.py:236
+#: ../setup/keyboardshortcut.py:251
 msgid ""
 "Please press a key (or a key combination).\n"
 "The dialog will be closed when the key is released."
-msgstr ""
-"Proszę nacisnąć klawisz (lub kombinację klawiszy).\n"
-"Okno dialogowe zostanie zamknięte po zwolnieniu klawisza."
+msgstr "Proszę nacisnąć klawisz (lub kombinację klawiszy).\nOkno dialogowe zostanie zamknięte po zwolnieniu klawisza."
 
-#: ../setup/keyboardshortcut.py:238
+#: ../setup/keyboardshortcut.py:253
 msgid "Please press a key (or a key combination)"
 msgstr "Proszę nacisnąć klawisz (lub kombinację klawiszy)"
 
-#: ../setup/main.py:80
+#: ../setup/main.py:87
 msgid "trigger"
 msgstr "przełącznik"
 
-#: ../setup/main.py:81
+#: ../setup/main.py:88
 msgid "enable"
 msgstr "włączenie"
 
-#: ../setup/main.py:82
+#: ../setup/main.py:89
 msgid "disable"
 msgstr "wyłączenie"
 
-#: ../setup/main.py:339
-msgid "IBus daemon is not started. Do you want to start it now?"
-msgstr "Demon iBus nie jest uruchomiony. Uruchomić go teraz?"
+#: ../setup/main.py:331
+msgid "The IBus daemon is not running. Do you wish to start it?"
+msgstr "Demon iBus nie jest uruchomiony. Uruchomić go?"
 
-#: ../setup/main.py:360
+#: ../setup/main.py:352
 msgid ""
-"IBus has been started! If you can not use IBus, please add below lines in "
-"$HOME/.bashrc, and relogin your desktop.\n"
+"IBus has been started! If you cannot use IBus, add the following lines to your $HOME/.bashrc; then relog into your desktop.\n"
 "  export GTK_IM_MODULE=ibus\n"
 "  export XMODIFIERS=@im=ibus\n"
 "  export QT_IM_MODULE=ibus"
-msgstr ""
-"iBus został uruchomiony. Jeśli nie można używać iBus, należy dodać poniższe "
-"wiersze do pliku $HOME/.bashrc i zalogować się ponownie.\n"
-"  export GTK_IM_MODULE=ibus\n"
-"  export XMODIFIERS=@im=ibus\n"
-"  export QT_IM_MODULE=ibus"
+msgstr "iBus został uruchomiony. Jeśli nie można używać iBus, należy dodać poniższe wiersze do pliku $HOME/.bashrc i zalogować się ponownie.\n  export GTK_IM_MODULE=ibus\n  export XMODIFIERS=@im=ibus\n  export QT_IM_MODULE=ibus"
 
-#: ../setup/main.py:373
+#. Translators: %d == 5 currently
+#: ../setup/main.py:366
 #, python-format
-msgid "IBus daemon coundn't be started in %d seconds"
-msgstr ""
+msgid "IBus daemon could not be started in %d seconds"
+msgstr "Nie można uruchomić demona iBus od %d sekund"
 
-#: ../setup/main.py:385
+#: ../setup/main.py:378
 #, python-format
 msgid "Select keyboard shortcut for %s"
 msgstr "Wybór skrótu klawiszowego dla %s"
 
-#: ../setup/xkbsetup.py:44 ../setup/xkbsetup.py:112 ../setup/xkbsetup.py:408
-msgid "Default"
-msgstr ""
+#: ../tools/main.vala:40
+msgid "List engine name only"
+msgstr "Wyświetla tylko nazwę mechanizmu"
 
-#: ../setup/xkbsetup.py:207
-#, fuzzy
-msgid "Select keyboard layouts"
-msgstr "Wybór skrótu klawiszowego dla %s"
+#: ../tools/main.vala:44
+msgid "command [OPTIONS]"
+msgstr "polecenie [OPCJE]"
 
-#: ../setup/xkbsetup.py:212
-#, fuzzy
-msgid "Keyboard Layouts"
-msgstr "Układ klawiatury: %s\n"
+#: ../tools/main.vala:56 ../tools/main.vala:138 ../tools/main.vala:148
+#, c-format
+msgid "Can't connect to IBus.\n"
+msgstr "Nie można połączyć z iBus.\n"
 
-#: ../setup/xkbsetup.py:241
-#, fuzzy, python-format
+#: ../tools/main.vala:82
+#, c-format
+msgid "language: %s\n"
+msgstr "język: %s\n"
+
+#: ../tools/main.vala:100
+#, c-format
+msgid "No engine is set.\n"
+msgstr "Nie ustawiono żadnego mechanizmu.\n"
+
+#: ../tools/main.vala:108
+#, c-format
+msgid "Set global engine failed.\n"
+msgstr "Ustawienie globalnego mechanizmu się nie powiodło.\n"
+
+#: ../tools/main.vala:113
+#, c-format
+msgid "Get global engine failed.\n"
+msgstr "Uzyskanie globalnego mechanizmu się nie powiodło.\n"
+
+#: ../tools/main.vala:120
+#, c-format
+msgid "Switch xkb layout to %s failed."
+msgstr "Przełączenie układu XKB na %s się nie powiodło."
+
+#: ../tools/main.vala:185
+#, c-format
 msgid ""
-"<small><i>The system keyboard layouts can be set less than or equal to %d.\n"
-"You may use Up/Down buttons to change the order.</i></small>"
-msgstr ""
-"<small><i>Domyślna metoda wprowadzania znajduje się na górze listy.\n"
-"Można użyć klawiszy w górę/w dół, aby ją zmienić.</i></small>"
+"Usage: %s COMMAND [OPTION...]\n"
+"\n"
+msgstr "Użycie %s POLECENIE [OPCJA...]\n\n"
 
-#: ../setup/xkbsetup.py:380 ../setup/xkbsetup.py:435
-#, fuzzy
-msgid "Please restart IBus to reload your configuration."
-msgstr "Proszę nacisnąć klawisz (lub kombinację klawiszy)"
+#: ../tools/main.vala:186
+#, c-format
+msgid "Commands:\n"
+msgstr "Polecenia:\n"
 
-#: ../setup/xkbsetup.py:425
-msgid "The keyboard option cannot be chosen."
-msgstr ""
+#: ../tools/main.vala:208
+#, c-format
+msgid "%s is unknown command!\n"
+msgstr "%s jest nieznanym poleceniem.\n"
 
-#: ../ui/gtk2/candidatepanel.py:264
-msgid "Previous page"
-msgstr "Poprzednia strona"
+#: ../ui/gtk3/panel.vala:361
+msgid "Copyright (c) 2007-2012 Peng Huang\n"
+msgstr "Copyright (c) 2007-2012 Peng Huang\n"
 
-#: ../ui/gtk2/candidatepanel.py:269
-msgid "Next page"
-msgstr "Następna strona"
-
-#: ../ui/gtk2/languagebar.py:107
-msgid "About the input method"
-msgstr "O metodzie wprowadzania"
-
-#: ../ui/gtk2/languagebar.py:215
-msgid "Switch input method"
-msgstr "Przełącz metodę wprowadzania"
-
-#: ../ui/gtk2/languagebar.py:362
-msgid "About the Input Method"
-msgstr "O metodzie wprowadzania"
-
-#: ../ui/gtk2/panel.py:117
-msgid "IBus Panel"
-msgstr "Panel iBus"
-
-#: ../ui/gtk2/panel.py:123
-msgid "IBus input method framework"
-msgstr "Struktura metody wprowadzania iBus"
-
-#: ../ui/gtk2/panel.py:353
-msgid "Restart"
-msgstr "Uruchom ponownie"
-
-#: ../ui/gtk2/panel.py:444
-msgid "Turn off input method"
-msgstr "Wyłącz metodę wprowadzania"
-
-#: ../ui/gtk2/panel.py:483
-msgid "No input window"
-msgstr "Brak okna wprowadzania"
-
-#: ../ui/gtk2/panel.py:514
+#: ../ui/gtk3/panel.vala:366
 msgid "IBus is an intelligent input bus for Linux/Unix."
 msgstr "iBus jest inteligentną magistralą wprowadzania dla systemu Linux/UNIX."
 
-#: ../ui/gtk2/panel.py:518
+#: ../ui/gtk3/panel.vala:370
 msgid "translator-credits"
 msgstr "Piotr Drąg <piotrdrag@gmail.com>, 2009"
 
-#: ../xkb/ibus-engine-xkb-main.c:201
-msgid "Default Layout"
-msgstr ""
-
-#: ../xkb/ibus-simple-engine.c:179
-msgid "Setup"
-msgstr ""
-
-#: ../xkb/ibus-simple-engine.c:180
-msgid "Configure XKB engine"
-msgstr ""
-
-#: ../xkb/ibus-xkb-main.c:47
-msgid "Get current xkb layout"
-msgstr ""
-
-#. Translators: the "layout" should not be translated due to a variable.
-#: ../xkb/ibus-xkb-main.c:49
-#, fuzzy
-msgid "Set xkb layout"
-msgstr "Użycie systemowych ustawień układu klawiatury"
-
-#: ../xkb/ibus-xkb-main.c:50
-msgid "Set xkb model"
-msgstr ""
-
-#: ../xkb/ibus-xkb-main.c:51
-msgid "Set xkb option"
-msgstr ""
-
-#: ../xkb/ibus-xkb-main.c:52
-msgid "Get current xkb state"
-msgstr ""
-
-#~ msgid "IBus"
-#~ msgstr "iBus"
-
-#~ msgid "Input Method Framework"
-#~ msgstr "Struktura metody wprowadzania"
-
-#~ msgid "Start IBus Input Method Framework"
-#~ msgstr "Uruchomienie struktury metody wprowadzania iBus"
-
-#~ msgid ""
-#~ "Copyright (c) 2007-2010 Peng Huang\n"
-#~ "Copyright (c) 2007-2010 Red Hat, Inc."
-#~ msgstr ""
-#~ "Copyright (c) 2007-2010 Peng Huang\n"
-#~ "Copyright (c) 2007-2010 Red Hat, Inc."
-
-#~ msgid "Other"
-#~ msgstr "Inne"
-
-#~ msgid ""
-#~ "Some input methods have been installed, removed or updated. Please "
-#~ "restart ibus input platform."
-#~ msgstr ""
-#~ "Metody wprowadzania zostały zainstalowane, usunięte lub zaktualizowane. "
-#~ "Proszę ponownie uruchomić platformę wprowadzania iBus."
-
-#~ msgid "Restart Now"
-#~ msgstr "Uruchom ponownie teraz"
-
-#~ msgid "Later"
-#~ msgstr "Później"
-
-#~ msgid "next input method"
-#~ msgstr "następna metoda wprowadzania"
-
-#~ msgid "previous input method"
-#~ msgstr "poprzednia metoda wprowadzania"
-
-#~ msgid "Auto hide"
-#~ msgstr "Automatyczne ukrywanie"
-
-#~ msgid "Custom font"
-#~ msgstr "Własna czcionka"
-
-#~ msgid "Custom font name for language panel"
-#~ msgstr "Nazwa własnej czcionki dla panelu języków"
-
-#~ msgid "Disable shortcut keys"
-#~ msgstr "Wyłącza skróty klawiszowe"
-
-#~ msgid "Embed Preedit Text"
-#~ msgstr "Osadzanie wcześniej wprowadzonego tekstu"
-
-#~ msgid "Embed Preedit Text in Application Window"
-#~ msgstr "Osadzanie wcześniej wprowadzonego tekstu w oknie aplikacji"
-
-#~ msgid "Enable input method by default"
-#~ msgstr "Domyślne włączanie metody wprowadzania"
-
-#~ msgid "Enable input method by default when the application gets input focus"
-#~ msgstr ""
-#~ "Domyślne włączanie metody wprowadzania, kiedy aplikacja uzyskuje "
-#~ "aktywność wprowadzania"
-
-#~ msgid "Enable shortcut keys"
-#~ msgstr "Włącza skróty klawiszowe"
-
-#~ msgid "Language panel position"
-#~ msgstr "Pozycja panela języków"
-
-#~ msgid "Next engine shortcut keys"
-#~ msgstr "Klawisze skrótów następnego mechanizmu"
-
-#~ msgid "Orientation of lookup table"
-#~ msgstr "Orientacja tablicy wyszukiwania"
-
-#~ msgid "Orientation of lookup table. 0 = Horizontal, 1 = Vertical"
-#~ msgstr "Orientacja tablicy wyszukiwania. 0 = pozioma, 1 = pionowa"
-
-#~ msgid "Preload engines"
-#~ msgstr "Wcześniejsze wczytanie mechanizmów"
-
-#~ msgid "Preload engines during ibus starts up"
-#~ msgstr "Wcześniejsze wczytanie mechanizmów podczas uruchamiania usługi iBus"
-
-#~ msgid "Prev engine shortcut keys"
-#~ msgstr "Klawisze skrótów poprzedniego mechanizmu"
-
-#~ msgid "Share the same input method among all applications"
-#~ msgstr "Używanie tej samej metody wprowadzania we wszystkich aplikacjach"
-
-#~ msgid "Show icon on system tray"
-#~ msgstr "Wyświetlanie ikony w obszarze powiadamiania"
-
-#~ msgid "Show input method name"
-#~ msgstr "Wyświetlanie nazwy metody wprowadzania"
-
-#~ msgid "Show input method name on language bar"
-#~ msgstr "Wyświetlanie nazwy metody wprowadzania na panelu języków"
-
-#~ msgid ""
-#~ "The behavior of language panel. 0 = Embedded in menu, 1 = Auto hide, 2 = "
-#~ "Always show"
-#~ msgstr ""
-#~ "Zachowanie panela języków. 0 = osadzony w menu, 1 = automatycznie "
-#~ "ukrywany, 2 = zawsze wyświetlany"
-
-#~ msgid ""
-#~ "The position of the language panel. 0 = Top left corner, 1 = Top right "
-#~ "corner, 2 = Bottom left corner, 3 = Bottom right corner, 4 = Custom"
-#~ msgstr ""
-#~ "Pozycja panela języków. 0 = górny lewy róg, 1 = górny prawy róg, 2 = "
-#~ "dolny lewy róg, 3 = dolny prawy róg, 4 = własna"
-
-#~ msgid "The shortcut keys for switching to the next input method in the list"
-#~ msgstr ""
-#~ "Klawisze skrótu do przełączania na następną metodę wprowadzania na liście"
-
-#~ msgid "The shortcut keys for switching to the previous input method"
-#~ msgstr ""
-#~ "Klawisze skrótu do przełączania na poprzednią metodę wprowadzania na "
-#~ "liście"
-
-#~ msgid "The shortcut keys for turning input method off"
-#~ msgstr "Skróty klawiszowe do wyłączania metody wprowadzania"
-
-#~ msgid "The shortcut keys for turning input method on"
-#~ msgstr "Skróty klawiszowe do włączania metody wprowadzania"
-
-#~ msgid "Use custom font"
-#~ msgstr "Użycie własnej czcionki"
-
-#~ msgid "Use custom font name for language panel"
-#~ msgstr "Nazwa własnej czcionki użytej w panelu języków"
-
-#~ msgid "Use global input method"
-#~ msgstr "Użycie globalnej metody wprowadzania"
-
-#~ msgid "Use system keyboard (XKB) layout"
-#~ msgstr "Użycie systemowego układu klawiatury (XKB)"
-
-#~ msgid "..."
-#~ msgstr "..."
-
-#~ msgid "<b>Font and Style</b>"
-#~ msgstr "<b>Czcionka i styl</b>"
-
-#~ msgid "<b>Global input method settings</b>"
-#~ msgstr "<b>Ustawienia globalnej metody wprowadzania</b>"
-
-#~ msgid "<b>Keyboard Layout</b>"
-#~ msgstr "<b>Układ klawiatury</b>"
-
-#~ msgid "<b>Keyboard Shortcuts</b>"
-#~ msgstr "<b>Skróty klawiszowe</b>"
-
-#~ msgid "<b>Startup</b>"
-#~ msgstr "<b>Uruchomienie</b>"
-
-#~ msgid ""
-#~ "<big><b>IBus</b></big>\n"
-#~ "<small>The intelligent input bus</small>\n"
-#~ "Homepage: http://code.google.com/p/ibus\n"
-#~ "\n"
-#~ "\n"
-#~ "\n"
-#~ msgstr ""
-#~ "<big><b>iBus</b></big>\n"
-#~ "<small>Inteligentna magistrala wprowadzania</small>\n"
-#~ "Strona domowa: http://code.google.com/p/ibus\n"
-#~ "\n"
-#~ "\n"
-#~ "\n"
-
-#~ msgid "Add the selected input method into the enabled input methods"
-#~ msgstr ""
-#~ "Dodanie wybranej metody wprowadzania do włączonych metod wprowadzania"
-
-#~ msgid "Advanced"
-#~ msgstr "Zaawansowane"
-
-#~ msgid "Always"
-#~ msgstr "Zawsze"
-
-#~ msgid "Bottom left corner"
-#~ msgstr "Dolny lewy róg"
-
-#~ msgid "Bottom right corner"
-#~ msgstr "Dolny prawy róg"
-
-#~ msgid "Candidates orientation:"
-#~ msgstr "Orientacja kandydatów:"
-
-#~ msgid "Custom"
-#~ msgstr "Własna"
-
-#~ msgid "Disable:"
-#~ msgstr "Wyłączone:"
-
-#~ msgid "Embed preedit text in application window"
-#~ msgstr "Osadzanie wcześniej wprowadzonego tekstu metody wejścia"
-
-#~ msgid "Embed the preedit text of input method in the application window"
-#~ msgstr ""
-#~ "Osadzanie wcześniej wprowadzonego tekstu metody wejścia w oknie aplikacji"
-
-#~ msgid "Embedded in menu"
-#~ msgstr "Osadzanie w menu"
-
-#~ msgid "Enable or disable:"
-#~ msgstr "Włączenie lub wyłączenie:"
-
-#~ msgid "Enable:"
-#~ msgstr "Włączone:"
-
-#~ msgid "General"
-#~ msgstr "Ogólne"
-
-#~ msgid "Horizontal"
-#~ msgstr "Poziomo"
-
-#~ msgid "Language panel position:"
-#~ msgstr "Pozycja panelu języków:"
-
-#~ msgid "Move down the selected input method in the enabled input methods"
-#~ msgstr ""
-#~ "Przeniesienie w dół zaznaczonej metody wprowadzania we włączonych "
-#~ "metodach wprowadzania"
-
-#~ msgid "Move up the selected input method in the enabled input methods list"
-#~ msgstr ""
-#~ "Przeniesienie w górę zaznaczonej metody wprowadzania we włączonych "
-#~ "metodach wprowadzania"
-
-#~ msgid "Next input method:"
-#~ msgstr "Następna metoda wprowadzania:"
-
-#~ msgid "Previous input method:"
-#~ msgstr "Poprzednia metoda wprowadzania:"
-
-#~ msgid "Remove the selected input method from the enabled input methods"
-#~ msgstr ""
-#~ "Usunięcie zaznaczonej metody wprowadzania we włączonych metodach "
-#~ "wprowadzania"
-
-#~ msgid "Set the behavior of ibus how to show or hide language bar"
-#~ msgstr "Ustawienie wyświetlania lub ukrywania panela języków usługi iBus"
-
-#~ msgid "Set the orientation of candidates in lookup table"
-#~ msgstr "Ustawienie orientacji kandydatów w tablicy wyszukiwania"
-
-#~ msgid "Show information of the selected input method"
-#~ msgstr "Wyświetlanie informacji o wybranej metodzie wprowadzania"
-
-#~ msgid "Show input method's name on language bar when check the checkbox"
-#~ msgstr ""
-#~ "Wyświetlanie nazwy metody wprowadzania na panelu języków podczas "
-#~ "zaznaczania pola wyboru"
-
-#~ msgid "Show language panel:"
-#~ msgstr "Wyświetlanie panelu języków:"
-
-#~ msgid "Start ibus on login"
-#~ msgstr "Uruchamianie iBus podczas logowania"
-
-#~ msgid "The shortcut keys for switching to next input method in the list"
-#~ msgstr ""
-#~ "Klawisz skrótu do przełączenia na następną metodę wprowadzania na liście"
-
-#~ msgid "The shortcut keys for switching to previous input method in the list"
-#~ msgstr ""
-#~ "Klawisz skrótu do przełączenia na poprzednią metodę wprowadzania na liście"
-
-#~ msgid "Top left corner"
-#~ msgstr "Górny lewy róg"
-
-#~ msgid "Top right corner"
-#~ msgstr "Górny prawy róg"
-
-#~ msgid "Use custom font:"
-#~ msgstr "Użycie własnej czcionki:"
-
-#~ msgid "Vertical"
-#~ msgstr "Pionowo"
-
-#~ msgid "When active"
-#~ msgstr "W czasie aktywności"
+#: ../ui/gtk3/panel.vala:402
+msgid "Restart"
+msgstr "Uruchom ponownie"
