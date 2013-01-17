@@ -2,6 +2,7 @@
 # Please keep this file in alphabetical order.
 [type: gettext/glade]setup/setup.ui
 data/ibus-xkb.schemas.in
+engine/ibus-xkb/ibus-xkb-main.c
 engine/main.vala
 setup/engineabout.py
 setup/enginecombobox.py
@@ -20,3 +21,4 @@ ui/gtk3/pango.vala
 ui/gtk3/property.vala
 ui/gtk3/separator.vala
 ui/gtk3/switcher.vala
+ui/gtk3/xkblayout.vala

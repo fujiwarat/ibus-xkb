@@ -161,24 +161,20 @@ else
     enable_gtk3="no (disabled, use --enable-gtk3 to enable)"
 fi
 
-# For source compatibility with ibus patch.
-AM_CONDITIONAL([ENABLE_XKB], [1])
-
-# Check for x11
-PKG_CHECK_MODULES(X11, [
-    x11
-])
-AC_CHECK_HEADERS([X11/XKBlib.h])
-
-PKG_CHECK_MODULES(XKB,
-    [xkbfile],,
-    [XKB_LIBS="-lxkbfile"]
+# --disable-vala option.
+AC_ARG_ENABLE(vala,
+    AS_HELP_STRING([--disable-vala],
+                   [Do not build ibus vala binding]),
+    [enable_vala=$enableval],
+    [enable_vala=yes]
 )
-
-# For source compatibility with ibus patch.
-AC_DEFINE(HAVE_XKB, 1, [define to 1 if you have xkbfile])
-HAVE_IBUS_XKB=true
-AC_SUBST(HAVE_IBUS_XKB)
+if test x"$enable_vala" = x"yes"; then
+    AC_PATH_PROG([VAPIGEN], [vapigen], [false])
+fi
+AM_CONDITIONAL([ENABLE_VALA], [test x"$enable_vala" = x"yes"])
+if test x"$enable_vala" != x"yes"; then
+    enable_vala="no (disabled, use --enable-vala to enable)"
+fi
 
 # --disable-dconf option.
 AC_ARG_ENABLE(dconf,
@@ -226,12 +222,20 @@ else
     enable_gconf="no (disabled, use --enable-gconf to enable)"
 fi
 
+# Option for XKB command.
+PKG_CHECK_MODULES(XKB,
+    [xkbfile],,
+    [XKB_LIBS="-lxkbfile"]
+)
+
+AC_CHECK_HEADERS([X11/XKBlib.h])
+
 # --enable-libgnomekbd option.
 AC_ARG_ENABLE(libgnomekbd,
     AS_HELP_STRING([--enable-libgnomekbd],
                    [Use libgnomekbd to handle the keymaps]),
     [enable_libgnomekbd=$enableval],
-    [enable_libgnomekbd=no]
+    [enable_libgnomekbd=yes]
 )
 AM_CONDITIONAL([ENABLE_LIBGNOMEKBD], [test x"$enable_libgnomekbd" = x"yes"])
 if test x"$enable_libgnomekbd" = x"yes"; then
@@ -243,8 +247,8 @@ if test x"$enable_libgnomekbd" = x"yes"; then
         atk
     ])
     HAVE_IBUS_GKBD=true
+    enable_libgnomekbd="yes (enabled, use --disable-libgnomekbd to disable)"
 else
-    enable_libgnomekbd="no (disabled, use --enable-libgnomekbd to enable)"
     HAVE_IBUS_GKBD=false
 fi
 AC_SUBST(HAVE_IBUS_GKBD)
@@ -356,6 +360,9 @@ fi
 GETTEXT_PACKAGE=ibus-xkb
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package])
+GLIB_DEFINE_LOCALEDIR(GLIB_LOCALE_DIR)
+GLIB_LOCALE_DIR=$localedir
+AC_SUBST(GLIB_LOCALE_DIR)
 
 AM_GLIB_GNU_GETTEXT
 
@@ -376,6 +383,7 @@ bindings/vala/Makefile
 data/Makefile
 data/dconf/Makefile
 engine/Makefile
+engine/ibus-xkb/Makefile
 engine/xkb.xml.in
 setup/Makefile
 setup/ibus-setup-xkb

@@ -28,11 +28,20 @@ dist_vapi_DATA = \
 	$(NULL)
 
 # Don't rebuild vapi every time gir is updated.
+if ENABLE_LIBGNOMEKBD
+vapi_deps = \
+	$(srcdir)/IBusXKB-1.0.metadata \
+	| \
+	$(builddir)/gkbd.vapi \
+	$(top_srcdir)/src/IBusXKB-@IBUS_XKB_API_VERSION@.gir \
+	$(NULL)
+else
 vapi_deps = \
 	$(srcdir)/IBusXKB-1.0.metadata \
 	| \
 	$(top_srcdir)/src/IBusXKB-@IBUS_XKB_API_VERSION@.gir \
 	$(NULL)
+endif
 
 ibus-xkb-@IBUS_XKB_API_VERSION@.vapi: $(vapi_deps)
 	$(AM_V_GEN) $(VAPIGEN) --library ibus-xkb-@IBUS_XKB_API_VERSION@ \
@@ -40,11 +49,24 @@ ibus-xkb-@IBUS_XKB_API_VERSION@.vapi: $(vapi_deps)
 			--pkg=ibus-1.0 \
 			$(top_srcdir)/src/IBusXKB-@IBUS_XKB_API_VERSION@.gir
 
+if ENABLE_LIBGNOMEKBD
+$(builddir)/gkbd.vapi:
+	$(AM_V_GEN) $(VAPIGEN) --library gkbd \
+	    --metadatadir $(srcdir) \
+	    --pkg gtk+-3.0 --pkg glib-2.0 --pkg gmodule-2.0 \
+	    /usr/share/gir-1.0/Gkbd-3.0.gir
+	$(NULL)
+endif
+
 EXTRA_DIST = \
+	Gkbd-3.0.metadata \
 	IBusXKB-1.0.metadata \
 	config.vapi \
 	xi.vapi \
+	Xkl-1.0.metadata \
 	$(NULL)
+
+CLEANFILES = gkbd.vapi
 
 MAINTAINERCLEANFILES = ibus-xkb-@IBUS_XKB_API_VERSION@.vapi
 

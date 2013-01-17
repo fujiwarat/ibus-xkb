@@ -40,7 +40,6 @@ XKB_COMMAND=\\\"$(libexecdir)/ibus-xkb\\\"
 %.py : %.py.in
 	@sed -e "s|\@XKB_COMMAND\@|$(XKB_COMMAND)|g" \
 	     -e "s|\@XKB_RULES_XML_FILE\@|$(XKB_RULES_XML_FILE)|g" \
-	     -e "s|\@HAVE_XKB\@|$(HAVE_XKB)|g" \
 	     -e "s|\@datadir\@|$(datadir)|g" \
 	$< > $@
 

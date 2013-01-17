@@ -2,7 +2,7 @@ prefix=@prefix@
 exec_prefix=@exec_prefix@
 libdir=@libdir@
 includedir=@includedir@
-ibus_xkb=@libexecdir@/ibus-xkb
+have_ibus_gkbd=@HAVE_IBUS_GKBD@
 
 Name: IBus-XKB
 Description: IBus XKB

@@ -1,0 +1,63 @@
+/* vim:set et sts=4 sw=4:
+ *
+ * ibus - The Input Bus
+ *
+ * Copyright 2012 Red Hat, Inc.
+ * Copyright(c) 2012 Peng Huang <shawn.p.huang@gmail.com>
+ * Copyright(c) 2012 Takao Fujiwara <tfujiwar@redhat.com>
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2 of the License, or(at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program; if not, write to the
+ * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
+ * Boston, MA  02111-1307  USA
+ */
+
+public class GkbdLayout
+{
+    public signal void changed();
+    public signal void group_changed (int object);
+
+    public GkbdLayout() {
+    }
+
+    public string[] get_layouts() {
+        return new string[0];
+    }
+
+    public string[] get_group_names() {
+        return new string[0];
+    }
+
+    public void lock_group(int id) {
+    }
+
+    public void start_listen() {
+    }
+
+    public void stop_listen() {
+    }
+
+    /*
+    public static int main(string[] args) {
+        GkbdLayout ibus_layouts = new GkbdLayout();
+
+        string[] layouts = ibus_layouts.get_layouts();
+        string[] names = ibus_layouts.get_group_names();
+        for (int i = 0; layouts != null && i < layouts.length; i++) {
+            stdout.printf("%s %s\n", layouts[i], names[i]);
+        }
+
+        return 0;
+    }
+    */
+}

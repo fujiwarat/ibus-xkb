@@ -1,5 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <gconfschemafile>
   <schemalist>
+    <schema>
+      <key>/schemas/desktop/ibus/general/use_xmodmap</key>
+      <applyto>/desktop/ibus/general/use_xmodmap</applyto>
+      <owner>ibus</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Use xmodmap</short>
+           <long>Run xmodmap if .xmodmap/.Xmodmap exists.</long>
+      </locale>
+    </schema>
+    <schema>
+      <!-- or
+           /schemas/desktop/ibus/engine/xkb/xkb_latin_layouts
+           /desktop/ibus/engine/xkb/xkb_latin_layouts
+      -->
+      <key>/schemas/desktop/ibus/general/xkb_latin_layouts</key>
+      <applyto>/desktop/ibus/general/xkb_latin_layouts</applyto>
+      <owner>ibus</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[ara,bg,cz,dev,gr,gur,in,jp(kana),mal,mkd,ru,ua]</default>
+      <locale name="C">
+        <short>Latin layout which have no ASCII</short>
+          <long>us layout is appended to the latin layouts. variant is not needed.</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/ibus/general/load_xkb_layouts</key>
+      <applyto>/desktop/ibus/general/load_xkb_layouts</applyto>
+      <owner>ibus</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[us,us(chr),us(dvorak),ad,al,am,ara,az,ba,bd,be,bg,br,bt,by,
+de,dk,ca,ch,cn(tib),cz,ee,epo,es,et,fi,fo,fr,
+gb,ge,ge(dsb),ge(ru),ge(os),gh,gh(akan),gh(ewe),gh(fula),gh(ga),gh(hausa),
+gn,gr,hu,hr,ie,ie(CloGaelach),il,
+in,
+in(tel),in(bolnagri),iq,iq(ku),ir,ir(ku),is,it,jp,
+kg,kh,kz,la,latam,lk,lk(tam_unicode),lt,lv,ma,ma(tifinagh),mal,mao,
+me,mk,mm,mt,mv,ng,ng(hausa),ng,ng(igbo),ng(yoruba),nl,no,no(smi),np,
+pk,pl,pl(csb),pt,ro,rs,ru,ru(cv),ru(kom),ru(sah),ru(tt),ru(xal),
+se,si,sk,sy,sy(ku),th,tj,tr,ua,uz,vn
+]</default>
+      <locale name="C">
+        <short>XKB layout list which is shown on ibus-setup</short>
+           <long>XKB layout list which is shown on ibus-setup.
+                 The format is "layout" or "layout(variant)".</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/desktop/ibus/general/hotkey/triggers-no-modifiers</key>
+      <applyto>/desktop/ibus/general/hotkey/triggers-no-modifiers</applyto>
+      <owner>ibus</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Trigger shortcut keys without modifier keys</short>
+           <long>Trigger shortcut keys without modifier keys.
+                 The list is used by ibus-gjs.</long>
+      </locale>
+    </schema>
   </schemalist>
 </gconfschemafile>

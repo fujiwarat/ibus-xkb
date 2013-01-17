@@ -48,6 +48,8 @@ USE_SYMBOL_ICON = TRUE
 # force include config.h before gi18n.h.
 AM_CPPFLAGS = -include $(CONFIG_HEADER)
 
+HAVE_IBUS_GKBD_C = $(strip $(subst false, FALSE, $(subst true, TRUE, $(HAVE_IBUS_GKBD))))
+
 AM_CFLAGS = \
 	@GLIB2_CFLAGS@ \
 	@GIO2_CFLAGS@ \
@@ -59,8 +61,10 @@ AM_CFLAGS = \
 	-DG_LOG_DOMAIN=\"IBUS\" \
 	-DBINDIR=\"$(bindir)\" \
 	-DIBUS_DISABLE_DEPRECATED \
-	-DIBUS_VERSION="\"@IBUS_XKB_VERSION@ (IBus: @IBUS_VERSION@)\"" \
+	-DPANEL_IBUS_VERSION="\"@IBUS_XKB_VERSION@ (IBus: @IBUS_VERSION@)\"" \
 	-DSWITCHER_USE_SYMBOL_ICON=$(USE_SYMBOL_ICON) \
+	-DHAVE_IBUS_GKBD=$(HAVE_IBUS_GKBD_C) \
+	-DXKB_LAYOUTS_MAX_LENGTH=4 \
 	-Wno-unused-variable \
 	-Wno-unused-but-set-variable \
 	-Wno-unused-function \
@@ -96,6 +100,7 @@ ibus_xkb_ui_gtk3_SOURCES = \
 	application.vala \
 	candidatearea.vala \
 	candidatepanel.vala \
+	gkbdlayout.vala \
 	handle.vala \
 	iconwidget.vala \
 	keybindingmanager.vala \
@@ -104,17 +109,48 @@ ibus_xkb_ui_gtk3_SOURCES = \
 	property.vala \
 	separator.vala \
 	switcher.vala \
+	xkblayout.vala \
 	$(NULL)
 
 ibus_xkb_ui_gtk3_LDADD = \
 	$(AM_LDADD) \
 	$(NULL)
 
+if ENABLE_LIBGNOMEKBD
+AM_CFLAGS += \
+	@LIBGNOMEKBDUI_CFLAGS@ \
+	@ATK_CFLAGS@ \
+	$(NULL)
+
+AM_LDADD += \
+	@LIBGNOMEKBDUI_LIBS@ \
+	@ATK_LIBS@ \
+	$(NULL)
+
+AM_VALAFLAGS += \
+	--vapidir=$(top_srcdir)/ui/gtk3 \
+	--metadatadir=$(top_srcdir)/bindings/vala \
+	--pkg=glib-2.0 \
+	--pkg=gmodule-2.0 \
+	--pkg=gkbd \
+	--pkg=Xkl-1.0 \
+	$(NULL)
+
+$(builddir)/gkbdlayout.vala: $(top_builddir)/bindings/vala/gkbd.vapi
+	@cp $(srcdir)/gkbdlayout.vala.true $(builddir)/gkbdlayout.vala
+else
+$(builddir)/gkbdlayout.vala:
+	@cp $(srcdir)/gkbdlayout.vala.false $(builddir)/gkbdlayout.vala
+endif
+
 CLEANFILES = \
+	gkbdlayout.vala \
 	gtkxkbpanel.xml \
 	$(NULL)
 
 EXTRA_DIST = \
+	gkbdlayout.vala.false \
+	gkbdlayout.vala.true \
 	gtkxkbpanel.xml.in.in \
 	$(NULL)
 

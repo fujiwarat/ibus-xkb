@@ -1,0 +1,108 @@
+/* vim:set et sts=4 sw=4:
+ *
+ * ibus - The Input Bus
+ *
+ * Copyright 2012 Red Hat, Inc.
+ * Copyright(c) 2012 Peng Huang <shawn.p.huang@gmail.com>
+ * Copyright(c) 2012 Takao Fujiwara <tfujiwar@redhat.com>
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2 of the License, or(at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program; if not, write to the
+ * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
+ * Boston, MA  02111-1307  USA
+ */
+
+public class GkbdLayout
+{
+    public signal void changed();
+    public signal void group_changed (int object);
+
+    private Gkbd.Configuration m_config = null;
+
+    public GkbdLayout() {
+        m_config = Gkbd.Configuration.get();
+        if (m_config != null) {
+            m_config.changed.connect(config_changed_cb);
+            m_config.group_changed.connect(config_group_changed_cb);
+        }
+    }
+
+    ~GkbdLayout() {
+        if (m_config != null) {
+            m_config.changed.disconnect(config_changed_cb);
+            m_config.group_changed.disconnect(config_group_changed_cb);
+            /* gkbd_configuration_get reuses the object and do not
+             * destroy m_config here. */
+            m_config.ref();
+            m_config = null;
+        }
+    }
+
+    private void config_changed_cb() {
+        changed();
+    }
+
+    private void config_group_changed_cb(int object) {
+        group_changed(object);
+    }
+
+    public string[] get_layouts() {
+        if (m_config == null) {
+            return new string[0];
+        }
+        return m_config.get_short_group_names();
+    }
+
+    public string[] get_group_names() {
+        if (m_config == null) {
+            return new string[0];
+        }
+        return m_config.get_group_names();
+    }
+
+    public void lock_group(int id) {
+        if (m_config == null) {
+            return;
+        }
+        m_config.lock_group(id);
+    }
+
+    public void start_listen() {
+        if (m_config == null) {
+            return;
+        }
+        m_config.start_listen();
+    }
+
+    public void stop_listen() {
+        if (m_config == null) {
+            return;
+        }
+        m_config.stop_listen();
+    }
+
+    /*
+    public static int main(string[] args) {
+        Gtk.init(ref args);
+        GkbdLayout ibus_layouts = new GkbdLayout();
+
+        string[] layouts = ibus_layouts.get_layouts();
+        string[] names = ibus_layouts.get_group_names();
+        for (int i = 0; layouts != null && i < layouts.length; i++) {
+            stdout.printf("%s %s\n", layouts[i], names[i]);
+        }
+
+        return 0;
+    }
+    */
+}
