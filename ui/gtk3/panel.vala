@@ -294,6 +294,8 @@ class Panel : IBus.PanelService {
         if (m_config != null) {
             m_config.value_changed.connect(config_value_changed_cb);
             m_config.watch("general", "preload_engines");
+            m_config.watch("general", "preload_engines_inited");
+            m_config.watch("general", "preload_engine_mode");
             m_config.watch("general", "engines_order");
             m_config.watch("general", "switcher_delay_time");
             m_config.watch("general/hotkey", "triggers");
@@ -406,7 +408,136 @@ class Panel : IBus.PanelService {
             init_gkbd();
         }
 
+        GLib.Variant var_engines = 
+                m_config.get_value("general", "preload_engines");
+        string[] preload_engines = {};
+
+        if (var_engines != null) {
+            preload_engines = var_engines.dup_strv();
+        }
+
+        bool preload_engines_inited = false;
+        GLib.Variant var_preload_engines_inited =
+                m_config.get_value("general", "preload_engines_inited");
+
+        if (var_preload_engines_inited != null) {
+            preload_engines_inited = var_preload_engines_inited.get_boolean();
+        }
+
+        // Set preload_engines_inited = true for back compatibility
+        if (preload_engines.length != 0 && !preload_engines_inited) {
+                preload_engines_inited = true;
+                m_config.set_value("general",
+                                   "preload_engines_inited",
+                                   new GLib.Variant.boolean(true));
+        }
+
         update_xkb_engines();
+
+        // Before update preload_engine_mode, update_xkb_engines() is called
+        // because config_value_changed_cb() calls update_im_engines().
+        if (!preload_engines_inited) {
+            GLib.Variant variant = new GLib.Variant.int32(
+                    IBusXKB.PreloadEngineMode.LANG_RELATIVE);
+            m_config.set_value("general",
+                               "preload_engine_mode",
+                               variant);
+        }
+
+        update_im_engines();
+
+        if (!preload_engines_inited) {
+            m_config.set_value("general",
+                               "preload_engines_inited",
+                               new GLib.Variant.boolean(true));
+        }
+    }
+
+    private bool set_lang_relative_preload_engines() {
+        string locale = Intl.setlocale(LocaleCategory.CTYPE, null);
+
+        if (locale == null) {
+            locale = "C";
+        }
+
+        string lang = locale.split(".")[0];
+        GLib.List<IBus.EngineDesc> engines = m_bus.list_engines();
+        string[] im_engines = {};
+
+        for (unowned GLib.List<IBus.EngineDesc> p = engines;
+             p != null;
+             p = p.next) {
+            unowned IBus.EngineDesc engine = p.data;
+            if (engine.get_language() == lang &&
+                engine.get_rank() > 0) {
+                im_engines += engine.get_name();
+            }
+        }
+
+        lang = lang.split("_")[0];
+        if (im_engines.length == 0) {
+            for (unowned GLib.List<IBus.EngineDesc> p = engines;
+                 p != null;
+                 p = p.next) {
+                unowned IBus.EngineDesc engine = p.data;
+                if (engine.get_language() == lang &&
+                    engine.get_rank() > 0) {
+                    im_engines += engine.get_name();
+                }
+            }
+        }
+
+        if (im_engines.length == 0) {
+            return false;
+        }
+
+        GLib.Variant var_engines = 
+                m_config.get_value("general", "preload_engines");
+        string[] orig_preload_engines = {};
+        string[] preload_engines = {};
+
+        if (var_engines != null) {
+            orig_preload_engines = var_engines.dup_strv();
+        }
+
+        // clear input method engines
+        foreach (string name in orig_preload_engines) {
+            if (name.ascii_ncasecmp("xkb:", 4) != 0) {
+                continue;
+            }
+            preload_engines += name;
+        }
+
+        foreach (string name in im_engines) {
+            if (!(name in preload_engines)) {
+                preload_engines += name;
+            }
+        }
+
+        if ("".joinv(",", orig_preload_engines) !=
+            "".joinv(",", preload_engines)) {
+            m_config.set_value("general",
+                               "preload_engines",
+                               new GLib.Variant.strv(preload_engines));
+        }
+
+        return true;
+    }
+
+    private void update_im_engines() {
+        int preload_engine_mode = IBusXKB.PreloadEngineMode.USER;
+        GLib.Variant var_preload_engine_mode =
+                m_config.get_value("general", "preload_engine_mode");
+
+        if (var_preload_engine_mode != null) {
+            preload_engine_mode = var_preload_engine_mode.get_int32();
+        }
+
+        if (preload_engine_mode == IBusXKB.PreloadEngineMode.USER) {
+            return;
+        }
+
+        set_lang_relative_preload_engines();
     }
 
     private void update_xkb_engines() {
@@ -576,6 +707,11 @@ class Panel : IBus.PanelService {
                                          string section,
                                          string name,
                                          Variant variant) {
+        if (section == "general" && name == "preload_engine_mode") {
+            update_im_engines();
+            return;
+        }
+
         if (section == "general" && name == "preload_engines") {
             update_engines(variant, null);
             return;

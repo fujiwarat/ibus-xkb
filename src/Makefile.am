@@ -51,6 +51,7 @@ ibus_xkb_common_sources =                                               \
     ibusxkbxml.c                                                        \
     $(NULL)
 ibus_xkb_common_headers =                                               \
+    ibusxkbtypes.h                                                      \
     ibusxkbxml.h                                                        \
     $(NULL)
 ibus_xkb_include_HEADERS =                                              \

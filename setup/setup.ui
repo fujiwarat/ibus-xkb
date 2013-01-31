@@ -669,7 +669,23 @@
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <child>
-                      <object class="GtkHBox" id="hbox1">
+                      <object class="GtkCheckButton" id="checkbutton_preload_engine_mode">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Customize active input _methods</property>
+                        <property name="use_underline">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">False</property>
+                        <property name="tooltip_text" translatable="yes">Customize active input methods</property>
+                        <property name="draw_indicator">True</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkHBox" id="hbox_customize_active_input_methods">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <child>
@@ -858,7 +874,7 @@
                       <packing>
                         <property name="expand">True</property>
                         <property name="fill">True</property>
-                        <property name="position">0</property>
+                        <property name="position">1</property>
                       </packing>
                     </child>
                     <child>
@@ -905,7 +921,7 @@ You may use up/down buttons to change it.&lt;/i&gt;&lt;/small&gt;</property>
                       <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
-                        <property name="position">1</property>
+                        <property name="position">2</property>
                       </packing>
                     </child>
                   </object>
