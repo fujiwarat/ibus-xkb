@@ -1,85 +1,87 @@
-# Polish translations for ibus-xkb
+# Interlingua translations for ibus-xkb
 # Copyright (C) 2011-2012 Takao Fujiwara <takao.fujiwara1@gmail.com>
 # This file is distributed under the same license as the ibus-xkb package.
 #
 # Translators:
-# Piotr Drąg <piotrdrag@gmail.com>, 2011-2012.
+# Nik Kalach <nikka@fedoraproject.org>, 2013
+# Nik Kalach <nik.kalach@inbox.ru>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: ibus-xkb HEAD\n"
 "Report-Msgid-Bugs-To: http://code.google.com/p/ibus/issues/entry\n"
 "POT-Creation-Date: 2013-01-18 00:20+0900\n"
-"PO-Revision-Date: 2012-10-15 18:26+0000\n"
-"Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
-"Language-Team: Polish <trans-pl@lists.fedoraproject.org>\n"
-"Language: pl\n"
+"PO-Revision-Date: 2013-04-28 01:32+0000\n"
+"Last-Translator: Nik Kalach <nik.kalach@inbox.ru>\n"
+"Language-Team: Interlingua <trans-ia@lists.fedoraproject.org>\n"
+"Language: ia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../setup/setup.ui.h:1
 msgid "Horizontal"
-msgstr "Poziomo"
+msgstr "Horizontal"
 
 #: ../setup/setup.ui.h:2
 msgid "Vertical"
-msgstr "Pionowo"
+msgstr "Vertical"
 
 #: ../setup/setup.ui.h:3
 msgid "Top left corner"
-msgstr "Górny lewy róg"
+msgstr "Angulo superior siniste"
 
 #: ../setup/setup.ui.h:4
 msgid "Top right corner"
-msgstr "Górny prawy róg"
+msgstr "Angelo superior dextere"
 
 #: ../setup/setup.ui.h:5
 msgid "Bottom left corner"
-msgstr "Dolny lewy róg"
+msgstr "Angulo inferior sinistre"
 
 #: ../setup/setup.ui.h:6
 msgid "Bottom right corner"
-msgstr "Dolny prawy róg"
+msgstr "Angulo inferior dextere"
 
 #: ../setup/setup.ui.h:7
 msgid "Custom"
-msgstr "Własna"
+msgstr "Personalisate"
 
 #: ../setup/setup.ui.h:8
 msgid "Embedded in menu"
-msgstr "Osadzanie w menu"
+msgstr "Inserite in le menu"
 
 #: ../setup/setup.ui.h:9
 msgid "When active"
-msgstr "W czasie aktywności"
+msgstr "Quando active"
 
 #: ../setup/setup.ui.h:10
 msgid "Always"
-msgstr "Zawsze"
+msgstr "Sempre"
 
 #: ../setup/setup.ui.h:11 ../setup/ibus-setup-xkb.desktop.in.h:1
 msgid "IBus Preferences"
-msgstr "Preferencje usługi iBus"
+msgstr "Preferentias IBus"
 
 #: ../setup/setup.ui.h:12
 msgid "The shortcut keys for switching to next input method in the list"
 msgstr ""
-"Klawisz skrótu do przełączenia na następną metodę wprowadzania na liście"
+"Le claves acceleratori pro cambiar al methodo de ingresso sequente in le "
+"lista"
 
 #: ../setup/setup.ui.h:13
 msgid "Next input method:"
-msgstr "Następna metoda wprowadzania:"
+msgstr "Methodo de ingresso sequente:"
 
 #: ../setup/setup.ui.h:14
 msgid "The shortcut keys for switching to previous input method in the list"
 msgstr ""
-"Klawisz skrótu do przełączenia na poprzednią metodę wprowadzania na liście"
+"Le claves acceleratori pro cambiar al methodo de ingresso precedente in le "
+"lista"
 
 #: ../setup/setup.ui.h:15
 msgid "Previous input method:"
-msgstr "Poprzednia metoda wprowadzania:"
+msgstr "Methodo de ingresso precedente"
 
 #: ../setup/setup.ui.h:16
 msgid "..."
@@ -87,152 +89,156 @@ msgstr "..."
 
 #: ../setup/setup.ui.h:17
 msgid "The shortcut keys for turning input method on or off"
-msgstr "Klawisze skrótów do włączania lub wyłączania metody wprowadzania"
+msgstr "Le claves acceleratori pro activar e disactivar le methodo de ingresso"
 
 #: ../setup/setup.ui.h:18
 msgid "Enable or disable:"
-msgstr "Włączenie lub wyłączenie:"
+msgstr "Activar o disactivar:"
 
 #: ../setup/setup.ui.h:19
 msgid "Enable:"
-msgstr "Włączone:"
+msgstr "Activar:"
 
 #: ../setup/setup.ui.h:20
 msgid "Disable:"
-msgstr "Wyłączone:"
+msgstr "Disactivar:"
 
 #: ../setup/setup.ui.h:21
 msgid "<b>Keyboard Shortcuts</b>"
-msgstr "<b>Skróty klawiszowe</b>"
+msgstr "<b>Claves acceleratori</b>"
 
 #: ../setup/setup.ui.h:22
 msgid "Set the orientation of candidates in lookup table"
-msgstr "Ustawienie orientacji kandydatów w tablicy wyszukiwania"
+msgstr "Configurar le orientation del tabula de cerca de candidatos"
 
 #: ../setup/setup.ui.h:23
 msgid "Candidates orientation:"
-msgstr "Orientacja kandydatów:"
+msgstr "Orientation de candidatos:"
 
 #: ../setup/setup.ui.h:24
 msgid "Set the behavior of ibus how to show or hide language bar"
-msgstr "Ustawienie wyświetlania lub ukrywania panela języków usługi iBus"
+msgstr ""
+"Configurar le comportamento de ibus super como monstrar o occultar le barra "
+"de lingua"
 
 #: ../setup/setup.ui.h:25
 msgid "Show language panel:"
-msgstr "Wyświetlanie panelu języków:"
+msgstr "Monstrar le pannello de lingua:"
 
 #: ../setup/setup.ui.h:26
 msgid "Language panel position:"
-msgstr "Pozycja panelu języków:"
+msgstr "Position del pannello de lingua:"
 
 #: ../setup/setup.ui.h:27
 msgid "Show icon on system tray"
-msgstr "Wyświetlanie ikony w obszarze powiadamiania"
+msgstr "Monstrar le icone in le area de indicatores"
 
 #: ../setup/setup.ui.h:28
 msgid "Show input method name on language bar"
-msgstr "Wyświetlanie nazwy metody wprowadzania na panelu języków"
+msgstr "Monstrar le nomine del methodo de ingresso sur le barra de lingua"
 
 #: ../setup/setup.ui.h:29
 msgid "Show input method's name on language bar when check the checkbox"
 msgstr ""
-"Wyświetlanie nazwy metody wprowadzania na panelu języków podczas zaznaczania "
-"pola wyboru"
+"Monstar le nomine del methodo de ingresso sur le barra de lingua quando le "
+"quadrato de selection es marcate "
 
 #: ../setup/setup.ui.h:30
 msgid "Embed preedit text in application window"
-msgstr "Osadzanie wcześniej wprowadzonego tekstu metody wejścia"
+msgstr "Inserer le texto pre-editate in le fenestra de application"
 
 #: ../setup/setup.ui.h:31
 msgid "Embed the preedit text of input method in the application window"
 msgstr ""
-"Osadzanie wcześniej wprowadzonego tekstu metody wejścia w oknie aplikacji"
+"Inserer le texto pre-editate del methodo de ingresso in le fenestra de "
+"application"
 
 #: ../setup/setup.ui.h:32
 msgid "Use custom font:"
-msgstr "Użycie własnej czcionki:"
+msgstr "Usar characteres personalisate:"
 
 #: ../setup/setup.ui.h:33
 msgid "<b>Font and Style</b>"
-msgstr "<b>Czcionka i styl</b>"
+msgstr "<b>Typo de characteres e stilo</b>"
 
 #: ../setup/setup.ui.h:34
 msgid "General"
-msgstr "Ogólne"
+msgstr "General"
 
 #: ../setup/setup.ui.h:35
 msgid "Customize active input _methods"
-msgstr "Dostosowanie aktywnej _metody wprowadzania"
+msgstr "Personalisar le _methodos de ingresso active"
 
 #: ../setup/setup.ui.h:36
 msgid "Customize active input methods"
-msgstr "Dostosowanie aktywnej metody wprowadzania"
+msgstr "Personalisar le methodos de ingresso active"
 
 #: ../setup/setup.ui.h:37
 msgid "Add the selected input method into the enabled input methods"
-msgstr "Dodanie wybranej metody wprowadzania do włączonych metod wprowadzania"
+msgstr "Adder le methodo de ingresso seligite al methodos de ingresso active"
 
 #: ../setup/setup.ui.h:38
 msgid "Remove the selected input method from the enabled input methods"
 msgstr ""
-"Usunięcie zaznaczonej metody wprowadzania we włączonych metodach wprowadzania"
+"Remover le methodo de ingresso seligite del methodos de ingresso active"
 
 #: ../setup/setup.ui.h:39
 msgid "Move up the selected input method in the enabled input methods list"
 msgstr ""
-"Przeniesienie w górę zaznaczonej metody wprowadzania we włączonych metodach "
-"wprowadzania"
+"Mover in alto le methodo de ingresso seligite in le lista de methodos de "
+"ingresso active"
 
 #: ../setup/setup.ui.h:40
 msgid "Move down the selected input method in the enabled input methods"
 msgstr ""
-"Przeniesienie w dół zaznaczonej metody wprowadzania we włączonych metodach "
-"wprowadzania"
+"Mover in basso le methodo de ingresso seligite in le lista de methodos de "
+"ingresso"
 
 #: ../setup/setup.ui.h:41
 msgid "Show information of the selected input method"
-msgstr "Wyświetlanie informacji o wybranej metodzie wprowadzania"
+msgstr "Monstrar le information del methodo de ingresso seligite"
 
 #: ../setup/setup.ui.h:42
 msgid "Show setup of the selected input method"
-msgstr "Wyświetlanie ustawień zaznaczonej metody wprowadzania"
+msgstr "Monstrar le configuration del methodo de ingresso seligite"
 
 #: ../setup/setup.ui.h:43
 msgid ""
 "<small><i>The default input method is the top one in the list.\n"
 "You may use up/down buttons to change it.</i></small>"
 msgstr ""
-"<small><i>Domyślna metoda wprowadzania znajduje się na górze listy.\n"
-"Można użyć klawiszy w górę/w dół, aby ją zmienić.</i></small>"
+"<small><i>Le methodo de ingresso predefinite es le entrata superior del "
+"lista.\n"
+"Usar le buttones 'supra' e 'infra' pro cambiar lo.</i></small>"
 
 #. create im name & icon column
 #: ../setup/setup.ui.h:45 ../setup/enginetreeview.py:65
 msgid "Input Method"
-msgstr "Metoda wprowadzania"
+msgstr "Methodo de ingresso"
 
 #: ../setup/setup.ui.h:46
 msgid "Use system keyboard layout"
-msgstr "Użycie systemowych ustawień układu klawiatury"
+msgstr "Usar le disposition de claviero del systema"
 
 #: ../setup/setup.ui.h:47
 msgid "Use system keyboard (XKB) layout"
-msgstr "Użycie systemowego układu klawiatury (XKB)"
+msgstr "Usar le disposition de claviero del systema (XKB)"
 
 #: ../setup/setup.ui.h:48
 msgid "<b>Keyboard Layout</b>"
-msgstr "<b>Układ klawiatury</b>"
+msgstr "<b>Disposition de claviero</b>"
 
 #: ../setup/setup.ui.h:49
 msgid "Share the same input method among all applications"
-msgstr "Używanie tej samej metody wprowadzania we wszystkich aplikacjach"
+msgstr "Usar le mesme methodo de ingresso pro tote le applicationes"
 
 #: ../setup/setup.ui.h:50
 msgid "<b>Global input method settings</b>"
-msgstr "<b>Ustawienia globalnej metody wprowadzania</b>"
+msgstr "<b>Configuration del methodo de ingresso global</b>"
 
 #: ../setup/setup.ui.h:51
 msgid "Advanced"
-msgstr "Zaawansowane"
+msgstr "Avantiate"
 
 #: ../setup/setup.ui.h:52
 msgid ""
@@ -243,84 +249,85 @@ msgid ""
 "\n"
 "\n"
 msgstr ""
-"<big><b>iBus</b></big>\n"
-"<small>Inteligentna magistrala wprowadzania</small>\n"
-"Strona domowa: http://code.google.com/p/ibus\n"
+"<big><b>IBus</b></big>\n"
+"<small>Le bus de ingresso intelligente</small>\n"
+"Pagina del projecto: http://code.google.com/p/ibus\n"
 "\n"
 "\n"
 "\n"
 
 #: ../setup/setup.ui.h:59
 msgid "Start ibus on login"
-msgstr "Uruchamianie iBus podczas logowania"
+msgstr "Initiar ibus al connexion"
 
 #: ../setup/setup.ui.h:60
 msgid "<b>Startup</b>"
-msgstr "<b>Uruchomienie</b>"
+msgstr "<b>Initiation</b>"
 
 #: ../setup/setup.ui.h:61 ../setup/engineabout.py:35
 msgid "About"
-msgstr "O programie"
+msgstr "A proposito"
 
 #: ../data/ibus-xkb.schemas.in.h:1
 msgid "Preload engine mode"
-msgstr "Wcześniejsze wczytanie mechanizmów"
+msgstr "Modo de ingenio de precargamento"
 
 #: ../data/ibus-xkb.schemas.in.h:2
 msgid ""
 "Preload engines are loaded with this mode. 0 = user customized engines. 1 = "
 "language related engines."
 msgstr ""
-"W tym trybie mechanizmy są wcześniej wczytywane. 0 = mechanizmy dostosowane "
-"przez użytkownika. 1 = mechanizmy związane z językiem."
+"Le ingenios de precargamento se carga con iste modo. 0 = ingenios "
+"pesonalisate. 1 = ingenios de linguas."
 
 #: ../data/ibus-xkb.schemas.in.h:3
 msgid "The key preload_engines is initialized"
-msgstr "Klucz preload_engines jest zainicjowany"
+msgstr "Le clave preload_engines es initialisate"
 
 #: ../data/ibus-xkb.schemas.in.h:4
 msgid "Use xmodmap"
-msgstr "Użycie xmodmap"
+msgstr "Usar xmodmap"
 
 #: ../data/ibus-xkb.schemas.in.h:5
 msgid "Run xmodmap if .xmodmap/.Xmodmap exists."
-msgstr "Wykonuje xmodmap, jeśli plik .xmodmap/.Xmodmap istnieje."
+msgstr "Exequer xmodmap si .xmodmap/.Xmodmap existe."
 
 #: ../data/ibus-xkb.schemas.in.h:6
 msgid "Latin layout which have no ASCII"
-msgstr "Układ łaciński bez ASCII"
+msgstr "Dispositiones latin sin ASCII"
 
 #: ../data/ibus-xkb.schemas.in.h:7
 msgid "us layout is appended to the latin layouts. variant is not needed."
 msgstr ""
-"układ us jest dołączany do układów łacińskich. wariant nie jest wymagany."
+"Le disposition 'us' es appendite al dispositiones latin. Le variante non es "
+"necessari."
 
 #: ../data/ibus-xkb.schemas.in.h:8
 msgid "XKB layout list which is shown on ibus-setup"
-msgstr "Lista układów XKB wyświetlana przez program ibus-setup"
+msgstr "Le lista del dispositiones XKB que se monstra in ibus-setup"
 
 #: ../data/ibus-xkb.schemas.in.h:9
 msgid ""
 "XKB layout list which is shown on ibus-setup. The format is \"layout\" or "
 "\"layout(variant)\"."
 msgstr ""
-"Lista układów XKB wyświetlana przez program ibus-setup. Format to \"układ\" "
-"lub \"układ(wariant)\"."
+"Le lista del dispositiones XKB que se monstra in ibus-setup. Le formato es "
+"\"disposition\" o \"disposition(variante)\"."
 
 #: ../data/ibus-xkb.schemas.in.h:10
 msgid "Trigger shortcut keys without modifier keys"
-msgstr "Klawisze skrótu przełączenia bez klawiszy modyfikacji"
+msgstr "Activatores sin modificatores"
 
 #: ../data/ibus-xkb.schemas.in.h:11
 msgid ""
 "Trigger shortcut keys without modifier keys. The list is used by ibus-gjs."
 msgstr ""
-"Klawisze skrótu przełączenia bez klawiszy modyfikacji. Lista jest używana "
-"przez ibus-gjs."
+"Le claves de activation que se usa sin claves de modification. Le lista es "
+"utilisate per ibus-gjs."
 
 #: ../data/ibus-xkb.schemas.in.h:12
 msgid "List of system keyboard layout groups on ibus-setup"
-msgstr "Lista systemowych grup układów klawiatury w programie ibus-setup"
+msgstr "Lista del gruppos de dispositiones de clavieros in ibus-setup"
 
 #: ../data/ibus-xkb.schemas.in.h:13
 msgid ""
@@ -328,13 +335,13 @@ msgid ""
 "default. The list item will be appended at the end of gconf key. e.g. .../"
 "xkblayoutconfig/item1"
 msgstr ""
-"Lista grup jest używana, aby domyślnie nie wyświetlać wszystkich układów "
-"klawiatury. Element listy zostanie dołączony na końcu klucza GConf, np. .../"
-"xkblayoutconfig/item1"
+"Le lista de gruppos se usa pro non monstrar per predefinition tote le "
+"dispositiones de clavieros del systema. Le elemento del lista se appendera "
+"al fin del clave gconf. Per ex. .../xkblayoutconfig/item1"
 
 #: ../data/ibus-xkb.schemas.in.h:14
 msgid "List of European languages on ibus-setup"
-msgstr "Lista europejskich języków w programie ibus-setup"
+msgstr "Lista del linguas europee in ibus-setup"
 
 #: ../data/ibus-xkb.schemas.in.h:15
 msgid ""
@@ -342,55 +349,55 @@ msgid ""
 "setup on one of the languages. Other languages are hidden under an extended "
 "button."
 msgstr ""
-"Program ibus-setup wyświetla języki na liście metod wprowadzania po "
-"uruchomieniu ibus-setup na jednym z języków. Inne języki są ukryte pod "
-"przyciskiem rozwijania."
+"ibus-setup monstra le linguas solmente in le lista de methodos de ingresso "
+"quando illo opera sur un del linguas. Altere linguas son occultate sub un "
+"button de extension."
 
 #: ../data/ibus-xkb.schemas.in.h:16
 msgid "List of Asian languages on ibus-setup"
-msgstr "Lista azjatyckich języków w programie ibus-setup"
+msgstr "Lista del linguas asiatic in ibus-setup"
 
 #: ../engine/ibus-xkb/ibus-xkb-main.c:47
 msgid "Query the current xkb layout"
-msgstr "Odpytuje bieżący układ XKB"
+msgstr "Querer le disposition xkb actual"
 
 #: ../engine/ibus-xkb/ibus-xkb-main.c:48
 msgid "Set xkb LAYOUT"
-msgstr "Ustawia układ XKB"
+msgstr "Definir le DISPOSITION xkb"
 
 #: ../engine/ibus-xkb/ibus-xkb-main.c:48
 msgid "LAYOUT"
-msgstr "UKŁAD"
+msgstr "DISPOSITION"
 
 #: ../engine/ibus-xkb/ibus-xkb-main.c:49
 msgid "Set xkb VARIANT"
-msgstr "Ustawia wariant XKB"
+msgstr "Definir le VARIANTE xkb"
 
 #: ../engine/ibus-xkb/ibus-xkb-main.c:49
 msgid "VARIANT"
-msgstr "WARIANT"
+msgstr "VARIANTE"
 
 #: ../engine/ibus-xkb/ibus-xkb-main.c:50
 msgid "Set xkb OPTION"
-msgstr "Ustawia opcję XKB"
+msgstr "Definir le OPTION xkb"
 
 #: ../engine/ibus-xkb/ibus-xkb-main.c:50
 msgid "OPTION"
-msgstr "OPCJA"
+msgstr "OPTION"
 
 #: ../engine/ibus-xkb/ibus-xkb-main.c:51 ../xkb/ibus-xkb-main.c:52
 msgid "Get current xkb state"
-msgstr "Ustawia obecny stan XKB"
+msgstr "Obtener le stato xkb actual"
 
 #: ../setup/engineabout.py:69
 #, python-format
 msgid "Language: %s\n"
-msgstr "Język: %s\n"
+msgstr "Lingua: %s\n"
 
 #: ../setup/engineabout.py:72
 #, python-format
 msgid "Keyboard layout: %s\n"
-msgstr "Układ klawiatury: %s\n"
+msgstr "Disposition de claviero: %s\n"
 
 #: ../setup/engineabout.py:75
 #, python-format
@@ -399,57 +406,56 @@ msgstr "Autor: %s\n"
 
 #: ../setup/engineabout.py:78
 msgid "Description:\n"
-msgstr "Opis:\n"
+msgstr "Description:\n"
 
 #: ../setup/enginecombobox.py:224
 msgid "Select an input method"
-msgstr "Wybór metodę wprowadzania"
+msgstr "Seliger un methodo de ingresso"
 
 #: ../setup/enginecombobox.py:228
 msgid "Show all input methods"
-msgstr "Wyświetla wszystkie metod wprowadzania"
+msgstr "Monstrar tote le methodos de ingresso"
 
 #: ../setup/enginecombobox.py:230
 msgid "Show only input methods for your region"
-msgstr "Wyświetla metody wprowadzania tylko dla regionu użytkownika"
+msgstr "Monstrar solmente le methodos de ingresso de tu region"
 
 #: ../setup/enginetreeview.py:93
 msgid "Kbd"
-msgstr "KBD"
+msgstr "Kbd"
 
 #: ../setup/ibus-setup-xkb.desktop.in.h:2
 msgid "Set IBus Preferences"
-msgstr "Ustawianie preferencji usługi iBus"
+msgstr "Definir preferentias IBus"
 
 #: ../setup/keyboardshortcut.py:55
 msgid "Keyboard shortcuts"
-msgstr "Skróty klawiszowe"
+msgstr "Claves acceleratori"
 
 #: ../setup/keyboardshortcut.py:66
 msgid "Key code:"
-msgstr "Kod klawisza:"
+msgstr "Codice de clave:"
 
 #: ../setup/keyboardshortcut.py:81
 msgid "Modifiers:"
-msgstr "Modyfikatory:"
+msgstr "Modificatores:"
 
 #: ../setup/keyboardshortcut.py:251
 msgid ""
 "Please press a key (or a key combination).\n"
 "The dialog will be closed when the key is released."
 msgstr ""
-"Proszę nacisnąć klawisz (lub kombinację klawiszy).\n"
-"Okno dialogowe zostanie zamknięte po zwolnieniu klawisza."
+"Preme un clave (o un combination de claves).\n"
+"Le dialogo se claudera quando le clave es liberate."
 
 #: ../setup/keyboardshortcut.py:253
 msgid "Please press a key (or a key combination)"
-msgstr "Proszę nacisnąć klawisz (lub kombinację klawiszy)"
+msgstr "Preme un clave (o combination de claves)"
 
 #: ../setup/main.py:101 ../setup/main.py:444
 msgid "Use shortcut with shift to switch to the previous input method"
 msgstr ""
-"Użycie skrótu z klawiszem Shift do przełączania do poprzedniej metody "
-"wprowadzania"
+"Usa accellerator con majuscula pro revinir al methodo previe de ingresso"
 
 #: ../setup/main.py:354
 msgid ""
@@ -457,12 +463,12 @@ msgid ""
 "list will be configured by the login language every time. Do you agree with "
 "this?"
 msgstr ""
-"Lista zapisanych metod wprowadzania będzie natychmiast czyszczona i zostanie "
-"skonfigurowana za każdym razem według języka logowania. Wyrazić zgodę?"
+"Rader immediatemente le lista existente del methodos de ingresso e "
+"configurar lo per le lingua de session al cata connexion. Facer lo?"
 
 #: ../setup/main.py:378
 msgid "The IBus daemon is not running. Do you wish to start it?"
-msgstr "Demon iBus nie jest uruchomiony. Uruchomić go?"
+msgstr "Le demonio IBus non functiona. Initiar lo?"
 
 #: ../setup/main.py:399
 msgid ""
@@ -472,8 +478,8 @@ msgid ""
 "  export XMODIFIERS=@im=ibus\n"
 "  export QT_IM_MODULE=ibus"
 msgstr ""
-"iBus został uruchomiony. Jeśli nie można używać iBus, należy dodać poniższe "
-"wiersze do pliku $HOME/.bashrc i zalogować się ponownie.\n"
+"IBus se ha initiate! Si tu non pote usar IBus, adde le lineas sequente al "
+"file $HOME/.bashrc e reconnecte.\n"
 "  export GTK_IM_MODULE=ibus\n"
 "  export XMODIFIERS=@im=ibus\n"
 "  export QT_IM_MODULE=ibus"
@@ -482,28 +488,28 @@ msgstr ""
 #: ../setup/main.py:413
 #, python-format
 msgid "IBus daemon could not be started in %d seconds"
-msgstr "Nie można uruchomić demona iBus od %d sekund"
+msgstr "Le demonio IBus non pote initiar se in %d secundas"
 
 #: ../setup/main.py:425
 #, python-format
 msgid "Select keyboard shortcut for %s"
-msgstr "Wybór skrótu klawiszowego dla %s"
+msgstr "Selige le clave acceleratori pro %s"
 
 #: ../setup/main.py:426
 msgid "switching input methods"
-msgstr "przełączanie metod wprowadzania"
+msgstr "cambiamento de methodos de ingresso"
 
 #: ../setup/xkbsetup.py:44 ../setup/xkbsetup.py:112 ../setup/xkbsetup.py:408
 msgid "Default"
-msgstr "Domyślne"
+msgstr "Predefinite"
 
 #: ../setup/xkbsetup.py:207
 msgid "Select keyboard layouts"
-msgstr "Wybór układów klawiatury"
+msgstr "Seliger dispositiones de claviero"
 
 #: ../setup/xkbsetup.py:212
 msgid "Keyboard Layouts"
-msgstr "Układy klawiatury"
+msgstr "Dispositiones de claviero"
 
 #: ../setup/xkbsetup.py:241
 #, python-format
@@ -511,18 +517,16 @@ msgid ""
 "<small><i>The system keyboard layouts can be set less than or equal to %d.\n"
 "You may use Up/Down buttons to change the order.</i></small>"
 msgstr ""
-"<small><i>Systemowe układy klawiatury można ustawić na mniej niż lub równo "
-"%d.\n"
-"Można użyć klawiszy w górę/w dół, aby ją zmienić.</i></small>"
+"<small><i>On pote configurar %d o minus del dispositiones de claviero.\n"
+"Usa buttones Supra/Infra pro cambiar lor ordine.</i></small>"
 
 #: ../setup/xkbsetup.py:380 ../setup/xkbsetup.py:435
 msgid "Please restart IBus to reload your configuration."
-msgstr ""
-"Proszę ponownie uruchomić usługę iBus, aby ponownie wczytać konfigurację."
+msgstr "Reinitia IBus pro recargar su configuration."
 
 #: ../setup/xkbsetup.py:425
 msgid "The keyboard option cannot be chosen."
-msgstr "Nie można wybrać opcji klawiatury."
+msgstr "Le option de claviero non pote ser seligite."
 
 #: ../ui/gtk3/panel.vala:849
 msgid "Copyright (c) 2012 Takao Fujiwara\n"
@@ -530,142 +534,172 @@ msgstr "Copyright (c) 2012 Takao Fujiwara\n"
 
 #: ../ui/gtk3/panel.vala:855
 msgid "IBus is an intelligent input bus for Linux/Unix."
-msgstr "iBus jest inteligentną magistralą wprowadzania dla systemu Linux/UNIX."
+msgstr "IBus es un bus de ingresso intelligente pro Linux/Unix."
 
 #: ../ui/gtk3/panel.vala:861
 msgid "translator-credits"
-msgstr "Piotr Drąg <piotrdrag@gmail.com>, 2009"
+msgstr "Nik Kalach <nikka@fedoraproject.org>"
 
 #: ../ui/gtk3/panel.vala:893
 msgid "Restart"
-msgstr "Uruchom ponownie"
+msgstr "Reinitiar"
 
 #: ../xkb/ibus-engine-xkb-main.c:201
 msgid "Default Layout"
-msgstr "Domyślny układ"
+msgstr "Disposition predefinite"
 
 #: ../xkb/ibus-simple-engine.c:179
 msgid "Setup"
-msgstr "Ustawienia"
+msgstr "Configuration"
 
 #: ../xkb/ibus-simple-engine.c:180
 msgid "Configure XKB engine"
-msgstr "Konfiguruje mechanizm XKB"
+msgstr "Configurar le ingenio XKB"
 
 #: ../xkb/ibus-xkb-main.c:47
 msgid "Get current xkb layout"
-msgstr "Uzyskuje bieżący układ XKB"
+msgstr "Obtener le disposition xkb actual"
 
 #. Translators: the "layout" should not be translated due to a variable.
 #: ../xkb/ibus-xkb-main.c:49
 msgid "Set xkb layout"
-msgstr "Ustawia układ XKB"
+msgstr "Definir le disposition xkb"
 
 #: ../xkb/ibus-xkb-main.c:50
 msgid "Set xkb model"
-msgstr "Ustawia model XKB"
+msgstr "Definir le modello xkb"
 
 #: ../xkb/ibus-xkb-main.c:51
 msgid "Set xkb option"
-msgstr "Ustawia opcję XKB"
+msgstr "Definir le option xkb"
 
 #~ msgid "IBus"
-#~ msgstr "iBus"
+#~ msgstr "IBus"
 
 #~ msgid "Input Method Framework"
-#~ msgstr "Struktura metody wprowadzania"
+#~ msgstr "Infrastructura de methodos de ingresso"
 
 #~ msgid "Start IBus Input Method Framework"
-#~ msgstr "Uruchomienie struktury metody wprowadzania iBus"
+#~ msgstr "Initiar le systema de methodos de ingresso IBus"
 
 #~ msgid "Preload engines during ibus starts up"
-#~ msgstr "Wcześniejsze wczytanie mechanizmów podczas uruchamiania usługi iBus"
+#~ msgstr "Precargar le ingenios durante le initiation de ibus"
 
 #~ msgid "Engines order"
-#~ msgstr "Kolejność mechanizmów"
+#~ msgstr "Ordine de ingenios"
 
 #~ msgid "Saved engines order in input method list"
-#~ msgstr "Kolejność zapisanych mechanizmów na liście metod wprowadzania"
+#~ msgstr ""
+#~ "Le ordine de ingenios registrate in le lista de methodos de ingresso"
+
+#~ msgid "Popup delay milliseconds for IME switcher window"
+#~ msgstr ""
+#~ "Demora in millisecundas ante le demonstration del fenestra de commutator "
+#~ "de methodos de ingresso"
+
+#~ msgid ""
+#~ "Set popup delay milliseconds to show IME switcher window. The default is "
+#~ "400. 0 = Show the window immediately. 0 &lt; Delay milliseconds. 0 &gt; "
+#~ "Do not show the window and switch prev/next engines."
+#~ msgstr ""
+#~ "Definir le demora (in ms) ante le demonstration del fenestra de "
+#~ "commutator de methodos de ingresso. Le valor predefinite es 400. 0 = "
+#~ "monstrar immediatemente le fenestra. 0 &lt; demora (in ms). 0 &gt; non "
+#~ "monstrar le fenestra e commutar inter ingenios precedente o sequente."
+
+#~ msgid "Trigger shortcut keys for gtk_accelerator_parse"
+#~ msgstr "Activator de claves acceleratori pro gtk_accelerator_parse"
 
 #~ msgid "Enable shortcut keys"
-#~ msgstr "Włącza skróty klawiszowe"
+#~ msgstr "Activar claves acceleratori"
 
 #~ msgid "The shortcut keys for turning input method on"
-#~ msgstr "Skróty klawiszowe do włączania metody wprowadzania"
+#~ msgstr "Le combination de claves pro activar le methodo de ingresso"
 
 #~ msgid "Disable shortcut keys"
-#~ msgstr "Wyłącza skróty klawiszowe"
+#~ msgstr "Disactivar claves acceleratori"
 
 #~ msgid "The shortcut keys for turning input method off"
-#~ msgstr "Skróty klawiszowe do wyłączania metody wprowadzania"
+#~ msgstr "Le combination de claves pro disactivar le methodo de ingresso"
 
 #~ msgid "Next engine shortcut keys"
-#~ msgstr "Klawisze skrótów następnego mechanizmu"
+#~ msgstr "Claves acceleratori del ingenio sequente"
 
 #~ msgid "The shortcut keys for switching to the next input method in the list"
 #~ msgstr ""
-#~ "Klawisze skrótu do przełączania na następną metodę wprowadzania na liście"
+#~ "Le combination de claves pro cambiar al methodo de ingresso sequente in "
+#~ "le lista"
 
 #~ msgid "Prev engine shortcut keys"
-#~ msgstr "Klawisze skrótów poprzedniego mechanizmu"
+#~ msgstr "Claves acceleratori del ingenio precedente"
+
+#~ msgid "The shortcut keys for switching to the previous input method"
+#~ msgstr ""
+#~ "Le combination de claves pro cambiar al methodo de ingresso precedente in "
+#~ "le lista"
 
 #~ msgid "Auto hide"
-#~ msgstr "Automatyczne ukrywanie"
+#~ msgstr "Occultar automaticamente"
 
 #~ msgid ""
 #~ "The behavior of language panel. 0 = Embedded in menu, 1 = Auto hide, 2 = "
 #~ "Always show"
 #~ msgstr ""
-#~ "Zachowanie panela języków. 0 = osadzony w menu, 1 = automatycznie "
-#~ "ukrywany, 2 = zawsze wyświetlany"
+#~ "Le comportamento del pannello de lingua. 0 = inserite in le menu, 1 = "
+#~ "occultar lo automaticamente, 2 = monstrar lo sempre"
 
 #~ msgid "Language panel position"
-#~ msgstr "Pozycja panela języków"
+#~ msgstr "Position del pannello de lingua"
 
 #~ msgid ""
 #~ "The position of the language panel. 0 = Top left corner, 1 = Top right "
 #~ "corner, 2 = Bottom left corner, 3 = Bottom right corner, 4 = Custom"
 #~ msgstr ""
-#~ "Pozycja panela języków. 0 = górny lewy róg, 1 = górny prawy róg, 2 = "
-#~ "dolny lewy róg, 3 = dolny prawy róg, 4 = własna"
+#~ "Le position del pannello de lingua. 0 = angulo superior siniste, 1 = "
+#~ "angulo superior dextere, 2 = angulo inferior sinistre, 3 = angulo "
+#~ "inferior dextere, 4 = Personalisate"
 
 #~ msgid "Orientation of lookup table"
-#~ msgstr "Orientacja tablicy wyszukiwania"
+#~ msgstr "Orientation del tabula de cerca"
 
 #~ msgid "Orientation of lookup table. 0 = Horizontal, 1 = Vertical"
-#~ msgstr "Orientacja tablicy wyszukiwania. 0 = pozioma, 1 = pionowa"
+#~ msgstr "Orientation del tabula de cerca. 0 = horizontal, 1 = vertical"
 
 #~ msgid "Use custom font"
-#~ msgstr "Użycie własnej czcionki"
+#~ msgstr "Usar characteres personalisate"
 
 #~ msgid "Use custom font name for language panel"
-#~ msgstr "Nazwa własnej czcionki użytej w panelu języków"
+#~ msgstr "Usar un typo de characteres personalisate pro le pannello de lingua"
 
 #~ msgid "Custom font"
-#~ msgstr "Własna czcionka"
+#~ msgstr "Characteres personalisate"
 
 #~ msgid "Custom font name for language panel"
-#~ msgstr "Nazwa własnej czcionki dla panelu języków"
+#~ msgstr ""
+#~ "Nomine del typo de characteres personalisate pro le pannello de lingua"
 
 #~ msgid "Embed Preedit Text"
-#~ msgstr "Osadzanie wcześniej wprowadzonego tekstu"
+#~ msgstr "Inserer le texto pre-editate"
 
 #~ msgid "Embed Preedit Text in Application Window"
-#~ msgstr "Osadzanie wcześniej wprowadzonego tekstu w oknie aplikacji"
+#~ msgstr "Inserer le texto pre-editate in le fenestra de application"
+
+#~ msgid "Use global input method"
+#~ msgstr "Usar le methodo de ingresso global"
 
 #~ msgid "Enable input method by default"
-#~ msgstr "Domyślne włączanie metody wprowadzania"
+#~ msgstr "Activar le methodo de ingresso predefinite"
 
 #~ msgid "Enable input method by default when the application gets input focus"
 #~ msgstr ""
-#~ "Domyślne włączanie metody wprowadzania, kiedy aplikacja uzyskuje "
-#~ "aktywność wprowadzania"
+#~ "Activar le methodo de ingresso predefinite quando le application recipe "
+#~ "le foco de ingresso"
 
 #~ msgid "DConf preserve name prefixes"
-#~ msgstr "DConf zachowuje przedrostki nazw"
+#~ msgstr "DConf preserva le prefixos de nomines"
 
 #~ msgid "Prefixes of DConf keys to stop name conversion"
-#~ msgstr "Przedrostki kluczy DConf zatrzymujące konwersję nazw"
+#~ msgstr "Prefixos de claves DConf pro parar le conversion de nomines"
 
 #~ msgid ""
 #~ "Copyright (c) 2007-2010 Peng Huang\n"
@@ -675,50 +709,38 @@ msgstr "Ustawia opcję XKB"
 #~ "Copyright (c) 2007-2010 Red Hat, Inc."
 
 #~ msgid "Other"
-#~ msgstr "Inne"
-
-#~ msgid "trigger"
-#~ msgstr "przełącznik"
-
-#~ msgid "enable"
-#~ msgstr "włączenie"
-
-#~ msgid "disable"
-#~ msgstr "wyłączenie"
+#~ msgstr "Altere"
 
 #~ msgid "List engine name only"
-#~ msgstr "Wyświetla tylko nazwę mechanizmu"
+#~ msgstr "Monstrar solmente nomines de ingenios"
 
 #~ msgid "command [OPTIONS]"
-#~ msgstr "polecenie [OPCJE]"
+#~ msgstr "commando [OPTIONES]"
 
 #~ msgid "Can't connect to IBus.\n"
-#~ msgstr "Nie można połączyć z iBus.\n"
+#~ msgstr "Le connexion a IBus es impossibile.\n"
 
 #~ msgid "language: %s\n"
-#~ msgstr "język: %s\n"
+#~ msgstr "lingua: %s\n"
 
 #~ msgid "No engine is set.\n"
-#~ msgstr "Nie ustawiono żadnego mechanizmu.\n"
+#~ msgstr "Necun ingenio es configurate.\n"
 
 #~ msgid "Set global engine failed.\n"
-#~ msgstr "Ustawienie globalnego mechanizmu się nie powiodło.\n"
+#~ msgstr "Falta al configuration del ingenio global.\n"
 
 #~ msgid "Get global engine failed.\n"
-#~ msgstr "Uzyskanie globalnego mechanizmu się nie powiodło.\n"
-
-#~ msgid "Switch xkb layout to %s failed."
-#~ msgstr "Przełączenie układu XKB na %s się nie powiodło."
+#~ msgstr "Falta al obtener le ingenio global.\n"
 
 #~ msgid ""
 #~ "Usage: %s COMMAND [OPTION...]\n"
 #~ "\n"
 #~ msgstr ""
-#~ "Użycie %s POLECENIE [OPCJA...]\n"
+#~ "Usage: %s COMMANDO [OPTION...]\n"
 #~ "\n"
 
 #~ msgid "Commands:\n"
-#~ msgstr "Polecenia:\n"
+#~ msgstr "Commandos:\n"
 
 #~ msgid "%s is unknown command!\n"
-#~ msgstr "%s jest nieznanym poleceniem.\n"
+#~ msgstr "%s es un commando incognite!\n"

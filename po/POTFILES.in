@@ -10,6 +10,7 @@ setup/enginetreeview.py
 setup/ibus-setup-xkb.desktop.in
 setup/keyboardshortcut.py
 setup/main.py
+setup/xkbsetup.py
 ui/gtk3/application.vala
 ui/gtk3/candidatearea.vala
 ui/gtk3/candidatepanel.vala
@@ -22,3 +23,6 @@ ui/gtk3/property.vala
 ui/gtk3/separator.vala
 ui/gtk3/switcher.vala
 ui/gtk3/xkblayout.vala
+xkb/ibus-engine-xkb-main.c
+xkb/ibus-simple-engine.c
+xkb/ibus-xkb-main.c

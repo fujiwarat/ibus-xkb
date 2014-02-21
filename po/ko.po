@@ -11,14 +11,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ibus-xkb HEAD\n"
 "Report-Msgid-Bugs-To: http://code.google.com/p/ibus/issues/entry\n"
-"POT-Creation-Date: 2012-10-15 11:55+0900\n"
+"POT-Creation-Date: 2013-01-18 00:20+0900\n"
 "PO-Revision-Date: 2012-12-05 03:56+0000\n"
 "Last-Translator: Michelle Kim <mkim33@gmail.com>\n"
 "Language-Team: Korean <en@li.org>\n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../setup/setup.ui.h:1
@@ -61,7 +61,7 @@ msgstr "활성화 되었을 때"
 msgid "Always"
 msgstr "항상"
 
-#: ../setup/setup.ui.h:11 ../setup/ibus-setup.desktop.in.h:1
+#: ../setup/setup.ui.h:11 ../setup/ibus-setup-xkb.desktop.in.h:1
 msgid "IBus Preferences"
 msgstr "IBus 환경 설정  "
 
@@ -85,7 +85,7 @@ msgstr "이전 입력 방식:"
 msgid "..."
 msgstr "..."
 
-#: ../setup/setup.ui.h:17 ../data/ibus.schemas.in.h:6
+#: ../setup/setup.ui.h:17
 msgid "The shortcut keys for turning input method on or off"
 msgstr "입력 방식을 활성 또는 해제하기 위한 단축키"
 
@@ -125,11 +125,11 @@ msgstr "언어 패널 표시:  "
 msgid "Language panel position:"
 msgstr "언어 패널 위치:"
 
-#: ../setup/setup.ui.h:27 ../data/ibus.schemas.in.h:21
+#: ../setup/setup.ui.h:27
 msgid "Show icon on system tray"
 msgstr "시스템 트레이에 아이콘 보여주기"
 
-#: ../setup/setup.ui.h:28 ../data/ibus.schemas.in.h:23
+#: ../setup/setup.ui.h:28
 msgid "Show input method name on language bar"
 msgstr "언어 도구 모음에 입력 방식 이름 보여주기"
 
@@ -158,65 +158,75 @@ msgid "General"
 msgstr "일반  "
 
 #: ../setup/setup.ui.h:35
+msgid "Customize active input _methods"
+msgstr "활성 입력 방식 사용자 지정(_M)"
+
+#: ../setup/setup.ui.h:36
+msgid "Customize active input methods"
+msgstr "활성 입력 방식 사용자 지정 "
+
+#: ../setup/setup.ui.h:37
 msgid "Add the selected input method into the enabled input methods"
 msgstr "활성화된 입력 방식에 선택한 입력 방식을 추가합니다  "
 
-#: ../setup/setup.ui.h:36
+#: ../setup/setup.ui.h:38
 msgid "Remove the selected input method from the enabled input methods"
 msgstr "활성화된 입력 방식 목록에서 선택한 입력 방식을 제거"
 
-#: ../setup/setup.ui.h:37
+#: ../setup/setup.ui.h:39
 msgid "Move up the selected input method in the enabled input methods list"
 msgstr "활성화된 입력 방식 목록에서 선택한 입력 방식을 위로 이동합니다"
 
-#: ../setup/setup.ui.h:38
+#: ../setup/setup.ui.h:40
 msgid "Move down the selected input method in the enabled input methods"
 msgstr "활성화된 입력 방식 목록에서 선택한 입력 방식을 아래로 이동합니다"
 
-#: ../setup/setup.ui.h:39
+#: ../setup/setup.ui.h:41
 msgid "Show information of the selected input method"
 msgstr "선택한 입력 방식의 정보 보여주기"
 
-#: ../setup/setup.ui.h:40
+#: ../setup/setup.ui.h:42
 msgid "Show setup of the selected input method"
 msgstr "선택한 입력 방식 설정 보기 "
 
-#: ../setup/setup.ui.h:41
+#: ../setup/setup.ui.h:43
 msgid ""
 "<small><i>The default input method is the top one in the list.\n"
 "You may use up/down buttons to change it.</i></small>"
-msgstr "<small><i>기본 입력 방식은 목록의 맨 위에 있습니다.\n위로/아래 버튼을 사용하여 변경할 수 있습니다.</i></small> "
+msgstr ""
+"<small><i>기본 입력 방식은 목록의 맨 위에 있습니다.\n"
+"위로/아래 버튼을 사용하여 변경할 수 있습니다.</i></small> "
 
 #. create im name & icon column
-#: ../setup/setup.ui.h:43 ../setup/enginetreeview.py:64
+#: ../setup/setup.ui.h:45 ../setup/enginetreeview.py:65
 msgid "Input Method"
 msgstr "입력 방식  "
 
-#: ../setup/setup.ui.h:44 ../data/ibus.schemas.in.h:24
+#: ../setup/setup.ui.h:46
 msgid "Use system keyboard layout"
 msgstr "시스템 키보드 레이아웃 사용  "
 
-#: ../setup/setup.ui.h:45 ../data/ibus.schemas.in.h:25
+#: ../setup/setup.ui.h:47
 msgid "Use system keyboard (XKB) layout"
 msgstr "시스템 키보드 (XKB) 레이아웃 사용  "
 
-#: ../setup/setup.ui.h:46
+#: ../setup/setup.ui.h:48
 msgid "<b>Keyboard Layout</b>"
 msgstr "<b>키보드 레이아웃</b>  "
 
-#: ../setup/setup.ui.h:47 ../data/ibus.schemas.in.h:33
+#: ../setup/setup.ui.h:49
 msgid "Share the same input method among all applications"
 msgstr "모든 어플리케이션에서 동일한 입력 방식 공유"
 
-#: ../setup/setup.ui.h:48
+#: ../setup/setup.ui.h:50
 msgid "<b>Global input method settings</b>"
 msgstr "<b>전역 입력 방식 설정</b>"
 
-#: ../setup/setup.ui.h:49
+#: ../setup/setup.ui.h:51
 msgid "Advanced"
 msgstr "고급  "
 
-#: ../setup/setup.ui.h:50
+#: ../setup/setup.ui.h:52
 msgid ""
 "<big><b>IBus</b></big>\n"
 "<small>The intelligent input bus</small>\n"
@@ -224,210 +234,185 @@ msgid ""
 "\n"
 "\n"
 "\n"
-msgstr "<big><b>IBus</b></big>\n<small>지능형 입력 버스</small>\n홈페이지: http://code.google.com/p/ibus\n\n\n\n"
+msgstr ""
+"<big><b>IBus</b></big>\n"
+"<small>지능형 입력 버스</small>\n"
+"홈페이지: http://code.google.com/p/ibus\n"
+"\n"
+"\n"
+"\n"
 
-#: ../setup/setup.ui.h:57
+#: ../setup/setup.ui.h:59
 msgid "Start ibus on login"
 msgstr "로그인 시 ibus 시작  "
 
-#: ../setup/setup.ui.h:58
+#: ../setup/setup.ui.h:60
 msgid "<b>Startup</b>"
 msgstr "<b>시작</b>  "
 
-#: ../setup/setup.ui.h:59 ../setup/engineabout.py:34
+#: ../setup/setup.ui.h:61 ../setup/engineabout.py:35
 msgid "About"
 msgstr "정보  "
 
-#: ../bus/ibus.desktop.in.h:1
-msgid "IBus"
-msgstr "IBus"
+#: ../data/ibus-xkb.schemas.in.h:1
+msgid "Preload engine mode"
+msgstr "엔진 모드 미리 로드"
 
-#: ../bus/ibus.desktop.in.h:2
-msgid "Input Method Framework"
-msgstr "입력 방식 프레임워크"
-
-#: ../bus/ibus.desktop.in.h:3
-msgid "Start IBus Input Method Framework"
-msgstr "IBus 입력 방식 프레임워크 시작"
-
-#: ../data/ibus.schemas.in.h:1
-msgid "Preload engines"
-msgstr "엔진 미리로드"
-
-#: ../data/ibus.schemas.in.h:2
-msgid "Preload engines during ibus starts up"
-msgstr "ibus 시작 시 엔진 미리 로드  "
-
-#: ../data/ibus.schemas.in.h:3
-msgid "Engines order"
-msgstr ""
-
-#: ../data/ibus.schemas.in.h:4
-msgid "Saved engines order in input method list"
-msgstr ""
-
-#: ../data/ibus.schemas.in.h:5
-msgid "Trigger shortcut keys"
-msgstr "트리거 단축키"
-
-#: ../data/ibus.schemas.in.h:7
-msgid "Enable shortcut keys"
-msgstr "단축키 활성화 "
-
-#: ../data/ibus.schemas.in.h:8
-msgid "The shortcut keys for turning input method on"
-msgstr "입력 방식 전환을 위한 단축키 활성화 "
-
-#: ../data/ibus.schemas.in.h:9
-msgid "Disable shortcut keys"
-msgstr "단축키 비활성화 "
-
-#: ../data/ibus.schemas.in.h:10
-msgid "The shortcut keys for turning input method off"
-msgstr "입력 방식 전환을 위한 단축키 비활성화 "
-
-#: ../data/ibus.schemas.in.h:11
-msgid "Next engine shortcut keys"
-msgstr "다음 엔진 단축키"
-
-#: ../data/ibus.schemas.in.h:12
-msgid "The shortcut keys for switching to the next input method in the list"
-msgstr "목록에 있는 다음 입력 방식으로 전환하기 위한 단축 키"
-
-#: ../data/ibus.schemas.in.h:13
-msgid "Prev engine shortcut keys"
-msgstr "이전 엔진 단축키"
-
-#: ../data/ibus.schemas.in.h:14
-msgid "The shortcut keys for switching to the previous input method"
-msgstr "목록에 있는 이전 입력 방식으로 전환하기 위한 단축 키"
-
-#: ../data/ibus.schemas.in.h:15
-msgid "Auto hide"
-msgstr "자동 숨기기"
-
-#: ../data/ibus.schemas.in.h:16
+#: ../data/ibus-xkb.schemas.in.h:2
 msgid ""
-"The behavior of language panel. 0 = Embedded in menu, 1 = Auto hide, 2 = "
-"Always show"
-msgstr "언어 패널의 동작 0 = 메뉴에 포함, 1 = 자동 숨기기, 2 = 항상 표시  "
+"Preload engines are loaded with this mode. 0 = user customized engines. 1 = "
+"language related engines."
+msgstr "사전 로드 엔진은 이 모드로 로딩됩니다. 0 = 사용자 지정 엔진. 1 = 언어 관련 엔진."
 
-#: ../data/ibus.schemas.in.h:17
-msgid "Language panel position"
-msgstr "언어 패널 위치"
+#: ../data/ibus-xkb.schemas.in.h:3
+msgid "The key preload_engines is initialized"
+msgstr "주요 preload_engines이 초기화되었습니다 "
 
-#: ../data/ibus.schemas.in.h:18
+#: ../data/ibus-xkb.schemas.in.h:4
+msgid "Use xmodmap"
+msgstr "xmodmap 사용 "
+
+#: ../data/ibus-xkb.schemas.in.h:5
+msgid "Run xmodmap if .xmodmap/.Xmodmap exists."
+msgstr ".xmodmap/.Xmodmap이 존재할 경우 xmodmap을 실행합니다."
+
+#: ../data/ibus-xkb.schemas.in.h:6
+msgid "Latin layout which have no ASCII"
+msgstr "ASCII이 없는 라틴어 레이아웃 "
+
+#: ../data/ibus-xkb.schemas.in.h:7
+msgid "us layout is appended to the latin layouts. variant is not needed."
+msgstr "영어 레이아웃이 라틴어 레이아웃에 추가되어 있습니다. 변형이 필요하지 않습니다."
+
+#: ../data/ibus-xkb.schemas.in.h:8
+msgid "XKB layout list which is shown on ibus-setup"
+msgstr "ibus 설정에 표시되는 XKB 레이아웃 목록 "
+
+#: ../data/ibus-xkb.schemas.in.h:9
 msgid ""
-"The position of the language panel. 0 = Top left corner, 1 = Top right "
-"corner, 2 = Bottom left corner, 3 = Bottom right corner, 4 = Custom"
-msgstr "언어 패널의 위치. 0 = 왼쪽 위, 1 = 오른쪽 위, 2 = 왼쪽 아래, 3 = 오른쪽 아래, 4 = 사용자 지정"
+"XKB layout list which is shown on ibus-setup. The format is \"layout\" or "
+"\"layout(variant)\"."
+msgstr "ibus 설정에 표시되는 XKB 레이아웃 목록. 형식은 \"layout\" 또는 \"layout(variant)\"입니다."
 
-#: ../data/ibus.schemas.in.h:19
-msgid "Orientation of lookup table"
-msgstr "검색 테이블의 방향  "
+#: ../data/ibus-xkb.schemas.in.h:10
+msgid "Trigger shortcut keys without modifier keys"
+msgstr "수정 키 없는 트리거 단축키 "
 
-#: ../data/ibus.schemas.in.h:20
-msgid "Orientation of lookup table. 0 = Horizontal, 1 = Vertical"
-msgstr "검색 테이블의 방향. 0 = 가로, 1 = 세로  "
+#: ../data/ibus-xkb.schemas.in.h:11
+msgid ""
+"Trigger shortcut keys without modifier keys. The list is used by ibus-gjs."
+msgstr "수정 키 없는 트리거 단축키. 목록은 ibus-gjs에 의해 사용됩니다."
 
-#: ../data/ibus.schemas.in.h:22
-msgid "Show input method name"
-msgstr "입력 방식 이름 보여주기"
+#: ../data/ibus-xkb.schemas.in.h:12
+msgid "List of system keyboard layout groups on ibus-setup"
+msgstr "ibus 설정에서 시스템 키보드 레이아웃 그룹 목록 "
 
-#: ../data/ibus.schemas.in.h:26
-msgid "Use custom font"
-msgstr "사용자 정의 글꼴 사용  "
+#: ../data/ibus-xkb.schemas.in.h:13
+msgid ""
+"The group list is used not to show all the system keyboard layouts by "
+"default. The list item will be appended at the end of gconf key. e.g. .../"
+"xkblayoutconfig/item1"
+msgstr ""
+"그룹 목록은 기본값으로 모든 시스템 키보드 레이아웃을 표시하는데 사용되지 않습니다. 목록 항목은 gconf 키 마지막에 추가됩니다. 예: "
+".../xkblayoutconfig/item1"
 
-#: ../data/ibus.schemas.in.h:27
-msgid "Use custom font name for language panel"
-msgstr "언어 패널 용 사용자 정의 글꼴 이름 사용"
+#: ../data/ibus-xkb.schemas.in.h:14
+msgid "List of European languages on ibus-setup"
+msgstr "ibus 설정에서 유럽어 목록 "
 
-#: ../data/ibus.schemas.in.h:28
-msgid "Custom font"
-msgstr "사용자 정의 글꼴"
+#: ../data/ibus-xkb.schemas.in.h:15
+msgid ""
+"ibus-setup shows the languages only in input method list when you run ibus-"
+"setup on one of the languages. Other languages are hidden under an extended "
+"button."
+msgstr ""
+"ibus 설정은 언어 중 하나에서 ibus 설정을 실행할 때 입력 방식 목록에 있는 언어만을 표시합니다. 다른 언어는 확장 버튼 아래에 "
+"숨겨져 있습니다."
 
-#: ../data/ibus.schemas.in.h:29
-msgid "Custom font name for language panel"
-msgstr "언어 패널 용 사용자 정의 글꼴 이름"
+#: ../data/ibus-xkb.schemas.in.h:16
+msgid "List of Asian languages on ibus-setup"
+msgstr "ibus 설정에서 아시아어 목록 "
 
-#: ../data/ibus.schemas.in.h:30
-msgid "Embed Preedit Text"
-msgstr "편집전 텍스트 포함"
-
-#: ../data/ibus.schemas.in.h:31
-msgid "Embed Preedit Text in Application Window"
-msgstr "어플리케이션 창에 편집전 텍스트를 포함"
-
-#: ../data/ibus.schemas.in.h:32
-msgid "Use global input method"
-msgstr "전역 입력 방식 사용"
-
-#: ../data/ibus.schemas.in.h:34
-msgid "Enable input method by default"
-msgstr "입력기를 디폴트로 활성화"
-
-#: ../data/ibus.schemas.in.h:35
-msgid "Enable input method by default when the application gets input focus"
-msgstr "프로그램의 입력창에 포커스가 가면 디폴트로 입력기를 활성화합니다"
-
-#: ../data/ibus.schemas.in.h:36
-msgid "DConf preserve name prefixes"
+#: ../engine/ibus-xkb/ibus-xkb-main.c:47
+msgid "Query the current xkb layout"
 msgstr ""
 
-#: ../data/ibus.schemas.in.h:37
-msgid "Prefixes of DConf keys to stop name conversion"
+#: ../engine/ibus-xkb/ibus-xkb-main.c:48
+msgid "Set xkb LAYOUT"
 msgstr ""
 
-#: ../ibus/_config.py.in:41
-msgid ""
-"Copyright (c) 2007-2010 Peng Huang\n"
-"Copyright (c) 2007-2010 Red Hat, Inc."
-msgstr "Copyright (c) 2007-2010 Peng Huang\nCopyright (c) 2007-2010 Red Hat, Inc."
+#: ../engine/ibus-xkb/ibus-xkb-main.c:48
+msgid "LAYOUT"
+msgstr ""
 
-#: ../ibus/lang.py:41 ../src/ibusutil.c:150 ../src/ibusutil.c:152
-msgid "Other"
-msgstr "기타"
+#: ../engine/ibus-xkb/ibus-xkb-main.c:49
+msgid "Set xkb VARIANT"
+msgstr ""
 
-#: ../setup/engineabout.py:67
+#: ../engine/ibus-xkb/ibus-xkb-main.c:49
+msgid "VARIANT"
+msgstr ""
+
+#: ../engine/ibus-xkb/ibus-xkb-main.c:50
+msgid "Set xkb OPTION"
+msgstr ""
+
+#: ../engine/ibus-xkb/ibus-xkb-main.c:50
+msgid "OPTION"
+msgstr ""
+
+#: ../engine/ibus-xkb/ibus-xkb-main.c:51 ../xkb/ibus-xkb-main.c:52
+msgid "Get current xkb state"
+msgstr ""
+
+#: ../setup/engineabout.py:69
 #, python-format
 msgid "Language: %s\n"
 msgstr "언어: %s\n"
 
-#: ../setup/engineabout.py:70
+#: ../setup/engineabout.py:72
 #, python-format
 msgid "Keyboard layout: %s\n"
 msgstr "키보드 레이아웃: %s\n"
 
-#: ../setup/engineabout.py:73
+#: ../setup/engineabout.py:75
 #, python-format
 msgid "Author: %s\n"
 msgstr "저자: %s\n"
 
-#: ../setup/engineabout.py:76
+#: ../setup/engineabout.py:78
 msgid "Description:\n"
 msgstr "설명:\n"
 
-#: ../setup/enginecombobox.py:135
+#: ../setup/enginecombobox.py:224
 msgid "Select an input method"
 msgstr "입력 방식을 선택합니다"
 
-#: ../setup/enginetreeview.py:92
+#: ../setup/enginecombobox.py:228
+msgid "Show all input methods"
+msgstr "모든 입력 방식 표시 "
+
+#: ../setup/enginecombobox.py:230
+msgid "Show only input methods for your region"
+msgstr "해당 지역의 입력 방식만 표시 "
+
+#: ../setup/enginetreeview.py:93
 msgid "Kbd"
 msgstr "Kbd"
 
-#: ../setup/ibus-setup.desktop.in.h:2
+#: ../setup/ibus-setup-xkb.desktop.in.h:2
 msgid "Set IBus Preferences"
 msgstr "IBus 환경 설정"
 
-#: ../setup/keyboardshortcut.py:54
+#: ../setup/keyboardshortcut.py:55
 msgid "Keyboard shortcuts"
 msgstr "단축키"
 
-#: ../setup/keyboardshortcut.py:65
+#: ../setup/keyboardshortcut.py:66
 msgid "Key code:"
 msgstr "키 코드:  "
 
-#: ../setup/keyboardshortcut.py:80
+#: ../setup/keyboardshortcut.py:81
 msgid "Modifiers:"
 msgstr "수정자:  "
 
@@ -435,114 +420,234 @@ msgstr "수정자:  "
 msgid ""
 "Please press a key (or a key combination).\n"
 "The dialog will be closed when the key is released."
-msgstr "키 또는 키 조합을 입력하십시오.\n키를 입력하면 대화 상자가 닫히게 됩니다."
+msgstr ""
+"키 또는 키 조합을 입력하십시오.\n"
+"키를 입력하면 대화 상자가 닫히게 됩니다."
 
 #: ../setup/keyboardshortcut.py:253
 msgid "Please press a key (or a key combination)"
 msgstr "키 또는 키 조합을 입력하십시오. "
 
-#: ../setup/main.py:87
-msgid "trigger"
-msgstr "트리거  "
+#: ../setup/main.py:101 ../setup/main.py:444
+msgid "Use shortcut with shift to switch to the previous input method"
+msgstr "이전 입력 방식으로 전환하려면 shift와 함께 단축키를 사용합니다 "
 
-#: ../setup/main.py:88
-msgid "enable"
-msgstr "활성화 "
-
-#: ../setup/main.py:89
-msgid "disable"
-msgstr "비활성화 "
-
-#: ../setup/main.py:331
-msgid "The IBus daemon is not running. Do you wish to start it?"
-msgstr ""
-
-#: ../setup/main.py:352
+#: ../setup/main.py:354
 msgid ""
-"IBus has been started! If you cannot use IBus, add the following lines to your $HOME/.bashrc; then relog into your desktop.\n"
+"The list of your saved input methods will be cleared immediately and the "
+"list will be configured by the login language every time. Do you agree with "
+"this?"
+msgstr "저장된 입력 방식 목록은 즉시 삭제되고 목록은 로그인 언어에 의해 매번 설정됩니다. 이에 동의하십니까? "
+
+#: ../setup/main.py:378
+msgid "The IBus daemon is not running. Do you wish to start it?"
+msgstr "IBus 데몬이 실행되고 있지 않습니다. 이를 시작하시겠습니까?"
+
+#: ../setup/main.py:399
+msgid ""
+"IBus has been started! If you cannot use IBus, add the following lines to "
+"your $HOME/.bashrc; then relog into your desktop.\n"
 "  export GTK_IM_MODULE=ibus\n"
 "  export XMODIFIERS=@im=ibus\n"
 "  export QT_IM_MODULE=ibus"
 msgstr ""
+"IBus를 시작했습니다! IBus를 사용할 수 없는 경우 다음과 같은 행을 $HOME/."
+"bashrc;에 추가하고 바탕 화면으로 다시 로그인합니다.\n"
+"  export GTK_IM_MODULE=ibus\n"
+"  export XMODIFIERS=@im=ibus\n"
+"  export QT_IM_MODULE=ibus"
 
 #. Translators: %d == 5 currently
-#: ../setup/main.py:366
+#: ../setup/main.py:413
 #, python-format
 msgid "IBus daemon could not be started in %d seconds"
-msgstr ""
+msgstr "IBus 데몬이 %d 초 이내에 시작하지 못했습니다 "
 
-#: ../setup/main.py:378
+#: ../setup/main.py:425
 #, python-format
 msgid "Select keyboard shortcut for %s"
 msgstr "%s의 단축키를 선택"
 
-#: ../tools/main.vala:40
-msgid "List engine name only"
+#: ../setup/main.py:426
+#, fuzzy
+msgid "switching input methods"
+msgstr "다음 입력 방식:"
+
+#: ../setup/xkbsetup.py:44 ../setup/xkbsetup.py:112 ../setup/xkbsetup.py:408
+msgid "Default"
 msgstr ""
 
-#: ../tools/main.vala:44
-msgid "command [OPTIONS]"
-msgstr ""
+#: ../setup/xkbsetup.py:207
+#, fuzzy
+msgid "Select keyboard layouts"
+msgstr "%s의 단축키를 선택"
 
-#: ../tools/main.vala:56 ../tools/main.vala:138 ../tools/main.vala:148
-#, c-format
-msgid "Can't connect to IBus.\n"
-msgstr ""
+#: ../setup/xkbsetup.py:212
+#, fuzzy
+msgid "Keyboard Layouts"
+msgstr "키보드 레이아웃: %s\n"
 
-#: ../tools/main.vala:82
-#, c-format
-msgid "language: %s\n"
-msgstr ""
-
-#: ../tools/main.vala:100
-#, c-format
-msgid "No engine is set.\n"
-msgstr ""
-
-#: ../tools/main.vala:108
-#, c-format
-msgid "Set global engine failed.\n"
-msgstr ""
-
-#: ../tools/main.vala:113
-#, c-format
-msgid "Get global engine failed.\n"
-msgstr ""
-
-#: ../tools/main.vala:120
-#, c-format
-msgid "Switch xkb layout to %s failed."
-msgstr ""
-
-#: ../tools/main.vala:185
-#, c-format
+#: ../setup/xkbsetup.py:241
+#, fuzzy, python-format
 msgid ""
-"Usage: %s COMMAND [OPTION...]\n"
-"\n"
+"<small><i>The system keyboard layouts can be set less than or equal to %d.\n"
+"You may use Up/Down buttons to change the order.</i></small>"
+msgstr ""
+"<small><i>기본 입력 방식은 목록의 맨 위에 있습니다.\n"
+"위로/아래 버튼을 사용하여 변경할 수 있습니다.</i></small> "
+
+#: ../setup/xkbsetup.py:380 ../setup/xkbsetup.py:435
+#, fuzzy
+msgid "Please restart IBus to reload your configuration."
+msgstr "키 또는 키 조합을 입력하십시오. "
+
+#: ../setup/xkbsetup.py:425
+msgid "The keyboard option cannot be chosen."
 msgstr ""
 
-#: ../tools/main.vala:186
-#, c-format
-msgid "Commands:\n"
-msgstr ""
-
-#: ../tools/main.vala:208
-#, c-format
-msgid "%s is unknown command!\n"
-msgstr ""
-
-#: ../ui/gtk3/panel.vala:361
-msgid "Copyright (c) 2007-2012 Peng Huang\n"
+#: ../ui/gtk3/panel.vala:849
+#, fuzzy
+msgid "Copyright (c) 2012 Takao Fujiwara\n"
 msgstr "Copyright (c) 2007-2012 Peng Huang\n"
 
-#: ../ui/gtk3/panel.vala:366
+#: ../ui/gtk3/panel.vala:855
 msgid "IBus is an intelligent input bus for Linux/Unix."
 msgstr "IBus는 Linux/Unix를 위한 지능형 입력 버스입니다. "
 
-#: ../ui/gtk3/panel.vala:370
+#: ../ui/gtk3/panel.vala:861
 msgid "translator-credits"
 msgstr "김은주(eukim@redhat.com)"
 
-#: ../ui/gtk3/panel.vala:402
+#: ../ui/gtk3/panel.vala:893
 msgid "Restart"
 msgstr "재시작"
+
+#: ../xkb/ibus-engine-xkb-main.c:201
+msgid "Default Layout"
+msgstr ""
+
+#: ../xkb/ibus-simple-engine.c:179
+msgid "Setup"
+msgstr ""
+
+#: ../xkb/ibus-simple-engine.c:180
+msgid "Configure XKB engine"
+msgstr ""
+
+#: ../xkb/ibus-xkb-main.c:47
+msgid "Get current xkb layout"
+msgstr ""
+
+#. Translators: the "layout" should not be translated due to a variable.
+#: ../xkb/ibus-xkb-main.c:49
+#, fuzzy
+msgid "Set xkb layout"
+msgstr "시스템 키보드 레이아웃 사용  "
+
+#: ../xkb/ibus-xkb-main.c:50
+msgid "Set xkb model"
+msgstr ""
+
+#: ../xkb/ibus-xkb-main.c:51
+msgid "Set xkb option"
+msgstr ""
+
+#~ msgid "IBus"
+#~ msgstr "IBus"
+
+#~ msgid "Input Method Framework"
+#~ msgstr "입력 방식 프레임워크"
+
+#~ msgid "Start IBus Input Method Framework"
+#~ msgstr "IBus 입력 방식 프레임워크 시작"
+
+#~ msgid "Preload engines during ibus starts up"
+#~ msgstr "ibus 시작 시 엔진 미리 로드  "
+
+#~ msgid "Enable shortcut keys"
+#~ msgstr "단축키 활성화 "
+
+#~ msgid "The shortcut keys for turning input method on"
+#~ msgstr "입력 방식 전환을 위한 단축키 활성화 "
+
+#~ msgid "Disable shortcut keys"
+#~ msgstr "단축키 비활성화 "
+
+#~ msgid "The shortcut keys for turning input method off"
+#~ msgstr "입력 방식 전환을 위한 단축키 비활성화 "
+
+#~ msgid "Next engine shortcut keys"
+#~ msgstr "다음 엔진 단축키"
+
+#~ msgid "The shortcut keys for switching to the next input method in the list"
+#~ msgstr "목록에 있는 다음 입력 방식으로 전환하기 위한 단축 키"
+
+#~ msgid "Prev engine shortcut keys"
+#~ msgstr "이전 엔진 단축키"
+
+#~ msgid "Auto hide"
+#~ msgstr "자동 숨기기"
+
+#~ msgid ""
+#~ "The behavior of language panel. 0 = Embedded in menu, 1 = Auto hide, 2 = "
+#~ "Always show"
+#~ msgstr "언어 패널의 동작 0 = 메뉴에 포함, 1 = 자동 숨기기, 2 = 항상 표시  "
+
+#~ msgid "Language panel position"
+#~ msgstr "언어 패널 위치"
+
+#~ msgid ""
+#~ "The position of the language panel. 0 = Top left corner, 1 = Top right "
+#~ "corner, 2 = Bottom left corner, 3 = Bottom right corner, 4 = Custom"
+#~ msgstr ""
+#~ "언어 패널의 위치. 0 = 왼쪽 위, 1 = 오른쪽 위, 2 = 왼쪽 아래, 3 = 오른쪽 아"
+#~ "래, 4 = 사용자 지정"
+
+#~ msgid "Orientation of lookup table"
+#~ msgstr "검색 테이블의 방향  "
+
+#~ msgid "Orientation of lookup table. 0 = Horizontal, 1 = Vertical"
+#~ msgstr "검색 테이블의 방향. 0 = 가로, 1 = 세로  "
+
+#~ msgid "Use custom font"
+#~ msgstr "사용자 정의 글꼴 사용  "
+
+#~ msgid "Use custom font name for language panel"
+#~ msgstr "언어 패널 용 사용자 정의 글꼴 이름 사용"
+
+#~ msgid "Custom font"
+#~ msgstr "사용자 정의 글꼴"
+
+#~ msgid "Custom font name for language panel"
+#~ msgstr "언어 패널 용 사용자 정의 글꼴 이름"
+
+#~ msgid "Embed Preedit Text"
+#~ msgstr "편집전 텍스트 포함"
+
+#~ msgid "Embed Preedit Text in Application Window"
+#~ msgstr "어플리케이션 창에 편집전 텍스트를 포함"
+
+#~ msgid "Enable input method by default"
+#~ msgstr "입력기를 디폴트로 활성화"
+
+#~ msgid "Enable input method by default when the application gets input focus"
+#~ msgstr "프로그램의 입력창에 포커스가 가면 디폴트로 입력기를 활성화합니다"
+
+#~ msgid ""
+#~ "Copyright (c) 2007-2010 Peng Huang\n"
+#~ "Copyright (c) 2007-2010 Red Hat, Inc."
+#~ msgstr ""
+#~ "Copyright (c) 2007-2010 Peng Huang\n"
+#~ "Copyright (c) 2007-2010 Red Hat, Inc."
+
+#~ msgid "Other"
+#~ msgstr "기타"
+
+#~ msgid "trigger"
+#~ msgstr "트리거  "
+
+#~ msgid "enable"
+#~ msgstr "활성화 "
+
+#~ msgid "disable"
+#~ msgstr "비활성화 "

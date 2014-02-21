@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ibus-xkb HEAD\n"
 "Report-Msgid-Bugs-To: http://code.google.com/p/ibus/issues/entry\n"
-"POT-Creation-Date: 2012-05-16 10:14+0900\n"
+"POT-Creation-Date: 2013-01-18 00:20+0900\n"
 "PO-Revision-Date: 2011-07-18 20:16+0000\n"
 "Last-Translator: kristho <lakristho@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -27,38 +27,38 @@ msgid "Vertical"
 msgstr "Vertikal"
 
 #: ../setup/setup.ui.h:3
-msgid "Embedded in menu"
-msgstr "Indlejret i menu"
-
-#: ../setup/setup.ui.h:4
-msgid "When active"
-msgstr "Når aktiv"
-
-#: ../setup/setup.ui.h:5
-msgid "Always"
-msgstr "Altid"
-
-#: ../setup/setup.ui.h:6
 msgid "Top left corner"
 msgstr "Øverste venstre hjørne"
 
-#: ../setup/setup.ui.h:7
+#: ../setup/setup.ui.h:4
 msgid "Top right corner"
 msgstr "Øverste højre hjørne"
 
-#: ../setup/setup.ui.h:8
+#: ../setup/setup.ui.h:5
 msgid "Bottom left corner"
 msgstr "Nederste venstre hjørne"
 
-#: ../setup/setup.ui.h:9
+#: ../setup/setup.ui.h:6
 msgid "Bottom right corner"
 msgstr "Nederste højre hjørne"
 
-#: ../setup/setup.ui.h:10
+#: ../setup/setup.ui.h:7
 msgid "Custom"
 msgstr "Brugertilpasset"
 
-#: ../setup/setup.ui.h:11 ../setup/ibus-setup.desktop.in.h:1
+#: ../setup/setup.ui.h:8
+msgid "Embedded in menu"
+msgstr "Indlejret i menu"
+
+#: ../setup/setup.ui.h:9
+msgid "When active"
+msgstr "Når aktiv"
+
+#: ../setup/setup.ui.h:10
+msgid "Always"
+msgstr "Altid"
+
+#: ../setup/setup.ui.h:11 ../setup/ibus-setup-xkb.desktop.in.h:1
 msgid "IBus Preferences"
 msgstr "Indstillinger for IBus"
 
@@ -82,7 +82,7 @@ msgstr "Forrige inddatametode:"
 msgid "..."
 msgstr "..."
 
-#: ../setup/setup.ui.h:17 ../data/ibus.schemas.in.h:6
+#: ../setup/setup.ui.h:17
 msgid "The shortcut keys for turning input method on or off"
 msgstr "Genvejstasterne for at tænde og slukke inputmetode"
 
@@ -122,11 +122,11 @@ msgstr "Vis sprogpanel:"
 msgid "Language panel position:"
 msgstr "Placering af sprogpanel:"
 
-#: ../setup/setup.ui.h:27 ../data/ibus.schemas.in.h:21
+#: ../setup/setup.ui.h:27
 msgid "Show icon on system tray"
 msgstr "Vis ikon i statusfelt"
 
-#: ../setup/setup.ui.h:28 ../data/ibus.schemas.in.h:23
+#: ../setup/setup.ui.h:28
 msgid "Show input method name on language bar"
 msgstr "Vis navn på inputmetode i sprogpanel"
 
@@ -155,31 +155,41 @@ msgid "General"
 msgstr "Generelt"
 
 #: ../setup/setup.ui.h:35
+#, fuzzy
+msgid "Customize active input _methods"
+msgstr "Om inputmetoden"
+
+#: ../setup/setup.ui.h:36
+#, fuzzy
+msgid "Customize active input methods"
+msgstr "Om inputmetoden"
+
+#: ../setup/setup.ui.h:37
 msgid "Add the selected input method into the enabled input methods"
 msgstr "Tilføj de valgte inputmetoder i de aktiverede inputmetoder"
 
-#: ../setup/setup.ui.h:36
+#: ../setup/setup.ui.h:38
 msgid "Remove the selected input method from the enabled input methods"
 msgstr "Fjern den valgte inputmetode fra de aktiverede inputmetoder"
 
-#: ../setup/setup.ui.h:37
+#: ../setup/setup.ui.h:39
 msgid "Move up the selected input method in the enabled input methods list"
 msgstr "Flyt den valgte inputmetode op i listen over aktiverede inputmetode"
 
-#: ../setup/setup.ui.h:38
+#: ../setup/setup.ui.h:40
 msgid "Move down the selected input method in the enabled input methods"
 msgstr "Flyt den valgte inputmetode i de aktiverede inputmetoder ned"
 
-#: ../setup/setup.ui.h:39
+#: ../setup/setup.ui.h:41
 msgid "Show information of the selected input method"
 msgstr "Vis information om den valgte inputmetode"
 
-#: ../setup/setup.ui.h:40
+#: ../setup/setup.ui.h:42
 #, fuzzy
 msgid "Show setup of the selected input method"
 msgstr "Vis information om den valgte inputmetode"
 
-#: ../setup/setup.ui.h:41
+#: ../setup/setup.ui.h:43
 msgid ""
 "<small><i>The default input method is the top one in the list.\n"
 "You may use up/down buttons to change it.</i></small>"
@@ -188,35 +198,35 @@ msgstr ""
 "Du kan bruge op/ned-knapperne for at ændre det.</i></small>"
 
 #. create im name & icon column
-#: ../setup/setup.ui.h:43 ../setup/enginetreeview.py:64
+#: ../setup/setup.ui.h:45 ../setup/enginetreeview.py:65
 msgid "Input Method"
 msgstr "Inputmetode"
 
-#: ../setup/setup.ui.h:44 ../data/ibus.schemas.in.h:24
+#: ../setup/setup.ui.h:46
 msgid "Use system keyboard layout"
 msgstr "Brug tastaturlayout for system"
 
-#: ../setup/setup.ui.h:45 ../data/ibus.schemas.in.h:25
+#: ../setup/setup.ui.h:47
 msgid "Use system keyboard (XKB) layout"
 msgstr "Brug systemttastaturlayout (XKB)"
 
-#: ../setup/setup.ui.h:46
+#: ../setup/setup.ui.h:48
 msgid "<b>Keyboard Layout</b>"
 msgstr "<b>Tastaturlayout</b>"
 
-#: ../setup/setup.ui.h:47 ../data/ibus.schemas.in.h:33
+#: ../setup/setup.ui.h:49
 msgid "Share the same input method among all applications"
 msgstr "Del den samme inputmetode i alle programmer"
 
-#: ../setup/setup.ui.h:48
+#: ../setup/setup.ui.h:50
 msgid "<b>Global input method settings</b>"
 msgstr "<b>Indstillinger for global inputmetode</b>"
 
-#: ../setup/setup.ui.h:49
+#: ../setup/setup.ui.h:51
 msgid "Advanced"
 msgstr "Avanceret"
 
-#: ../setup/setup.ui.h:50
+#: ../setup/setup.ui.h:52
 msgid ""
 "<big><b>IBus</b></big>\n"
 "<small>The intelligent input bus</small>\n"
@@ -232,219 +242,182 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../setup/setup.ui.h:57
+#: ../setup/setup.ui.h:59
 msgid "Start ibus on login"
 msgstr "Start ibus ved logind"
 
-#: ../setup/setup.ui.h:58
+#: ../setup/setup.ui.h:60
 msgid "<b>Startup</b>"
 msgstr "<b>Opstart</b>"
 
-#: ../setup/setup.ui.h:59 ../setup/engineabout.py:34
+#: ../setup/setup.ui.h:61 ../setup/engineabout.py:35
 msgid "About"
 msgstr "Om"
 
-#: ../bus/ibus.desktop.in.h:1
-msgid "IBus"
-msgstr "IBus"
-
-#: ../bus/ibus.desktop.in.h:2
-msgid "Input Method Framework"
-msgstr "Framework for inputmetode"
-
-#: ../bus/ibus.desktop.in.h:3
-msgid "Start IBus Input Method Framework"
-msgstr "Start IBus, framework for inputmetode"
-
-#: ../data/ibus.schemas.in.h:1
-msgid "Preload engines"
+#: ../data/ibus-xkb.schemas.in.h:1
+#, fuzzy
+msgid "Preload engine mode"
 msgstr "Forindlæs motorer"
 
-#: ../data/ibus.schemas.in.h:2
-msgid "Preload engines during ibus starts up"
-msgstr "Forindlæs motorer under opstarten af IBus"
-
-#: ../data/ibus.schemas.in.h:3
-msgid "Engines order"
+#: ../data/ibus-xkb.schemas.in.h:2
+msgid ""
+"Preload engines are loaded with this mode. 0 = user customized engines. 1 = "
+"language related engines."
 msgstr ""
 
-#: ../data/ibus.schemas.in.h:4
-msgid "Saved engines order in input method list"
+#: ../data/ibus-xkb.schemas.in.h:3
+msgid "The key preload_engines is initialized"
 msgstr ""
 
-#: ../data/ibus.schemas.in.h:5
-msgid "Trigger shortcut keys"
+#: ../data/ibus-xkb.schemas.in.h:4
+msgid "Use xmodmap"
+msgstr ""
+
+#: ../data/ibus-xkb.schemas.in.h:5
+msgid "Run xmodmap if .xmodmap/.Xmodmap exists."
+msgstr ""
+
+#: ../data/ibus-xkb.schemas.in.h:6
+msgid "Latin layout which have no ASCII"
+msgstr ""
+
+#: ../data/ibus-xkb.schemas.in.h:7
+msgid "us layout is appended to the latin layouts. variant is not needed."
+msgstr ""
+
+#: ../data/ibus-xkb.schemas.in.h:8
+msgid "XKB layout list which is shown on ibus-setup"
+msgstr ""
+
+#: ../data/ibus-xkb.schemas.in.h:9
+msgid ""
+"XKB layout list which is shown on ibus-setup. The format is \"layout\" or "
+"\"layout(variant)\"."
+msgstr ""
+
+#: ../data/ibus-xkb.schemas.in.h:10
+#, fuzzy
+msgid "Trigger shortcut keys without modifier keys"
 msgstr "Udløser tastaturgenveje"
 
-#: ../data/ibus.schemas.in.h:7
-msgid "Enable shortcut keys"
-msgstr "Aktivér genvejstaster"
-
-#: ../data/ibus.schemas.in.h:8
-msgid "The shortcut keys for turning input method on"
-msgstr "Genvejstasterne for at tænde inputmetode"
-
-#: ../data/ibus.schemas.in.h:9
-msgid "Disable shortcut keys"
-msgstr "Deaktivér genvejstaster"
-
-#: ../data/ibus.schemas.in.h:10
-msgid "The shortcut keys for turning input method off"
-msgstr "Genvejstasterne for slukning af inputmetode"
-
-#: ../data/ibus.schemas.in.h:11
-msgid "Next engine shortcut keys"
-msgstr "Genvejstaster for næste motor"
-
-#: ../data/ibus.schemas.in.h:12
-msgid "The shortcut keys for switching to the next input method in the list"
-msgstr "Genvejstasterne for at skrive til næste inputmetode i listen"
-
-#: ../data/ibus.schemas.in.h:13
-msgid "Prev engine shortcut keys"
-msgstr "Genvejstaster for forrige motor"
-
-#: ../data/ibus.schemas.in.h:14
-msgid "The shortcut keys for switching to the previous input method"
-msgstr "Genvejstasterne for at skifte til forrige inputmetode"
-
-#: ../data/ibus.schemas.in.h:15
-msgid "Auto hide"
-msgstr "Skjul automatisk"
-
-#: ../data/ibus.schemas.in.h:16
+#: ../data/ibus-xkb.schemas.in.h:11
 msgid ""
-"The behavior of language panel. 0 = Embedded in menu, 1 = Auto hide, 2 = "
-"Always show"
+"Trigger shortcut keys without modifier keys. The list is used by ibus-gjs."
 msgstr ""
-"Sprogpanelets opførsel. 0 = Indlejret i menu, 1 = Skjul automatisk, 2 = Vis "
-"altid"
 
-#: ../data/ibus.schemas.in.h:17
-msgid "Language panel position"
-msgstr "Placering for sprogpanel"
+#: ../data/ibus-xkb.schemas.in.h:12
+#, fuzzy
+msgid "List of system keyboard layout groups on ibus-setup"
+msgstr "Brug tastaturlayout for system"
 
-#: ../data/ibus.schemas.in.h:18
+#: ../data/ibus-xkb.schemas.in.h:13
 msgid ""
-"The position of the language panel. 0 = Top left corner, 1 = Top right "
-"corner, 2 = Bottom left corner, 3 = Bottom right corner, 4 = Custom"
-msgstr ""
-"Placering af sprogpanelet. 0 = Øverste venstre hjørne, 1 = Øverste højre "
-"hjørne, 2 = Nederste venstre hjørne, 3 = Nederste højre hjørne, 4 = "
-"Brugertilpasset"
-
-#: ../data/ibus.schemas.in.h:19
-msgid "Orientation of lookup table"
-msgstr "Orientering af opslagstabel"
-
-#: ../data/ibus.schemas.in.h:20
-msgid "Orientation of lookup table. 0 = Horizontal, 1 = Vertical"
-msgstr "Orientering af opslagstabel. 0 = Horisontal, 1 = Vertikal"
-
-#: ../data/ibus.schemas.in.h:22
-msgid "Show input method name"
-msgstr "Vis navn på inputmetode"
-
-#: ../data/ibus.schemas.in.h:26
-msgid "Use custom font"
-msgstr "Brug tilpasset skrifttype"
-
-#: ../data/ibus.schemas.in.h:27
-msgid "Use custom font name for language panel"
-msgstr "Brug tilpasset skrifttypenavn til sprogpanel"
-
-#: ../data/ibus.schemas.in.h:28
-msgid "Custom font"
-msgstr "Brugertilpasset skrifttype"
-
-#: ../data/ibus.schemas.in.h:29
-msgid "Custom font name for language panel"
-msgstr "Tilpasset skrifttypenavn til sprogpanel"
-
-#: ../data/ibus.schemas.in.h:30
-msgid "Embed Preedit Text"
-msgstr "Indbyg forudredigeret tekst"
-
-#: ../data/ibus.schemas.in.h:31
-msgid "Embed Preedit Text in Application Window"
-msgstr "Indlejr forudredigeret tekst i programvindue"
-
-#: ../data/ibus.schemas.in.h:32
-msgid "Use global input method"
-msgstr "Brug global inputmetode"
-
-#: ../data/ibus.schemas.in.h:34
-msgid "Enable input method by default"
-msgstr "Aktivér inputmetode som standard"
-
-#: ../data/ibus.schemas.in.h:35
-msgid "Enable input method by default when the application gets input focus"
-msgstr "Aktivér inputmetoder som standard når programmerne modtaget inputfokus"
-
-#: ../data/ibus.schemas.in.h:36
-msgid "DConf preserve name prefixes"
+"The group list is used not to show all the system keyboard layouts by "
+"default. The list item will be appended at the end of gconf key. e.g. .../"
+"xkblayoutconfig/item1"
 msgstr ""
 
-#: ../data/ibus.schemas.in.h:37
-msgid "Prefixes of DConf keys to stop name conversion"
+#: ../data/ibus-xkb.schemas.in.h:14
+msgid "List of European languages on ibus-setup"
 msgstr ""
 
-#: ../ibus/_config.py.in:41
+#: ../data/ibus-xkb.schemas.in.h:15
 msgid ""
-"Copyright (c) 2007-2010 Peng Huang\n"
-"Copyright (c) 2007-2010 Red Hat, Inc."
+"ibus-setup shows the languages only in input method list when you run ibus-"
+"setup on one of the languages. Other languages are hidden under an extended "
+"button."
 msgstr ""
-"Ophavsret (c) 2007-2010 Peng Huang\n"
-"Ophavsret (c) 2007-2010 Red Hat, Inc."
 
-#: ../ibus/lang.py:41 ../src/ibusutil.c:150 ../src/ibusutil.c:152
-msgid "Other"
-msgstr "Andre"
+#: ../data/ibus-xkb.schemas.in.h:16
+msgid "List of Asian languages on ibus-setup"
+msgstr ""
 
-#: ../setup/engineabout.py:67
+#: ../engine/ibus-xkb/ibus-xkb-main.c:47
+msgid "Query the current xkb layout"
+msgstr ""
+
+#: ../engine/ibus-xkb/ibus-xkb-main.c:48
+msgid "Set xkb LAYOUT"
+msgstr ""
+
+#: ../engine/ibus-xkb/ibus-xkb-main.c:48
+msgid "LAYOUT"
+msgstr ""
+
+#: ../engine/ibus-xkb/ibus-xkb-main.c:49
+msgid "Set xkb VARIANT"
+msgstr ""
+
+#: ../engine/ibus-xkb/ibus-xkb-main.c:49
+msgid "VARIANT"
+msgstr ""
+
+#: ../engine/ibus-xkb/ibus-xkb-main.c:50
+msgid "Set xkb OPTION"
+msgstr ""
+
+#: ../engine/ibus-xkb/ibus-xkb-main.c:50
+msgid "OPTION"
+msgstr ""
+
+#: ../engine/ibus-xkb/ibus-xkb-main.c:51 ../xkb/ibus-xkb-main.c:52
+msgid "Get current xkb state"
+msgstr ""
+
+#: ../setup/engineabout.py:69
 #, python-format
 msgid "Language: %s\n"
 msgstr "Sprog: %s\n"
 
-#: ../setup/engineabout.py:70
+#: ../setup/engineabout.py:72
 #, python-format
 msgid "Keyboard layout: %s\n"
 msgstr "Tastaturlayout: %s\n"
 
-#: ../setup/engineabout.py:73
+#: ../setup/engineabout.py:75
 #, python-format
 msgid "Author: %s\n"
 msgstr "Forfatter: %s\n"
 
-#: ../setup/engineabout.py:76
+#: ../setup/engineabout.py:78
 msgid "Description:\n"
 msgstr "Beskrivelse:\n"
 
-#: ../setup/enginecombobox.py:136
+#: ../setup/enginecombobox.py:224
 msgid "Select an input method"
 msgstr "Vælg en inddatametode"
 
-#: ../setup/enginetreeview.py:92
+#: ../setup/enginecombobox.py:228
+#, fuzzy
+msgid "Show all input methods"
+msgstr "Vis navn på inputmetode"
+
+#: ../setup/enginecombobox.py:230
+#, fuzzy
+msgid "Show only input methods for your region"
+msgstr "Vis navn på inputmetode"
+
+#: ../setup/enginetreeview.py:93
 msgid "Kbd"
 msgstr "Kbd"
 
-#: ../setup/ibus-setup.desktop.in.h:2
+#: ../setup/ibus-setup-xkb.desktop.in.h:2
 msgid "Set IBus Preferences"
 msgstr "Angiv indstillinger for IBus"
 
-#: ../setup/keyboardshortcut.py:54
+#: ../setup/keyboardshortcut.py:55
 msgid "Keyboard shortcuts"
 msgstr "Tastaturgenveje"
 
-#: ../setup/keyboardshortcut.py:65
+#: ../setup/keyboardshortcut.py:66
 msgid "Key code:"
 msgstr "Nøglekode:"
 
-#: ../setup/keyboardshortcut.py:80
+#: ../setup/keyboardshortcut.py:81
 msgid "Modifiers:"
 msgstr "Kombinationstaster:"
 
-#: ../setup/keyboardshortcut.py:235
+#: ../setup/keyboardshortcut.py:251
 msgid ""
 "Please press a key (or a key combination).\n"
 "The dialog will be closed when the key is released."
@@ -452,28 +425,28 @@ msgstr ""
 "Tryk venligst på en tast (eller en tastekombination).\n"
 "Dialogen bliver lukket, når tasten slippes."
 
-#: ../setup/keyboardshortcut.py:237
+#: ../setup/keyboardshortcut.py:253
 msgid "Please press a key (or a key combination)"
 msgstr "Tryk venligst på en tast (eller en tastekombination)"
 
-#: ../setup/main.py:79
-msgid "trigger"
-msgstr "udløser"
+#: ../setup/main.py:101 ../setup/main.py:444
+#, fuzzy
+msgid "Use shortcut with shift to switch to the previous input method"
+msgstr "Genvejstasterne for at skifte til forrige inputmetode"
 
-#: ../setup/main.py:80
-msgid "enable"
-msgstr "aktivér"
+#: ../setup/main.py:354
+msgid ""
+"The list of your saved input methods will be cleared immediately and the "
+"list will be configured by the login language every time. Do you agree with "
+"this?"
+msgstr ""
 
-#: ../setup/main.py:81
-msgid "disable"
-msgstr "deaktivér"
-
-#: ../setup/main.py:323
+#: ../setup/main.py:378
 #, fuzzy
 msgid "The IBus daemon is not running. Do you wish to start it?"
 msgstr "IBus-dæmonen er ikke startet. Vil du starte den nu?"
 
-#: ../setup/main.py:344
+#: ../setup/main.py:399
 #, fuzzy
 msgid ""
 "IBus has been started! If you cannot use IBus, add the following lines to "
@@ -488,28 +461,66 @@ msgstr ""
 "  export XMODIFIERS=@im=ibus\n"
 "  export QT_IM_MODULE=ibus"
 
-#: ../setup/main.py:357
+#. Translators: %d == 5 currently
+#: ../setup/main.py:413
 #, python-format
-msgid "IBus daemon coundn't be started in %d seconds"
+msgid "IBus daemon could not be started in %d seconds"
 msgstr ""
 
-#: ../setup/main.py:369
+#: ../setup/main.py:425
 #, python-format
 msgid "Select keyboard shortcut for %s"
 msgstr "Vælg tastaturgenveje til %s"
 
-#: ../ui/gtk3/panel.vala:330
+#: ../setup/main.py:426
 #, fuzzy
-msgid "Copyright (c) 2007-2012 Peng Huang\n"
+msgid "switching input methods"
+msgstr "Skift inddatametode"
+
+#: ../setup/xkbsetup.py:44 ../setup/xkbsetup.py:112 ../setup/xkbsetup.py:408
+msgid "Default"
+msgstr ""
+
+#: ../setup/xkbsetup.py:207
+#, fuzzy
+msgid "Select keyboard layouts"
+msgstr "Vælg tastaturgenveje til %s"
+
+#: ../setup/xkbsetup.py:212
+#, fuzzy
+msgid "Keyboard Layouts"
+msgstr "Tastaturlayout: %s\n"
+
+#: ../setup/xkbsetup.py:241
+#, fuzzy, python-format
+msgid ""
+"<small><i>The system keyboard layouts can be set less than or equal to %d.\n"
+"You may use Up/Down buttons to change the order.</i></small>"
+msgstr ""
+"<small><i>Standard inputmetoden er den øverste i listen.\n"
+"Du kan bruge op/ned-knapperne for at ændre det.</i></small>"
+
+#: ../setup/xkbsetup.py:380 ../setup/xkbsetup.py:435
+#, fuzzy
+msgid "Please restart IBus to reload your configuration."
+msgstr "Tryk venligst på en tast (eller en tastekombination)"
+
+#: ../setup/xkbsetup.py:425
+msgid "The keyboard option cannot be chosen."
+msgstr ""
+
+#: ../ui/gtk3/panel.vala:849
+#, fuzzy
+msgid "Copyright (c) 2012 Takao Fujiwara\n"
 msgstr ""
 "Ophavsret (c) 2007-2010 Peng Huang\n"
 "Ophavsret (c) 2007-2010 Red Hat, Inc."
 
-#: ../ui/gtk3/panel.vala:335
+#: ../ui/gtk3/panel.vala:855
 msgid "IBus is an intelligent input bus for Linux/Unix."
 msgstr "IBus er en intelligent inddatabus til Linux/Unix."
 
-#: ../ui/gtk3/panel.vala:339
+#: ../ui/gtk3/panel.vala:861
 msgid "translator-credits"
 msgstr ""
 "Kris Thomsen\n"
@@ -517,9 +528,146 @@ msgstr ""
 "Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
 "Mere info: http://www.dansk-gruppen.dk"
 
-#: ../ui/gtk3/panel.vala:371
+#: ../ui/gtk3/panel.vala:893
 msgid "Restart"
 msgstr "Genstart"
+
+#: ../xkb/ibus-engine-xkb-main.c:201
+msgid "Default Layout"
+msgstr ""
+
+#: ../xkb/ibus-simple-engine.c:179
+msgid "Setup"
+msgstr ""
+
+#: ../xkb/ibus-simple-engine.c:180
+msgid "Configure XKB engine"
+msgstr ""
+
+#: ../xkb/ibus-xkb-main.c:47
+msgid "Get current xkb layout"
+msgstr ""
+
+#. Translators: the "layout" should not be translated due to a variable.
+#: ../xkb/ibus-xkb-main.c:49
+#, fuzzy
+msgid "Set xkb layout"
+msgstr "Brug tastaturlayout for system"
+
+#: ../xkb/ibus-xkb-main.c:50
+msgid "Set xkb model"
+msgstr ""
+
+#: ../xkb/ibus-xkb-main.c:51
+msgid "Set xkb option"
+msgstr ""
+
+#~ msgid "IBus"
+#~ msgstr "IBus"
+
+#~ msgid "Input Method Framework"
+#~ msgstr "Framework for inputmetode"
+
+#~ msgid "Start IBus Input Method Framework"
+#~ msgstr "Start IBus, framework for inputmetode"
+
+#~ msgid "Preload engines during ibus starts up"
+#~ msgstr "Forindlæs motorer under opstarten af IBus"
+
+#~ msgid "Enable shortcut keys"
+#~ msgstr "Aktivér genvejstaster"
+
+#~ msgid "The shortcut keys for turning input method on"
+#~ msgstr "Genvejstasterne for at tænde inputmetode"
+
+#~ msgid "Disable shortcut keys"
+#~ msgstr "Deaktivér genvejstaster"
+
+#~ msgid "The shortcut keys for turning input method off"
+#~ msgstr "Genvejstasterne for slukning af inputmetode"
+
+#~ msgid "Next engine shortcut keys"
+#~ msgstr "Genvejstaster for næste motor"
+
+#~ msgid "The shortcut keys for switching to the next input method in the list"
+#~ msgstr "Genvejstasterne for at skrive til næste inputmetode i listen"
+
+#~ msgid "Prev engine shortcut keys"
+#~ msgstr "Genvejstaster for forrige motor"
+
+#~ msgid "Auto hide"
+#~ msgstr "Skjul automatisk"
+
+#~ msgid ""
+#~ "The behavior of language panel. 0 = Embedded in menu, 1 = Auto hide, 2 = "
+#~ "Always show"
+#~ msgstr ""
+#~ "Sprogpanelets opførsel. 0 = Indlejret i menu, 1 = Skjul automatisk, 2 = "
+#~ "Vis altid"
+
+#~ msgid "Language panel position"
+#~ msgstr "Placering for sprogpanel"
+
+#~ msgid ""
+#~ "The position of the language panel. 0 = Top left corner, 1 = Top right "
+#~ "corner, 2 = Bottom left corner, 3 = Bottom right corner, 4 = Custom"
+#~ msgstr ""
+#~ "Placering af sprogpanelet. 0 = Øverste venstre hjørne, 1 = Øverste højre "
+#~ "hjørne, 2 = Nederste venstre hjørne, 3 = Nederste højre hjørne, 4 = "
+#~ "Brugertilpasset"
+
+#~ msgid "Orientation of lookup table"
+#~ msgstr "Orientering af opslagstabel"
+
+#~ msgid "Orientation of lookup table. 0 = Horizontal, 1 = Vertical"
+#~ msgstr "Orientering af opslagstabel. 0 = Horisontal, 1 = Vertikal"
+
+#~ msgid "Use custom font"
+#~ msgstr "Brug tilpasset skrifttype"
+
+#~ msgid "Use custom font name for language panel"
+#~ msgstr "Brug tilpasset skrifttypenavn til sprogpanel"
+
+#~ msgid "Custom font"
+#~ msgstr "Brugertilpasset skrifttype"
+
+#~ msgid "Custom font name for language panel"
+#~ msgstr "Tilpasset skrifttypenavn til sprogpanel"
+
+#~ msgid "Embed Preedit Text"
+#~ msgstr "Indbyg forudredigeret tekst"
+
+#~ msgid "Embed Preedit Text in Application Window"
+#~ msgstr "Indlejr forudredigeret tekst i programvindue"
+
+#~ msgid "Use global input method"
+#~ msgstr "Brug global inputmetode"
+
+#~ msgid "Enable input method by default"
+#~ msgstr "Aktivér inputmetode som standard"
+
+#~ msgid "Enable input method by default when the application gets input focus"
+#~ msgstr ""
+#~ "Aktivér inputmetoder som standard når programmerne modtaget inputfokus"
+
+#~ msgid ""
+#~ "Copyright (c) 2007-2010 Peng Huang\n"
+#~ "Copyright (c) 2007-2010 Red Hat, Inc."
+#~ msgstr ""
+#~ "Ophavsret (c) 2007-2010 Peng Huang\n"
+#~ "Ophavsret (c) 2007-2010 Red Hat, Inc."
+
+#~ msgid "Other"
+#~ msgstr "Andre"
+
+#~ msgid "trigger"
+#~ msgstr "udløser"
+
+#~ msgid "enable"
+#~ msgstr "aktivér"
+
+#~ msgid "disable"
+#~ msgstr "deaktivér"
 
 #~ msgid "Previous page"
 #~ msgstr "Forrige side"
@@ -551,12 +699,6 @@ msgstr "Genstart"
 
 #~ msgid "No input window"
 #~ msgstr "Intet inputvindue"
-
-#~ msgid "About the input method"
-#~ msgstr "Om inputmetoden"
-
-#~ msgid "Switch input method"
-#~ msgstr "Skift inddatametode"
 
 #~ msgid "About the Input Method"
 #~ msgstr "Om inputmetoden"
